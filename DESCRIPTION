@@ -1,0 +1,16 @@
+Package: stopwords
+Type: Package
+Title: Stopwords ISO Data in R
+Version: 0.1.0
+Author: David Muhr <muhrdavid+github@gmail.com>
+Maintainer: David Muhr <muhrdavid+github@gmail.com>
+Description: Exposes the full Stopwords ISO collection as an easy to use R data structure.
+License: MIT + file LICENSE
+URL: https://github.com/davnn/stopwords
+BugReports: https://github.com/davnn/stopwords/issues
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 6.0.1
+Depends:
+  R (>= 2.10)

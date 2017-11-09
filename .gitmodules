@@ -1,0 +1,3 @@
+[submodule "data-raw/stopwords-iso"]
+	path = data-raw/stopwords-iso
+	url = https://github.com/stopwords-iso/stopwords-iso
