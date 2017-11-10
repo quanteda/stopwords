@@ -97,7 +97,7 @@ Contributing
 
 If there are stopwords missing, check if you have the latest version installed and if this version also represents the latest version of [Stopwords ISO](https://github.com/stopwords-iso/stopwords-iso).
 
-If there is a newer version of [Stopwords ISO](https://github.com/stopwords-iso/stopwords-iso) available, please submit a pull request or file an issue to request the update.
+If there is a newer version of [Stopwords ISO](https://github.com/stopwords-iso/stopwords-iso) available, please submit a pull request with the updated version.
 
 If you would like to contribute stopwords, please do so in the official [Stopwords ISO repositories](https://github.com/stopwords-iso).
 
