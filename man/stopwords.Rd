@@ -74,4 +74,11 @@ stopwords
 The Stopwords ISO Dataset is the most comprehensive collection of stopwords
 for multiple languages. The collection follows the ISO 639-1 language code.
 }
+\examples{
+stopwords$en
+# [1] "'ll" "'tis" "'twas" ...
+stopwords$de
+# [1] "a" "ab" "aber" "ach" ...
+
+}
 \keyword{datasets}

@@ -63,5 +63,12 @@
 #'   \item{yo}{Yoruba}
 #'   \item{zu}{Zulu}
 #' }
+#'
+#' @examples
+#' stopwords$en
+#' # [1] "'ll" "'tis" "'twas" ...
+#' stopwords$de
+#' # [1] "a" "ab" "aber" "ach" ...
+#'
 #' @source \url{https://github.com/stopwords-iso/stopwords-iso/}
 "stopwords"
