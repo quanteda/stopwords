@@ -4,14 +4,13 @@
 \alias{update_stopwords}
 \title{Internal function to update the data file}
 \usage{
-update_stopwords()
+update_stopwords(source = c("stopwords-iso"))
 }
 \description{
-Internal function to update the data file
+Fetches new data from remote sources, which can be used to regenerate the stopword files.
 }
 \examples{
-\dontrun{
-stopwords:::update_stopwords()
-}
+# data_stopwords_stopwordsiso <- update_stopwords("stopwords-iso)"
+# devtools::use_data(data_stopwords_stopwordsiso)
 }
 \keyword{internal}

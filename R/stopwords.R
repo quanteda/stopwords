@@ -19,9 +19,27 @@
 #' stopwords('jp')
 stopwords <- function(language = "en", source = "snowball") {
   stopwords_options()
+
+  # for quanteda compability
+  if (missing(source) && tolower(language) == "smart") {
+    .Deprecated(old = paste0("stopwords(language = \"", language, "\")"),
+                new = "stopwords(source = \"smart\")")
+    source <- "smart"
+    language <- "en"
+  }
+
   if (nchar(language) > 2) {
     language <- lookup_iso_639_1(language)
   }
+
+  # for quanteda compability
+  if (missing(source) && tolower(language) %in% c("el", "ar", "zh")) {
+    language <- tolower(language)
+    .Deprecated(old = paste0("stopwords(language = \"", language, "\")"),
+                new = paste0("stopwords(language = \"", language, "\", source = \"misc\")"))
+    source <- "misc"
+  }
+
   get_stopwords_data(source)[[language]]
 }
 
@@ -63,10 +81,6 @@ lookup_iso_639_1 <- function(language_name) {
 
   # remove Norwegian variants
   language_data <- language_data[-which(language_data[["Alpha_2"]] %in% c("nn", "nb")), ]
-
-  # add the "SMART" list for compatibility
-  language_data <- rbind(language_data,
-                         data.frame(Alpha_2 = "SMART", Name = "smart", stringsAsFactors = FALSE))
 
   # match the language to the name
   language_code_index <- grep(language_name, language_data[["Name"]], ignore.case = TRUE)
