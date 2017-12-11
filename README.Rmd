@@ -93,7 +93,7 @@ The following languages are currently available:
 |	 Persian	|	fa	|	✔	|		|
 |	 Polish	|	pl	|	✔	|		|
 |	 Portuguese	|	pt	|	✔	|	✔	|
-|	 Romanian	|	ro	|	✔	|		|
+|	 Romanian	|	ro	|	✔	|	✔	|
 |	 Russian	|	ru	|	✔	|	✔	|
 |	 Slovak	|	sk	|	✔	|		|
 |	 Slovenian	|	sl	|	✔	|		|
