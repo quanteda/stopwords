@@ -11,7 +11,9 @@ Depends:
   R (>= 2.10)
 Imports:
     ISOcodes,
-    rjson  
+    rjson
+Suggests:
+    quanteda
 URL: https://github.com/davnn/stopwords
 BugReports: https://github.com/davnn/stopwords/issues
 Encoding: UTF-8

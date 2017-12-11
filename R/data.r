@@ -92,17 +92,23 @@ update_stopwords <- function() {
 #'   name (in English) as the name of each list element.
 #'   Supported languages are Arabic, Danish, Dutch, English, Finnish, French,
 #'   German, Greek, Hungarian, Italian, Norwegian, Portuguese, Russian, Spanish,
-#'   and Swedish.
-#' @source The English stopwords are taken from the SMART information retrieval
-#'   system (obtained from Lewis, David D., et al.
-#'   "\href{http://www.jmlr.org/papers/volume5/lewis04a/lewis04a.pdf}{Rcv1: A
-#'   new benchmark collection for text categorization research.}" \emph{Journal
-#'   of machine learning research} (2004, 5 April): 361-397.
-#'
-#'   Additional stopword lists are taken from the Snowball stemmer project in
+#'   and Swedish.  For compatibility with the names used in the \pkg{quanteda}
+#'   package from which this source was first adapted, we have retained the
+#'   "SMART", "Greek", and "Chinese" stopword lists.
+#' @source
+#'   The main stopword lists are taken from the Snowball stemmer project in
 #'   different languages (see \url{http://snowballstem.org/projects.html}).
 #'
 #'   The Greek stopwords were supplied by Carsten Schwemmer (see
 #'   \href{https://github.com/kbenoit/quanteda/issues/282}{GitHub issue #282}).
+#'
+#'   The Chinese stopwords are taken from the
+#'   \href{http://www.baiduguide.com/baidu-stopwords/}{Baidu stopword list}.
+#'
+#'   The English "SMART" stopwords are taken from the SMART information retrieval
+#'   system (obtained from Lewis, David D., et al.
+#'   "\href{http://www.jmlr.org/papers/volume5/lewis04a/lewis04a.pdf}{Rcv1: A
+#'   new benchmark collection for text categorization research.}" \emph{Journal
+#'   of machine learning research} (2004, 5 April): 361-397.
 #' @seealso \code{\link{stopwords}}
 "data_stopwords_snowball"

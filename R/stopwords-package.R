@@ -1,0 +1,19 @@
+#' stopwords: one-stop shopping for stopwords in R
+#'
+#' Provides a \code{stopwords()} function to return character vectors of
+#' stopwords for different languages, using the ISO-639-1 language codes,
+#' and allows for different sources of stopwords to be defined.
+#'
+#' @section Currently available sources:
+#' \describe{
+#' \item{\code{snowball}}{The (mostly) SnowBall sources for multiple languages,
+#' with a few added languages to ensure compatibility with the \pkg{quanteda}
+#' stopword lists (in versions <1.0 of that package).}
+#'
+#'  \item{\code{stopwords-iso}}{The collection taken from
+#'  \url{https://github.com/stopwords-iso/stopwords-iso/}.}
+#'  }
+#' @author Kenneth Benoit, David Muhr, and Kohei Watanabe
+#' @docType package
+#' @name stopwords-package
+NULL
