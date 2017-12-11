@@ -51,7 +51,7 @@ The following coverage of languages is currently available, by source.  Note tha
 
 The following languages are currently available:
 
-|	Language	      |	ISO-639-1 Code | `stopwords-iso` | `snowball`	|
+|	Language	      |	[ISO-639-1 Code](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) | `stopwords-iso` | `snowball`	|
 |:----------------|:--------------:|:---------------:|:----------:| 								
 |	 Afrikaans	|	af	|	✔	|		|
 |	 Arabic	|	ar	|	✔	|	✔	|
@@ -116,9 +116,9 @@ The following languages are currently available:
 
 Additional sources can be defined and contributed by adding new data objects, as follows:
 
-1. **Data object**.  Create a named list of characters, in UTF-8 format, consisting of the stopwords for each language.  The ISO-639-1 language code will form the name of the list element, and the values of each element will be the character vector of stopwords for literal matches.  The data object should follow the package naming convention, and be called `data_stopwords_newsource`, where `newsource` is replaced by the name of the new source.
+1. **Data object**.  Create a named list of characters, in UTF-8 format, consisting of the stopwords for each language.  The [ISO-639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) language code will form the name of the list element, and the values of each element will be the character vector of stopwords for literal matches.  The data object should follow the package naming convention, and be called `data_stopwords_newsource`, where `newsource` is replaced by the name of the new source.
 
-2. **Documenation**.  The new source should be clearly documented, especially the source from which was taken.
+2. **Documentation**.  The new source should be clearly documented, especially the source from which was taken.
 
 
 ## License
