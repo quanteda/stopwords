@@ -1,4 +1,4 @@
-#' Stopwords ISO Data
+#' multilingual stopwords from https://github.com/stopwords-iso/stopwords-iso
 #'
 #' The Stopwords ISO Dataset is the most comprehensive collection of stopwords
 #' for multiple languages. The collection follows the ISO 639-1 language code.
@@ -63,12 +63,46 @@
 #'   \item{yo}{Yoruba}
 #'   \item{zu}{Zulu}
 #' }
-#'
-#' @examples
-#' stopwords$en
-#' # [1] "'ll" "'tis" "'twas" ...
-#' stopwords$de
-#' # [1] "a" "ab" "aber" "ach" ...
-#'
 #' @source \url{https://github.com/stopwords-iso/stopwords-iso/}
-"stopwords"
+"data_stopwords_stopwordsiso"
+
+#' Internal function to update the data file
+#' @keywords internal
+#' @examples
+#' \dontrun{
+#' stopwords:::update_stopwords()
+#' }
+update_stopwords <- function() {
+
+  url <- 'https://raw.githubusercontent.com/stopwords-iso/stopwords-iso/master/stopwords-iso.json'
+  json <- paste0(readLines(url, warn = FALSE), collapse="")
+  data_char_stopwords_iso <- rjson::fromJSON(json)
+  cat('Downloaded stopwords for', length(data), 'languages.\n')
+  path <- 'data/data_char_stopwords_iso.RData'
+  save(data_char_stopwords_iso, file = path)
+  cat('Saved to', path, '.\n')
+}
+
+
+#' snowball stopword list
+#'
+#' Ported from versions < 1.0 of the\pkg{quanteda} package.
+#' @details \code{data_char_stopwords} provides stopword lists in multiple
+#'   languages; it is a named list of characters with the lowercase language
+#'   name (in English) as the name of each list element.
+#'   Supported languages are Arabic, Danish, Dutch, English, Finnish, French,
+#'   German, Greek, Hungarian, Italian, Norwegian, Portuguese, Russian, Spanish,
+#'   and Swedish.
+#' @source The English stopwords are taken from the SMART information retrieval
+#'   system (obtained from Lewis, David D., et al.
+#'   "\href{http://www.jmlr.org/papers/volume5/lewis04a/lewis04a.pdf}{Rcv1: A
+#'   new benchmark collection for text categorization research.}" \emph{Journal
+#'   of machine learning research} (2004, 5 April): 361-397.
+#'
+#'   Additional stopword lists are taken from the Snowball stemmer project in
+#'   different languages (see \url{http://snowballstem.org/projects.html}).
+#'
+#'   The Greek stopwords were supplied by Carsten Schwemmer (see
+#'   \href{https://github.com/kbenoit/quanteda/issues/282}{GitHub issue #282}).
+#' @seealso \code{\link{stopwords}}
+"data_stopwords_snowball"
