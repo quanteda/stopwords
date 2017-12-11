@@ -18,6 +18,7 @@
 #' stopwords('en')
 #' stopwords('jp')
 stopwords <- function(language = "en", source = "snowball") {
+  stopwords_options()
   if (nchar(language) > 2) {
     language <- lookup_iso_639_1(language)
   }
@@ -30,6 +31,7 @@ stopwords <- function(language = "en", source = "snowball") {
 #' \pkg{stopwords} package.
 #' @export
 stopwords_getsources <- function() {
+  stopwords_options()
   names(getOption("stopwords_sources"))
 }
 
@@ -41,6 +43,7 @@ stopwords_getsources <- function() {
 #' @param source the source of the stopwords
 #' @export
 stopwords_getlanguages <- function(source) {
+  stopwords_options()
   names(get_stopwords_data(source))
 }
 
@@ -78,8 +81,11 @@ lookup_iso_639_1 <- function(language_name) {
 }
 
 get_stopwords_data <- function(source) {
+  stopwords_options()
   check_sources(source)
-  get(getOption("stopwords_sources")[source])
+  data_object_name <- getOption("stopwords_sources")[source]
+  # this allows the data to be accessed without attaching the package
+  eval(parse(text = paste0("stopwords::", data_object_name)))
 }
 
 check_sources <- function(source) {
