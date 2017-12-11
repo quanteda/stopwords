@@ -1,6 +1,6 @@
 Package: stopwords
 Type: Package
-Title: Multilingual Stopword Collection
+Title: Stopword lists in R
 Version: 0.9
 Authors@R: c(person("Kenneth", "Benoit", email = "kbenoit@lse.ac.uk", role = "aut"),
     person("David", "Muhr", email = "muhrdavid+github@gmail.com", role = c("aut", "cre")), 
