@@ -4,7 +4,7 @@
 \name{data_stopwords_snowball}
 \alias{data_stopwords_snowball}
 \title{snowball stopword list}
-\format{An object of class \code{list} of length 18.}
+\format{An object of class \code{list} of length 19.}
 \source{
 The main stopword lists are taken from the Snowball stemmer project in
 different languages (see \url{http://snowballstem.org/projects.html}).
