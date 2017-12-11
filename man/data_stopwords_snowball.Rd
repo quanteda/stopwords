@@ -4,39 +4,25 @@
 \name{data_stopwords_snowball}
 \alias{data_stopwords_snowball}
 \title{snowball stopword list}
-\format{An object of class \code{list} of length 19.}
+\format{An object of class \code{list} of length 15.}
 \source{
 The main stopword lists are taken from the Snowball stemmer project in
 different languages (see \url{http://snowballstem.org/projects.html}).
 
-The Greek stopwords were supplied by Carsten Schwemmer (see
-\href{https://github.com/kbenoit/quanteda/issues/282}{GitHub issue #282}).
-
-The Chinese stopwords are taken from the
-\href{http://www.baiduguide.com/baidu-stopwords/}{Baidu stopword list}.
-
-The English "SMART" stopwords are taken from the SMART information retrieval
-system (obtained from Lewis, David D., et al.
-"\href{http://www.jmlr.org/papers/volume5/lewis04a/lewis04a.pdf}{Rcv1: A
-new benchmark collection for text categorization research.}" \emph{Journal
-of machine learning research} (2004, 5 April): 361-397.
-}
-\usage{
-data_stopwords_snowball
+The stopword lists can be found in \url{http://snowball.tartarus.org/dist/snowball_all.tgz}.
 }
 \description{
-Ported from versions < 1.0 of the\pkg{quanteda} package.
+snowball stopword list
 }
 \details{
-\code{data_char_stopwords} provides stopword lists in multiple
-languages; it is a named list of characters with the lowercase language
-name (in English) as the name of each list element.
-Supported languages are Arabic, Danish, Dutch, English, Finnish, French,
-German, Greek, Hungarian, Italian, Norwegian, Portuguese, Russian, Spanish,
-and Swedish.  For compatibility with the names used in the \pkg{quanteda}
-package from which this source was first adapted, we have retained the
-"SMART", "Greek", and "Chinese" stopword lists.
+Provides stopword lists in multiple
+languages, based on the Snowball stemmer's word lists.
 }
+\section{Usage}{
+
+\code{stopwords(language, source = "snowball")}
+}
+
 \seealso{
 \code{\link{stopwords}}
 }
