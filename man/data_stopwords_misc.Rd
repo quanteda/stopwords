@@ -6,7 +6,7 @@
 \title{miscellaneous stopword lists}
 \format{An object of class \code{list} of length 4.}
 \source{
-The Arabic stopwords were supplied by Alexandra Siegel (documentation pending).
+The Arabic stopwords come from \url{https://sites.google.com/site/kevinbouge/stopwords-lists}.
 
 The Catalan stopwords come from \url{http://latel.upf.edu/morgana/altres/pub/ca_stop.htm}.
 
@@ -14,7 +14,7 @@ The Greek stopwords were supplied by Carsten Schwemmer (see
 \url{https://github.com/kbenoit/quanteda/issues/282}).
 
 The Chinese stopwords are taken from the
-\url{http://www.baiduguide.com/baidu-stopwords/}{Baidu stopword list}.
+\href{http://www.baiduguide.com/baidu-stopwords/}{Baidu stopword list}.
 }
 \description{
 Other, miscellaneous stopword lists.

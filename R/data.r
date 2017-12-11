@@ -52,7 +52,7 @@ update_stopwords <- function(source = c("stopwords-iso")) {
 #' @section Usage:
 #' \code{stopwords(language, source = "misc")}
 #' @source
-#'   The Arabic stopwords were supplied by Alexandra Siegel (documentation pending).
+#'   The Arabic stopwords come from \url{https://sites.google.com/site/kevinbouge/stopwords-lists}.
 #'
 #'   The Catalan stopwords come from \url{http://latel.upf.edu/morgana/altres/pub/ca_stop.htm}.
 #'
@@ -60,7 +60,7 @@ update_stopwords <- function(source = c("stopwords-iso")) {
 #'   \url{https://github.com/kbenoit/quanteda/issues/282}).
 #'
 #'   The Chinese stopwords are taken from the
-#'   \url{http://www.baiduguide.com/baidu-stopwords/}{Baidu stopword list}.
+#'   \href{http://www.baiduguide.com/baidu-stopwords/}{Baidu stopword list}.
 "data_stopwords_misc"
 
 #' stopword lists from the SMART system
