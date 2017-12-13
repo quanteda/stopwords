@@ -28,5 +28,5 @@ deprecated.
 }
 \examples{
 stopwords('en')
-stopwords('jp')
+stopwords('de')
 }

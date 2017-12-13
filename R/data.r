@@ -11,24 +11,6 @@
 #' @source \url{https://github.com/stopwords-iso/stopwords-iso/}
 "data_stopwords_stopwordsiso"
 
-#' Internal function to update the data file
-#'
-#' Fetches new data from remote sources, which can be used to regenerate the stopword files.
-#' @keywords internal
-#' @examples
-#' # data_stopwords_stopwordsiso <- update_stopwords("stopwords-iso)"
-#' # devtools::use_data(data_stopwords_stopwordsiso)
-update_stopwords <- function(source = c("stopwords-iso")) {
-  source <- match.arg(source)
-  url <- 'https://raw.githubusercontent.com/stopwords-iso/stopwords-iso/master/stopwords-iso.json'
-  message("Rebuilding data from https://github.com/stopwords-iso/stopwords-iso/blob/master/stopwords-iso.json")
-  json <- paste0(readLines(url, warn = FALSE), collapse="")
-  message("data_stopwords_stopwordsiso has been updated.\n")
-  message("To save:\n data_stopwords_stopwordsiso <- update_stopwords(\"stopwords-iso)\"\n devtools::use_data(data_stopwords_stopwordsiso)")
-  invisible(rjson::fromJSON(json))
-}
-
-
 #' snowball stopword list
 #'
 #' @usage NULL
@@ -43,7 +25,6 @@ update_stopwords <- function(source = c("stopwords-iso")) {
 #'   The stopword lists can be found in \url{http://snowball.tartarus.org/dist/snowball_all.tgz}.
 #' @seealso \code{\link{stopwords}}
 "data_stopwords_snowball"
-
 
 #' miscellaneous stopword lists
 #'
@@ -72,7 +53,7 @@ update_stopwords <- function(source = c("stopwords-iso")) {
 #' @section Usage:
 #' \code{stopwords(language = "en", source = "smart")}
 #' @source
-#'   The English stopwrod list is taken from the
+#'   The English stopword list is taken from the
 #'   \href{http://www.ai.mit.edu/projects/jmlr/papers/volume5/lewis04a/a11-smart-stop-list/english.stop}{online appendix 11}
 #'   of Lewis et. al. (2004).
 #' @references
