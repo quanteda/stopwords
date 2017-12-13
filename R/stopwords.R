@@ -16,9 +16,14 @@
 #'
 #' @examples
 #' stopwords('en')
-#' stopwords('jp')
+#' stopwords('de')
 stopwords <- function(language = "en", source = "snowball") {
   stopwords_options()
+
+  error <- createError(
+    default = paste0("Language ", "\"", language, "\" not available in source \"", source, "\"."),
+    note = "See `stopwords_getlanguages` for more information on supported langauges."
+  )
 
   # for quanteda compability
   if (missing(source) && tolower(language) == "smart") {
@@ -29,7 +34,10 @@ stopwords <- function(language = "en", source = "snowball") {
   }
 
   if (nchar(language) > 2) {
-    language <- lookup_iso_639_1(language)
+    language <- tryCatch(
+      lookup_iso_639_1(language),
+      error = function(message) error(message)
+    )
   }
 
   # for quanteda compability
@@ -40,7 +48,16 @@ stopwords <- function(language = "en", source = "snowball") {
     source <- "misc"
   }
 
-  get_stopwords_data(source)[[language]]
+  words <- tryCatch(
+    get_stopwords_data(source)[[language]],
+    error = function(message) error(message)
+  )
+
+  if (is.null(words)) {
+    error()
+  }
+
+  words
 }
 
 #' list available stopwords sources
@@ -53,7 +70,6 @@ stopwords_getsources <- function() {
   names(getOption("stopwords_sources"))
 }
 
-
 #' list available stopwords country codes
 #'
 #' Lists the available stopwords country codes for a given stopwords source.
@@ -62,7 +78,16 @@ stopwords_getsources <- function() {
 #' @export
 stopwords_getlanguages <- function(source) {
   stopwords_options()
-  names(get_stopwords_data(source))
+
+  error <- createError(
+    default = paste0("Source \"", source, "\" not found."),
+    note = "See `stopwords_getsources` for a list of all available sources."
+  )
+
+  tryCatch(
+    names(get_stopwords_data(source)),
+    error = function(message) error(message)
+  )
 }
 
 #' return ISO-639-1 code for a given language name
@@ -70,7 +95,6 @@ stopwords_getlanguages <- function(source) {
 #' Looks up the two-character ISO-639-1 language code for a given
 #' language name.
 #' @importFrom stats na.omit
-#' @importFrom utils data
 #' @keywords internal
 #' @param language_name character; name of a language
 lookup_iso_639_1 <- function(language_name) {
@@ -85,26 +109,34 @@ lookup_iso_639_1 <- function(language_name) {
   # match the language to the name
   language_code_index <- grep(language_name, language_data[["Name"]], ignore.case = TRUE)
   if (!length(language_code_index)) {
-    stop("language ", language_name, " not found")
+    stop()
   } else if (length(language_code_index) > 1) {
-    stop("multiple language codes found for ", language_name, ":\n",
-         language_data[language_code_index, ])
+    message <- paste0("Multiple language codes found for \"", language_name, "\":\n",
+               paste0(language_data[language_code_index, 2], collapse = "\n"))
+    stop(message)
   } else {
     language_data[["Alpha_2"]][language_code_index]
   }
 }
 
+# Create consistent error messages
+createError <- function(default, note, message) {
+  function(message) {
+    msg <- paste0(ifelse(missing(message) || message == "", default, message), "\n", note)
+    stop(msg, call. = FALSE)
+  }
+}
+
+# Retrieve data from sources
 get_stopwords_data <- function(source) {
   stopwords_options()
-  check_sources(source)
+
+  if (! source %in% names(getOption("stopwords_sources"))) {
+    message <- paste0("Source \"", source, "\" not found.")
+    stop(message, call. = FALSE)
+  }
+
   data_object_name <- getOption("stopwords_sources")[source]
   # this allows the data to be accessed without attaching the package
   eval(parse(text = paste0("stopwords::", data_object_name)))
 }
-
-check_sources <- function(source) {
-  if (! source %in% names(getOption("stopwords_sources"))) {
-    stop("source ", source, " not available", call. = FALSE)
-  }
-}
-

@@ -10,8 +10,7 @@ License: MIT + file LICENSE
 Depends:
   R (>= 2.10)
 Imports:
-    ISOcodes,
-    rjson
+    ISOcodes
 Suggests:
     quanteda
 URL: https://github.com/davnn/stopwords
