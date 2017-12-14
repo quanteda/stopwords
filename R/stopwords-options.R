@@ -14,3 +14,8 @@ stopwords_options <- function() {
                           smart = "data_stopwords_smart")
   )
 }
+
+# Load options on attach
+.onAttach <- function(...) {
+  stopwords_options()
+}
