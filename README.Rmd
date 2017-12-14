@@ -59,7 +59,7 @@ stopwords::stopwords_getlanguages("snowball")
 
 ## Languages available
 
-The following coverage of languages is currently available, by source. Note that the inclusiveness of the stopword lists will vary by source, and the number of languages covered by a stopword list does not necessarily mean that the source is better than one with more limited coverage. (There may be meany reasons to prefer the default "snowball" source over the "stopwords-iso" source, for instance.)
+The following coverage of languages is currently available, by source. Note that the inclusiveness of the stopword lists will vary by source, and the number of languages covered by a stopword list does not necessarily mean that the source is better than one with more limited coverage. (There may be many reasons to prefer the default "snowball" source over the "stopwords-iso" source, for instance.)
 
 The following languages are currently available:
 
