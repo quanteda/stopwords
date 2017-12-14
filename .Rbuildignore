@@ -2,3 +2,5 @@
 ^\.Rproj\.user$
 ^data-raw$
 ^cran-comments\.md$
+README.Rmd
+languages_by_source.xlsx
