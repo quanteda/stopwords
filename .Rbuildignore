@@ -4,3 +4,4 @@
 ^cran-comments\.md$
 README.Rmd
 languages_by_source.xlsx
+^\.travis\.yml$
