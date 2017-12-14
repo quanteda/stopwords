@@ -45,10 +45,23 @@ head(stopwords::stopwords("german"), 20)
 ## [15] "anderer" "anderes" "anderm"  "andern"  "anderr"  "anders"
 ```
 
+Explore sources and languages:
+
+``` r
+# list all sources
+stopwords::stopwords_getsources()
+## [1] "snowball"      "stopwords-iso" "misc"          "smart"
+
+# list languages for a specific source
+stopwords::stopwords_getlanguages("snowball")
+##  [1] "da" "de" "en" "es" "fi" "fr" "hu" "ir" "it" "nl" "no" "pt" "ro" "ru"
+## [15] "sv"
+```
+
 Languages available
 -------------------
 
-The following coverage of languages is currently available, by source. Note that the inclusiveness of the stopword lists will vary by source, and the numebr of languages covered by a stopword list does not necessarily mean that the source is better than one with more limited coverage. (There may be meany reasons to prefer the "snowball" source over the "stopwords-iso" source, for instance.)
+The following coverage of languages is currently available, by source. Note that the inclusiveness of the stopword lists will vary by source, and the number of languages covered by a stopword list does not necessarily mean that the source is better than one with more limited coverage. (There may be meany reasons to prefer the default "snowball" source over the "stopwords-iso" source, for instance.)
 
 The following languages are currently available:
 
