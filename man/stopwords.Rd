@@ -2,7 +2,7 @@
 % Please edit documentation in R/stopwords.R
 \name{stopwords}
 \alias{stopwords}
-\title{Collection of stopwords in multiple langauges}
+\title{Collection of stopwords in multiple languages}
 \usage{
 stopwords(language = "en", source = "snowball")
 }
@@ -16,13 +16,13 @@ available options, use \code{\link{stopwords_getsources}}.}
 a character vector containing the stopwords
 }
 \description{
-This function returns stopwrods colated for Stopwords ISO library
+This function returns stopwords collated for Stopwords ISO library
 (\url{https://github.com/stopwords-iso/stopwords-iso}).
 }
 \details{
 The language codes for each stopword list use the two-letter ISO
 code from \url{https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes}.
-For backwards compatibility, the full english names of the stopwords
+For backwards compatibility, the full English names of the stopwords
 from the \pkg{quanteda} package may also be used, although these are
 deprecated.
 }

@@ -1,6 +1,6 @@
-#' Collection of stopwords in multiple langauges
+#' Collection of stopwords in multiple languages
 #'
-#' This function returns stopwrods colated for Stopwords ISO library
+#' This function returns stopwords collated for Stopwords ISO library
 #' (\url{https://github.com/stopwords-iso/stopwords-iso}).
 #' @param language specify language of stopwords by ISO 639-1 code
 #' @param source specify a stopwords source. To list the currently
@@ -9,7 +9,7 @@
 #' @details
 #' The language codes for each stopword list use the two-letter ISO
 #' code from \url{https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes}.
-#' For backwards compatibility, the full english names of the stopwords
+#' For backwards compatibility, the full English names of the stopwords
 #' from the \pkg{quanteda} package may also be used, although these are
 #' deprecated.
 #' @export
@@ -22,7 +22,7 @@ stopwords <- function(language = "en", source = "snowball") {
 
   error <- createError(
     default = paste0("Language ", "\"", language, "\" not available in source \"", source, "\"."),
-    note = "See `stopwords_getlanguages` for more information on supported langauges."
+    note = "See `stopwords_getlanguages` for more information on supported languages."
   )
 
   # for quanteda compability
