@@ -98,9 +98,6 @@ stopwords_getlanguages <- function(source) {
 #' @keywords internal
 #' @param language_name character; name of a language
 lookup_iso_639_1 <- function(language_name) {
-  if (nchar(language_name) <= 2) {
-    stop("language_name must be the full, English name of the language")
-  }
   language_data <- na.omit(ISOcodes::ISO_639_2[, c("Alpha_2", "Name")])
 
   # remove Norwegian variants

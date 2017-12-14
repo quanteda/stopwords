@@ -33,13 +33,34 @@ test_that("all languages work for source: Smart", {
   expect_equal(smart, testData)
 })
 
+test_that("full name language returns same values", {
+  expect_equal(stopwords("en"), stopwords("english"))
+})
+
 test_that("wrong source throws error", {
   expect_error(stopwords("en", "not_existing_test_source"))
 })
 
 test_that("wrong language throws error", {
-  expect_error(stopwords("not_existing_test_language", "snowball"))
-  expect_error(stopwords("not_existing_test_language", "stopwords-iso"))
-  expect_error(stopwords("not_existing_test_language", "misc"))
-  expect_error(stopwords("not_existing_test_language", "smart"))
+  expect_error(stopwords("not_existing_test_language"))
+})
+
+test_that("null stopwords throw error", {
+  # a valid 2-character language that's not in the source
+  expect_error(stopwords("cs"))
+})
+
+test_that("multiple language matches throw error", {
+  # a valid 2-character language that's not in the source
+  expect_error(stopwords("south"))
+})
+
+test_that("deprecation warning if SMART is only argument", {
+  # a valid 2-character language that's not in the source
+  expect_warning(stopwords("smart"))
+})
+
+test_that("deprecation warning if MISC language without source MISC", {
+  # a valid 2-character language that's not in the source
+  expect_warning(stopwords("ar"))
 })
