@@ -4,7 +4,7 @@ stopwords: the R package
 
 [![CRAN Version](https://www.r-pkg.org/badges/version/stopwords)](https://CRAN.R-project.org/package=stopwords) [![Travis-CI Build Status](https://travis-ci.org/davnn/stopwords.svg?branch=master)](https://travis-ci.org/davnn/stopwords) [![Coverage status](https://codecov.io/gh/davnn/stopwords/branch/master/graph/badge.svg)](https://codecov.io/github/davnn/stopwords?branch=master) [![Downloads](https://cranlogs.r-pkg.org/badges/stopwords)](https://CRAN.R-project.org/package=stopwords) [![Total Downloads](https://cranlogs.r-pkg.org/badges/grand-total/stopwords?color=orange)](https://CRAN.R-project.org/package=stopwords)
 
-R package providing "one-stop shopping" for stopword lists in R, for multiple languages and sources. No longer should text analysis or NLP packages bake in their own stopword lists or functions, since this package can accomodate them all, and is easily extended.
+R package providing "one-stop shopping" (or should that be "one-shop stopping"?) for stopword lists in R, for multiple languages and sources. No longer should text analysis or NLP packages bake in their own stopword lists or functions, since this package can accomodate them all, and is easily extended.
 
 Created by [David Muhr](https://github.com/davnn), and extended in cooperation with [Kenneth Benoit](https://github.com/kbenoit) and [Kohei Watanabe](https://github.com/koheiw).
 
