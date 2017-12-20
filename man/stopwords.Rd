@@ -16,8 +16,14 @@ available options, use \code{\link{stopwords_getsources}}.}
 a character vector containing the stopwords
 }
 \description{
-This function returns stopwords collated for Stopwords ISO library
-(\url{https://github.com/stopwords-iso/stopwords-iso}).
+This function returns character vectors of stopwords for different languages,
+using the
+\href{https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes}{ISO-639-1
+language codes}, and allows for different sources of stopwords to be defined.
+
+The default source is the \code{\link[=data_stopwords_snowball]{Snowball}}
+stopwords collection but \code{\link[=stopwords-package]{other}} sources are
+also available.
 }
 \details{
 The language codes for each stopword list use the two-letter ISO
@@ -27,6 +33,6 @@ from the \pkg{quanteda} package may also be used, although these are
 deprecated.
 }
 \examples{
-stopwords('en')
-stopwords('de')
+stopwords("en")
+stopwords("de")
 }
