@@ -1,7 +1,14 @@
 #' Collection of stopwords in multiple languages
 #'
-#' This function returns stopwords collated for Stopwords ISO library
-#' (\url{https://github.com/stopwords-iso/stopwords-iso}).
+#' @description
+#' This function returns character vectors of stopwords for different languages,
+#' using the
+#' \href{https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes}{ISO-639-1
+#' language codes}, and allows for different sources of stopwords to be defined.
+#'
+#' The default source is the \code{\link[=data_stopwords_snowball]{Snowball}}
+#' stopwords collection but \code{\link[=stopwords-package]{other}} sources are
+#' also available.
 #' @param language specify language of stopwords by ISO 639-1 code
 #' @param source specify a stopwords source. To list the currently
 #' available options, use \code{\link{stopwords_getsources}}.
@@ -15,8 +22,8 @@
 #' @export
 #'
 #' @examples
-#' stopwords('en')
-#' stopwords('de')
+#' stopwords("en")
+#' stopwords("de")
 stopwords <- function(language = "en", source = "snowball") {
   stopwords_options()
 
