@@ -1,0 +1,10 @@
+url: http://stopwords.quanteda.io
+template:
+  params:
+    bootswatch: readable
+navbar:
+  title: "Stopwords"
+  type: inverse
+  left:
+    - text: "Reference"
+      href: reference/index.html
