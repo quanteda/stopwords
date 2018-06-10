@@ -20,15 +20,20 @@ b, strong, th {
     background-image: url(https://cdn.rawgit.com/quanteda/stopwords/master/images/stopwords_logo_small.svg);
     background-repeat: no-repeat;
     background-position: 12.5px 12.5px;
-    background-size: 150px auto;
-    width: 300
+    background-size: 170px auto;
+    width: 250px;
 }
 
 .navbar-brand > .navbar-link {
     opacity: 0;
     width: 0;
     height: 0;
-    padding: 0 60px 0 0;
+    display: block;
+
+}
+
+.navbar-brand > .label {
+    margin-left: 170px;
 }
 
 .navbar .navbar-nav > li > a {
