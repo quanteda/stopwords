@@ -30,7 +30,7 @@ install.packages("stopwords")
 
 # Or get the development version from GitHub:
 # install.packages("devtools")
-devtools::install_github("davnn/stopwords")
+devtools::install_github("quanteda/stopwords")
 ```
 
 ## Usage
