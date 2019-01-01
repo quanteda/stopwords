@@ -1,7 +1,7 @@
 Package: stopwords
 Type: Package
 Title: Multilingual Stopword Lists
-Version: 0.9.0
+Version: 0.9.9000
 Authors@R: c(person("Kenneth", "Benoit", email = "kbenoit@lse.ac.uk", role = "aut"),
     person("David", "Muhr", email = "muhrdavid+github@gmail.com", role = c("aut", "cre")), 
     person("Kohei", "Watanabe", email = "watanabe.kohei@gmail.com", role = "aut"))
@@ -12,12 +12,15 @@ Depends:
 Imports:
     ISOcodes
 Suggests: 
+    covr,
+    lintr,
     quanteda,
-    testthat,
-    covr
+    spelling,
+    testthat
 URL: https://github.com/davnn/stopwords
 BugReports: https://github.com/davnn/stopwords/issues
 Encoding: UTF-8
 LazyData: true
+Language: en-GB
 Roxygen: list(markdown = TRUE)
-RoxygenNote: 6.0.1
+RoxygenNote: 6.1.1
