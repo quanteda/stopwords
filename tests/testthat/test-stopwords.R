@@ -1,10 +1,10 @@
 context("test-stopwords.R")
 
 # Helper
-createTestData <- function(sourceData, sourceName) {
-  testData <- lapply(names(sourceData), function(x) stopwords(x, source = sourceName))
-  names(testData) <- names(sourceData)
-  testData
+create_test_data <- function(source_data, source_name) {
+  test_data <- lapply(names(source_data), function(x) stopwords(x, source = source_name))
+  names(test_data) <- names(source_data)
+  test_data
 }
 
 # Sources
@@ -14,23 +14,23 @@ misc <- stopwords::data_stopwords_misc
 smart <- stopwords::data_stopwords_smart
 
 test_that("all languages work for source: Snowball", {
-  testData <- createTestData(snowball, "snowball")
-  expect_equal(snowball, testData)
+  test_data <- create_test_data(snowball, "snowball")
+  expect_equal(snowball, test_data)
 })
 
 test_that("all languages work for source: Stopwords-ISO", {
-  testData <- createTestData(stopwordsiso, "stopwords-iso")
-  expect_equal(stopwordsiso, testData)
+  test_data <- create_test_data(stopwordsiso, "stopwords-iso")
+  expect_equal(stopwordsiso, test_data)
 })
 
 test_that("all languages work for source: Misc", {
-  testData <- createTestData(misc, "misc")
-  expect_equal(misc, testData)
+  test_data <- create_test_data(misc, "misc")
+  expect_equal(misc, test_data)
 })
 
 test_that("all languages work for source: Smart", {
-  testData <- createTestData(smart, "smart")
-  expect_equal(smart, testData)
+  test_data <- create_test_data(smart, "smart")
+  expect_equal(smart, test_data)
 })
 
 test_that("full name language returns same values", {
