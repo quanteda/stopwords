@@ -14,8 +14,8 @@ Downloads](https://cranlogs.r-pkg.org/badges/grand-total/stopwords?color=orange)
 R package providing “one-stop shopping” (or should that be “one-shop
 stopping”?) for stopword lists in R, for multiple languages and sources.
 No longer should text analysis or NLP packages bake in their own
-stopword lists or functions, since this package can accomodate them all,
-and is easily extended.
+stopword lists or functions, since this package can accommodate them
+all, and is easily extended.
 
 Created by [David Muhr](https://github.com/davnn), and extended in
 cooperation with [Kenneth Benoit](https://github.com/kbenoit) and [Kohei
@@ -47,7 +47,7 @@ head(stopwords::stopwords("de", source = "stopwords-iso"), 20)
 ## [16] "allerdings"  "alles"       "allgemeinen" "als"         "also"
 ```
 
-For compability with the former `quanteda::stopwords()`:
+For compatibility with the former `quanteda::stopwords()`:
 
 ``` r
 head(stopwords::stopwords("german"), 20)
@@ -104,6 +104,7 @@ available:
 | Galician       |                                   gl                                    |        ✔        |            |         |        |
 | German         |                                   de                                    |        ✔        |     ✔      |         |        |
 | Greek          |                                   el                                    |        ✔        |            |         |   ✔    |
+| Gujarati       |                                   gu                                    |                 |            |         |   ✔    |
 | Hausa          |                                   ha                                    |        ✔        |            |         |        |
 | Hebrew         |                                   he                                    |        ✔        |            |         |        |
 | Hindi          |                                   hi                                    |        ✔        |            |         |        |

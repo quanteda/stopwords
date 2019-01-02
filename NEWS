@@ -1,4 +1,8 @@
-stopwords v0.9 (Release date: TBC)
+stopwords v0.9.9000
+==============
+* Added Gujarati to misc stopwords.
+
+stopwords v0.9 (Release date: 2017-12-14)
 ==============
 
 Changes:
