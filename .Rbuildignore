@@ -10,3 +10,6 @@ languages_by_source.xlsx
 ^CNAME$
 ^_pkgdown\.yml$
 ^css/
+^images/
+^pkgdown/
+^\.lintr$
