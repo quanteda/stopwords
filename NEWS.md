@@ -1,6 +1,7 @@
-stopwords v0.9.9000
+stopwords > v0.9
 ==============
 * Added Gujarati to misc stopwords.
+* Fixed several mis-encoded characters ("ı") for Turkish in stopwords-iso. (#15)
 
 stopwords v0.9 (Release date: 2017-12-14)
 ==============
