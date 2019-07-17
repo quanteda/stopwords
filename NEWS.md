@@ -10,7 +10,7 @@ Changes:
 * Added Snowball, misc, and SMART stopwords.
 * Replaced exposed data object with the function `stopwords()`.
 * Made completely compatible with `quanteda::stopwords()` to provide a replacement for that function.
-* Significantly improved documenation.
+* Significantly improved documentation.
 
 
 stopwords v0.1.0 (Release date: 2017-11-09)
