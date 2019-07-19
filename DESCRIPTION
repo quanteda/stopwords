@@ -1,7 +1,7 @@
 Package: stopwords
 Type: Package
 Title: Multilingual Stopword Lists
-Version: 0.9.9000
+Version: 0.9.9001
 Authors@R: c(person("Kenneth", "Benoit", email = "kbenoit@lse.ac.uk", role = "aut"),
     person("David", "Muhr", email = "muhrdavid+github@gmail.com", role = c("aut", "cre")), 
     person("Kohei", "Watanabe", email = "watanabe.kohei@gmail.com", role = "aut"))
@@ -22,5 +22,3 @@ BugReports: https://github.com/davnn/stopwords/issues
 Encoding: UTF-8
 LazyData: true
 Language: en-GB
-Roxygen: list(markdown = TRUE)
-RoxygenNote: 6.1.1

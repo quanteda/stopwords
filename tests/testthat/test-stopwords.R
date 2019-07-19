@@ -64,3 +64,14 @@ test_that("deprecation warning if MISC language without source MISC", {
   # a valid 2-character language that's not in the source
   expect_warning(stopwords("ar"))
 })
+
+test_that("error conditions work", {
+  expect_error(
+    stopwords(language = c("en", "fr")),
+    "only one language may be specified"
+  )
+  expect_error(
+    stopwords(language = c("en"), source = c("snowball", "stopwords-iso")),
+    "only one source may be specified"
+  )
+})
