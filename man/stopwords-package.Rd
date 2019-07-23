@@ -16,15 +16,15 @@ and allows for different sources of stopwords to be defined.
 Most of these have been ported from the \pkg{quanteda}
 stopword lists (in versions <1.0 of that package).}
 
-\item{\code{\link[=data_stopwords_stopwordsiso]{stopwords-iso}}}{The collection taken from
-\url{https://github.com/stopwords-iso/stopwords-iso/}.}
+ \item{\code{\link[=data_stopwords_stopwordsiso]{stopwords-iso}}}{The collection taken from
+ \url{https://github.com/stopwords-iso/stopwords-iso/}.}
 
-\item{\code{\link[=data_stopwords_smart]{smart}}}{The English-language stopword list from the SMART information
-retrieval system.}
+ \item{\code{\link[=data_stopwords_smart]{smart}}}{The English-language stopword list from the SMART information
+ retrieval system.}
 
-\item{\code{\link[=data_stopwords_misc]{misc}}}{A few additional stopword lists, including the non-Snowball
-word lists from \pkg{quanteda} versions < 1.0.}
-}
+ \item{\code{\link[=data_stopwords_misc]{misc}}}{A few additional stopword lists, including the non-Snowball
+ word lists from \pkg{quanteda} versions < 1.0.}
+ }
 }
 
 \author{
