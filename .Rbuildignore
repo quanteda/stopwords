@@ -14,3 +14,4 @@ languages_by_source.xlsx
 ^pkgdown/
 ^\.lintr$
 ^revdep/
+^CRAN-RELEASE$
