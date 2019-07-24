@@ -13,3 +13,4 @@ languages_by_source.xlsx
 ^images/
 ^pkgdown/
 ^\.lintr$
+^revdep/
