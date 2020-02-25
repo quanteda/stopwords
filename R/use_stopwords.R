@@ -18,9 +18,8 @@ use_dependency <- usethis:::use_dependency
 #'   the roxygen template to import and re-export [stopwords()]. If `FALSE`, the
 #'   necessary roxygen directive is added, if possible, or otherwise
 #'   instructions are given.
-#'
 #' @export
-#'
+#' @importFrom usethis use_template ui_todo ui_code_block ui_todo
 #' @examples
 #' \dontrun{
 #' use_stopwords()
@@ -32,7 +31,7 @@ use_stopwords <- function(export = TRUE) {
   use_dependency("stopwords", "Imports")
 
   if (export) {
-    usethis::use_template("stopwords.R", "R/use-stopwords.R") && roxygen_update()
+    use_template("stopwords.R", "R/use-stopwords.R", package = "stopwords") && roxygen_update()
     return(invisible(TRUE))
   }
 
@@ -41,12 +40,12 @@ use_stopwords <- function(export = TRUE) {
     return(invisible(TRUE))
   }
 
-  usethis::ui_todo(
+  ui_todo(
     "Copy and paste this line into some roxygen header, then run \\
     {ui_code('devtools::document()')}:"
   )
-  usethis::ui_code_block("#' @importFrom stopwords stopwords", copy = FALSE)
-  usethis::ui_todo(
+  ui_code_block("#' @importFrom stopwords stopwords", copy = FALSE)
+  ui_todo(
     "Alternative recommendation: call {ui_code('use_package_doc()')}, then \\
     call {ui_code('use_stopwords()')} again."
   )
