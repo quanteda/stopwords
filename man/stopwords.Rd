@@ -17,8 +17,8 @@ a character vector containing the stopwords
 }
 \description{
 This function returns character vectors of stopwords for different languages,
-using the
-\href{https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes}{ISO-639-1 language codes}, and allows for different sources of stopwords to be defined.
+using the \href{https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes}{ISO-639-1 language codes}, and allows for
+different sources of stopwords to be defined.
 
 The default source is the \code{\link[=data_stopwords_snowball]{Snowball()}}
 stopwords collection but \code{\link[=stopwords-package]{other()}} sources are

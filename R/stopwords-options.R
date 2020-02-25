@@ -15,7 +15,9 @@ stopwords_options <- function() {
   )
 }
 
+# nolint start
 # Load options on attach
 .onAttach <- function(...) {
   stopwords_options()
 }
+# nolint end

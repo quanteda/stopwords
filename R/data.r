@@ -59,12 +59,12 @@
 #' @section Usage:
 #' `stopwords(language = "en", source = "smart")`
 #' @source
-#'   The English stopword list is taken from the
-#'   [online appendix 11](http://www.ai.mit.edu/projects/jmlr/papers/volume5/lewis04a/a11-smart-stop-list/english.stop)
+#'   The English stopword list is taken from the [online appendix
+#'   11](http://www.ai.mit.edu/projects/jmlr/papers/volume5/lewis04a/a11-smart-stop-list/english.stop)
 #'   of Lewis et. al. (2004).
 #' @references
-#'   Lewis, David D., et al. (2004)
-#'   "[Rcv1: A
-#'   new benchmark collection for text categorization research.](http://www.jmlr.org/papers/volume5/lewis04a/lewis04a.pdf)" *Journal
-#'   of machine learning research* 5: 361-397.
+#'   Lewis, David D., et al. (2004) "[Rcv1: A new benchmark collection for text
+#'   categorization
+#'   research.](http://www.jmlr.org/papers/volume5/lewis04a/lewis04a.pdf)"
+#'   *Journal of machine learning research* 5: 361-397.
 "data_stopwords_smart"

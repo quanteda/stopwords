@@ -2,9 +2,9 @@
 #'
 #' @description
 #' This function returns character vectors of stopwords for different languages,
-#' using the
-#' [ISO-639-1
-#' language codes](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes), and allows for different sources of stopwords to be defined.
+#' using the [ISO-639-1 language
+#' codes](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes), and allows for
+#' different sources of stopwords to be defined.
 #'
 #' The default source is the [`Snowball()`][data_stopwords_snowball]
 #' stopwords collection but [`other()`][stopwords-package] sources are
@@ -33,7 +33,7 @@ stopwords <- function(language = "en", source = "snowball") {
   if (length(source) > 1)
     stop("only one source may be specified")
 
-  error <- createError(
+  error <- create_error(
     default = paste0("Language ", "\"", language, "\" not available in source \"", source, "\"."),
     note = "See `stopwords_getlanguages` for more information on supported languages."
   )
@@ -92,7 +92,7 @@ stopwords_getsources <- function() {
 stopwords_getlanguages <- function(source) {
   stopwords_options()
 
-  error <- createError(
+  error <- create_error(
     default = paste0("Source \"", source, "\" not found."),
     note = "See `stopwords_getsources` for a list of all available sources."
   )
@@ -130,7 +130,7 @@ lookup_iso_639_1 <- function(language_name) {
 }
 
 # Create consistent error messages
-createError <- function(default, note, message) {
+create_error <- function(default, note, message) {
   function(message) {
     message <- message[1] # ensure that condition is length 1
     msg <- paste0(ifelse(missing(message) || message == "", default, message), "\n", note)
