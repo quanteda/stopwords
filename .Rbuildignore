@@ -6,3 +6,12 @@ README.Rmd
 languages_by_source.xlsx
 ^\.travis\.yml$
 ^codecov\.yml$
+^docs/
+^CNAME$
+^_pkgdown\.yml$
+^css/
+^images/
+^pkgdown/
+^\.lintr$
+^revdep/
+^CRAN-RELEASE$

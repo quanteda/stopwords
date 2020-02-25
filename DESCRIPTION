@@ -1,9 +1,9 @@
 Package: stopwords
 Type: Package
 Title: Multilingual Stopword Lists
-Version: 0.9.0
-Authors@R: c(person("Kenneth", "Benoit", email = "kbenoit@lse.ac.uk", role = "aut"),
-    person("David", "Muhr", email = "muhrdavid+github@gmail.com", role = c("aut", "cre")), 
+Version: 1.0
+Authors@R: c(person("Kenneth", "Benoit", email = "kbenoit@lse.ac.uk", role = c("aut", "cre")),
+    person("David", "Muhr", email = "muhrdavid+github@gmail.com", role = "aut"), 
     person("Kohei", "Watanabe", email = "watanabe.kohei@gmail.com", role = "aut"))
 Description: Provides multiple sources of stopwords, for use in text analysis and natural language processing.
 License: MIT + file LICENSE
@@ -13,12 +13,14 @@ Imports:
     ISOcodes,
     usethis
 Suggests: 
+    covr,
+    lintr,
     quanteda,
-    testthat,
-    covr
-URL: https://github.com/davnn/stopwords
-BugReports: https://github.com/davnn/stopwords/issues
+    spelling,
+    testthat
+URL: https://github.com/quanteda/stopwords
+BugReports: https://github.com/quanteda/stopwords/issues
 Encoding: UTF-8
 LazyData: true
-Roxygen: list(markdown = TRUE)
-RoxygenNote: 6.0.1
+Language: en-GB
+RoxygenNote: 6.1.1

@@ -27,6 +27,12 @@
 stopwords <- function(language = "en", source = "snowball") {
   stopwords_options()
 
+  if (length(language) > 1)
+    stop("only one language may be specified")
+
+  if (length(source) > 1)
+    stop("only one source may be specified")
+
   error <- createError(
     default = paste0("Language ", "\"", language, "\" not available in source \"", source, "\"."),
     note = "See `stopwords_getlanguages` for more information on supported languages."
@@ -126,6 +132,7 @@ lookup_iso_639_1 <- function(language_name) {
 # Create consistent error messages
 createError <- function(default, note, message) {
   function(message) {
+    message <- message[1] # ensure that condition is length 1
     msg <- paste0(ifelse(missing(message) || message == "", default, message), "\n", note)
     stop(msg, call. = FALSE)
   }

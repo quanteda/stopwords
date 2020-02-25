@@ -1,0 +1,8 @@
+pandoc: '2.5'
+pkgdown: 1.3.0
+pkgdown_sha: ~
+articles: []
+urls:
+  reference: http://stopwords.quanteda.io/reference
+  article: http://stopwords.quanteda.io/articles
+

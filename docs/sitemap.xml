@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>http://stopwords.quanteda.io/index.html</loc>
+  </url>
+  <url>
+    <loc>http://stopwords.quanteda.io/reference/data_stopwords_misc.html</loc>
+  </url>
+  <url>
+    <loc>http://stopwords.quanteda.io/reference/data_stopwords_smart.html</loc>
+  </url>
+  <url>
+    <loc>http://stopwords.quanteda.io/reference/data_stopwords_snowball.html</loc>
+  </url>
+  <url>
+    <loc>http://stopwords.quanteda.io/reference/data_stopwords_stopwordsiso.html</loc>
+  </url>
+  <url>
+    <loc>http://stopwords.quanteda.io/reference/lookup_iso_639_1.html</loc>
+  </url>
+  <url>
+    <loc>http://stopwords.quanteda.io/reference/stopwords-package.html</loc>
+  </url>
+  <url>
+    <loc>http://stopwords.quanteda.io/reference/stopwords.html</loc>
+  </url>
+  <url>
+    <loc>http://stopwords.quanteda.io/reference/stopwords_getlanguages.html</loc>
+  </url>
+  <url>
+    <loc>http://stopwords.quanteda.io/reference/stopwords_getsources.html</loc>
+  </url>
+  <url>
+    <loc>http://stopwords.quanteda.io/reference/stopwords_options.html</loc>
+  </url>
+</urlset>
