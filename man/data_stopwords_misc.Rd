@@ -7,20 +7,20 @@
 \format{An object of class \code{list} of length 5.}
 \source{
 The Arabic stopwords come from
-  \url{https://sites.google.com/site/kevinbouge/stopwords-lists}.
+\url{https://sites.google.com/site/kevinbouge/stopwords-lists}.
 
-  The Catalan stopwords come from
-  \url{http://latel.upf.edu/morgana/altres/pub/ca_stop.htm}.
+The Catalan stopwords come from
+\url{http://latel.upf.edu/morgana/altres/pub/ca_stop.htm}.
 
-  The Greek stopwords were supplied by Carsten Schwemmer (see
-  \url{https://github.com/quanteda/quanteda/issues/282}).
+The Greek stopwords were supplied by Carsten Schwemmer (see
+\url{https://github.com/quanteda/quanteda/issues/282}).
 
-  The Gujarati stopwords are taken from
-  \url{https://github.com/gujarati-ir/Gujarati-Stop-Words} and modified by
-  Chandrakant Bhogayata.
+The Gujarati stopwords are taken from
+\url{https://github.com/gujarati-ir/Gujarati-Stop-Words} and modified by
+Chandrakant Bhogayata.
 
-  The Chinese stopwords are taken from the
-  \href{http://www.baiduguide.com/baidu-stopwords/}{Baidu stopword list}.
+The Chinese stopwords are taken from the
+\href{http://www.baiduguide.com/baidu-stopwords/}{Baidu stopword list}.
 }
 \description{
 Other, miscellaneous stopword lists.

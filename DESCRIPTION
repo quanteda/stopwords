@@ -23,4 +23,5 @@ BugReports: https://github.com/quanteda/stopwords/issues
 Encoding: UTF-8
 LazyData: true
 Language: en-GB
-RoxygenNote: 6.1.1
+RoxygenNote: 7.0.2
+Roxygen: list(markdown = TRUE)

@@ -2,7 +2,7 @@
 #'
 #' Set global options affecting functions across \pkg{stopwords}.
 #' @details Currently available options are: \describe{
-#' \item{\code{stopwords_sources}}{character; vector of the stopword source labels.}
+#' \item{`stopwords_sources`}{character; vector of the stopword source labels.}
 #' }
 #' @export
 #' @keywords internal

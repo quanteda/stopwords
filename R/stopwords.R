@@ -3,19 +3,19 @@
 #' @description
 #' This function returns character vectors of stopwords for different languages,
 #' using the
-#' \href{https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes}{ISO-639-1
-#' language codes}, and allows for different sources of stopwords to be defined.
+#' [ISO-639-1
+#' language codes](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes), and allows for different sources of stopwords to be defined.
 #'
-#' The default source is the \code{\link[=data_stopwords_snowball]{Snowball}}
-#' stopwords collection but \code{\link[=stopwords-package]{other}} sources are
+#' The default source is the [`Snowball()`][data_stopwords_snowball]
+#' stopwords collection but [`other()`][stopwords-package] sources are
 #' also available.
 #' @param language specify language of stopwords by ISO 639-1 code
 #' @param source specify a stopwords source. To list the currently
-#' available options, use \code{\link{stopwords_getsources}}.
+#' available options, use [stopwords_getsources()].
 #' @return a character vector containing the stopwords
 #' @details
 #' The language codes for each stopword list use the two-letter ISO
-#' code from \url{https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes}.
+#' code from <https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes>.
 #' For backwards compatibility, the full English names of the stopwords
 #' from the \pkg{quanteda} package may also be used, although these are
 #' deprecated.
@@ -86,7 +86,7 @@ stopwords_getsources <- function() {
 #' list available stopwords country codes
 #'
 #' Lists the available stopwords country codes for a given stopwords source.
-#' See \url{https://en.wikipedia.org/wiki/ISO_639-1} for details of the language code.
+#' See <https://en.wikipedia.org/wiki/ISO_639-1> for details of the language code.
 #' @param source the source of the stopwords
 #' @export
 stopwords_getlanguages <- function(source) {
