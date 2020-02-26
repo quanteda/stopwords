@@ -1,3 +1,8 @@
+stopwords v1.1
+==============
+* Adds `use_stopwords()`, for adding a re-export of this function to any package.
+
+
 stopwords v1.0
 ==============
 * Added Gujarati to misc stopwords.
