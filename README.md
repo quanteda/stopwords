@@ -65,8 +65,7 @@ stopwords::stopwords_getsources()
 
 # list languages for a specific source
 stopwords::stopwords_getlanguages("snowball")
-##  [1] "da" "de" "en" "es" "fi" "fr" "hu" "ir" "it" "nl" "no" "pt" "ro" "ru"
-## [15] "sv"
+##  [1] "da" "de" "en" "es" "fi" "fr" "hu" "ir" "it" "nl" "no" "pt" "ro" "ru" "sv"
 ```
 
 ## Languages available
@@ -141,6 +140,27 @@ available:
 | Vietnamese     |                                   vi                                    |        ✔        |            |         |        |
 | Yoruba         |                                   yo                                    |        ✔        |            |         |        |
 | Zulu           |                                   zu                                    |        ✔        |            |         |        |
+
+## Adding stopwords to your own package
+
+As of version 1.1, we’ve made it a one-step process to add `stopwords()`
+to your package through a re-export. Simply call `use_stopwords()` like
+this:
+
+``` r
+> stopwords::use_stopwords()
+✔ Setting active project to '/Users/kbenoit/GitHub-home/rJST'
+✔ Adding 'stopwords' to Imports field in DESCRIPTION
+✔ Writing 'R/use-stopwords.R'
+● Run `devtools::document()` to update 'NAMESPACE'
+> devtools::document()
+Updating rJST documentation
+Updating collate directive in  /Users/kbenoit/GitHub-home/rJST/DESCRIPTION 
+Writing NAMESPACE
+Loading rJST
+Writing NAMESPACE
+Writing stopwords.Rd
+```
 
 ## Contributing
 

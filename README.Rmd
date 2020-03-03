@@ -124,6 +124,26 @@ The following languages are currently available:
 |	 Yoruba	|	yo	|	✔	|		|		|		|
 |	 Zulu	|	zu	|	✔	|		|		|		|
 
+## Adding stopwords to your own package
+
+As of version 1.1, we've made it a one-step process to add `stopwords()` to your package through a re-export.  Simply call `use_stopwords()` like this:
+
+```{r eval = FALSE}
+> stopwords::use_stopwords()
+✔ Setting active project to '/Users/kbenoit/GitHub-home/rJST'
+✔ Adding 'stopwords' to Imports field in DESCRIPTION
+✔ Writing 'R/use-stopwords.R'
+● Run `devtools::document()` to update 'NAMESPACE'
+> devtools::document()
+Updating rJST documentation
+Updating collate directive in  /Users/kbenoit/GitHub-home/rJST/DESCRIPTION 
+Writing NAMESPACE
+Loading rJST
+Writing NAMESPACE
+Writing stopwords.Rd
+```
+
+
 ## Contributing
 
 Additional sources can be defined and contributed by adding new data objects, as follows:
