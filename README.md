@@ -149,15 +149,16 @@ this:
 
 ``` r
 > stopwords::use_stopwords()
-✔ Setting active project to '/Users/kbenoit/GitHub-home/rJST'
+✔ Setting active project to '/Users/me/GitHub/mypackage'
 ✔ Adding 'stopwords' to Imports field in DESCRIPTION
 ✔ Writing 'R/use-stopwords.R'
 ● Run `devtools::document()` to update 'NAMESPACE'
+
 > devtools::document()
-Updating rJST documentation
-Updating collate directive in  /Users/kbenoit/GitHub-home/rJST/DESCRIPTION 
+Updating mypackage documentation
+Updating collate directive in  /Users/me/GitHub/mypackage/DESCRIPTION 
 Writing NAMESPACE
-Loading rJST
+Loading mypackage
 Writing NAMESPACE
 Writing stopwords.Rd
 ```
