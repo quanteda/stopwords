@@ -1,6 +1,7 @@
 stopwords v1.1
 ==============
 * Adds `use_stopwords()`, for adding a re-export of this function to any package.
+* Adds the "marimo" source, for 5 languages, created by Kohei Watanabe.
 
 
 stopwords v1.0

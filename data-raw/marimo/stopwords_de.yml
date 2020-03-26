@@ -1,0 +1,28 @@
+pronoun: 
+    basic: 
+        - [ich, mein, meine, mir, wir, unser, unsere, uns, du, deine, dir, dich, ihr, ihre, ihnen, er, ihn, seine, ihm, sie, es, dies, solche, den, des, dem,]
+    possessive: 
+        - [mein, meine, meinem, meinen, meiner, meines, meine, unser, unsere, dein, deine, deinem, deinen, deiner, deines, sein, seine, seinem, seinen, seiner, seines, seine, ihr, ihre, deren, derer, dessen, euer, eure, euren, eurem, eurer, eures]
+    interrogative: 
+        - [was, welche, welchem, welchen, welcher, welches, wer, wessen, wem, wann, wo, warum, wie, wieso, weshalb]
+verb: 
+    basic: 
+        - [sein, bin, bist, ist, sind, war, waren, gewesen, haben, hat, hatte, hatten, gehabt, tun, tat, taten, getan, machen, machten, machte, gemacht, gehen, ging, gingen, gegangen, muss, musste, werde, werden, wird, wirst]
+    modal: 
+        - [wäre, wären, würde, würden, kann, könnte, könnten, soll, sollte, sollten, muss, müsste, müssten, wird, werden]
+    reporting: 
+        - [sagen, sagt, sagte, berichten, berichtete, berichtet, erzählen, erzählt, erzählte]
+article: 
+    - [ein, eine, einem, einen, einer, eines, der, die, das]
+conjunction: 
+    - [und, aber, wenn, falls, oder, da, weil, denn, deshalb, deswegen, folglich, während, währenddessen, weder, also, nun, ob, sondern, sonst, um, weiter, wieder, zwar, zwischen, aber, also, damit, dass, daß, dazu]
+adverb: 
+    - [nicht, nichts, noch, nur, oder, ohne, als, sobald, hier, dort, alle, allen, allem, aller, alles, jegliche, beide, manche, manchem, manchen, mancher, manches, jede, jedem, jeden, jeder, jedes, jene, jenem, jenen, jener, jenes, wenige, viele, mehrere, meisten, andere, anderem, anderen, anderer, anderes, solche, solchem, solchen, solcher, solches, kein, keine, keinem, keinen, keiner, keines, keinerlei, nur, einzig, einzige, dann, auch, ebenfalls, sehr, ziemlich, manche, dies, diese, diesem, diesen, dieser, dieses, einig, einige, einigem, einigen, einiger, einiges, etwas]
+preposition: 
+    - [zu, zur, von, vom, bei, durch, für, mit, über, gegen, zwischen, hinein, via, während, solange, vor, nach, über, unter, ab, hoch, runter, in, aus, auf, hinunter, wieder, abermals, weiter, ferner, am, an, bis, nach, hinter, im]
+adjectives: 
+    - [selbst, selber, selbe, selben, sich, derselbe, derselben, denselben, desselben, demselben, dieselbe, dieselben, dasselbe] 
+time: 
+    - [minute, stunde, monat, jahr, jahrhundert, morgens, abends, vormittags, nachmittags]
+    - [januar, februar, märz, april, mai, juni, juli, august, september, oktober, november, dezember]
+

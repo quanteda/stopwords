@@ -68,3 +68,21 @@
 #'   research.](http://www.jmlr.org/papers/volume5/lewis04a/lewis04a.pdf)"
 #'   *Journal of machine learning research* 5: 361-397.
 "data_stopwords_smart"
+
+#' stopword lists including parts-of-speech
+#'
+#' Stopword lists that include specific parts of speech, created by
+#' Kohei Watanabe.
+#'
+#' These are multi-level lists, in the original data.  If you wish to
+#' use them as lists, please access the data object directly.
+#' @usage NULL
+#' @section Usage:
+#' `stopwords(language = "en", source = "marimo")`
+#' @source
+#'   KOHEI TO ADD
+#' @examples
+#' # access English pronouns directly
+#' stopwords::data_stopwords_marimo$en$pronoun
+#'
+"data_stopwords_marimo"
