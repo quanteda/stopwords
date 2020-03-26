@@ -4,7 +4,9 @@
 \name{data_stopwords_misc}
 \alias{data_stopwords_misc}
 \title{miscellaneous stopword lists}
-\format{An object of class \code{list} of length 5.}
+\format{
+An object of class \code{list} of length 5.
+}
 \source{
 The Arabic stopwords come from
 \url{https://sites.google.com/site/kevinbouge/stopwords-lists}.
