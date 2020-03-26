@@ -70,7 +70,7 @@ stopwords <- function(language = "en", source = "snowball") {
     error()
   }
 
-  words
+  unlist(words, use.names = FALSE)
 }
 
 #' list available stopwords sources
