@@ -8,19 +8,20 @@
 An object of class \code{list} of length 5.
 }
 \source{
-KOHEI TO ADD
+The English version was adopted from the Snowball collection, and then
+extended and translated into other languages by contributors. Names of
+contributors are in the header of the \href{https://github.com/koheiw/marimo/tree/master/yaml}{original YAML files}.
 }
 \description{
-Stopword lists that include specific parts of speech, created by
-Kohei Watanabe.
+Stopword lists that include specific parts of speech, maintained by Kohei
+Watanabe.
 }
 \details{
-These are multi-level lists, in the original data.  If you wish to
-use them as lists, please access the data object directly.
+These are multi-level lists, in the original data.  If you wish to use them
+as lists, please access the data object directly.
 }
 \section{Usage}{
-
-\code{stopwords(language = "en", source = "marimo")}
+ \code{stopwords(language = "en", source = "marimo")}
 }
 
 \examples{

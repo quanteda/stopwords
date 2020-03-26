@@ -71,16 +71,17 @@
 
 #' stopword lists including parts-of-speech
 #'
-#' Stopword lists that include specific parts of speech, created by
-#' Kohei Watanabe.
+#' Stopword lists that include specific parts of speech, maintained by Kohei
+#' Watanabe.
 #'
-#' These are multi-level lists, in the original data.  If you wish to
-#' use them as lists, please access the data object directly.
+#' These are multi-level lists, in the original data.  If you wish to use them
+#' as lists, please access the data object directly.
 #' @usage NULL
-#' @section Usage:
-#' `stopwords(language = "en", source = "marimo")`
-#' @source
-#'   KOHEI TO ADD
+#' @section Usage: `stopwords(language = "en", source = "marimo")`
+#' @source The English version was adopted from the Snowball collection, and then
+#'   extended and translated into other languages by contributors. Names of
+#'   contributors are in the header of the [original YAML
+#'   files](https://github.com/koheiw/marimo/tree/master/yaml).
 #' @examples
 #' # access English pronouns directly
 #' stopwords::data_stopwords_marimo$en$pronoun
