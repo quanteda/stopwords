@@ -12,7 +12,10 @@
 #' @param language specify language of stopwords by ISO 639-1 code
 #' @param source specify a stopwords source. To list the currently
 #' available options, use [stopwords_getsources()].
-#' @return a character vector containing the stopwords
+#' @param simplify logical; if `TRUE` return a simple vector, if
+#' `FALSE` return a list if the original word list was nested
+#' @return a character vector containing the stopwords, or a list
+#' of characters `simplify = FALSE`
 #' @details
 #' The language codes for each stopword list use the two-letter ISO
 #' code from <https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes>.
@@ -24,7 +27,7 @@
 #' @examples
 #' stopwords("en")
 #' stopwords("de")
-stopwords <- function(language = "en", source = "snowball") {
+stopwords <- function(language = "en", source = "snowball", simplify = TRUE) {
   stopwords_options()
 
   if (length(language) > 1)
@@ -70,7 +73,7 @@ stopwords <- function(language = "en", source = "snowball") {
     error()
   }
 
-  unlist(words, use.names = FALSE)
+  if (simplify) unlist(words, use.names = FALSE) else words
 }
 
 #' list available stopwords sources

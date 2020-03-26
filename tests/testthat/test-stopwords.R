@@ -12,6 +12,7 @@ snowball <- stopwords::data_stopwords_snowball
 stopwordsiso <- stopwords::data_stopwords_stopwordsiso
 misc <- stopwords::data_stopwords_misc
 smart <- stopwords::data_stopwords_smart
+marimo <- stopwords::data_stopwords_marimo
 
 test_that("all languages work for source: Snowball", {
   test_data <- create_test_data(snowball, "snowball")
@@ -74,4 +75,11 @@ test_that("error conditions work", {
     stopwords(language = c("en"), source = c("snowball", "stopwords-iso")),
     "only one source may be specified"
   )
+})
+
+test_that("simplify works", {
+  expect_is(stopwords("en", source = "marimo", simplify = TRUE),
+            "character")
+  expect_is(stopwords("en", source = "marimo", simplify = FALSE),
+            "list")
 })
