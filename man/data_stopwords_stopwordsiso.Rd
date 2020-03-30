@@ -4,9 +4,11 @@
 \name{data_stopwords_stopwordsiso}
 \alias{data_stopwords_stopwordsiso}
 \title{multilingual stopwords from https://github.com/stopwords-iso/stopwords-iso}
-\format{A named list of length 57, of character vectors that represent
+\format{
+A named list of length 57, of character vectors that represent
 stopwords in 57 languages.  To see the languages available, use
-\code{\link[=stopwords_getlanguages]{stopwords_getlanguages()}}.}
+\code{\link[=stopwords_getlanguages]{stopwords_getlanguages()}}.
+}
 \source{
 \url{https://github.com/stopwords-iso/stopwords-iso/}
 }

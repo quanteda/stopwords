@@ -4,7 +4,9 @@
 \name{data_stopwords_smart}
 \alias{data_stopwords_smart}
 \title{stopword lists from the SMART system}
-\format{An object of class \code{list} of length 1.}
+\format{
+An object of class \code{list} of length 1.
+}
 \source{
 The English stopword list is taken from the \href{http://www.ai.mit.edu/projects/jmlr/papers/volume5/lewis04a/a11-smart-stop-list/english.stop}{online appendix 11}
 of Lewis et. al. (2004).
