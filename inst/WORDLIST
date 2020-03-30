@@ -13,6 +13,7 @@ es
 eu
 fi
 ga
+gh
 github
 gl
 gu
@@ -20,6 +21,7 @@ Hausa
 hr
 hu
 hy
+Inc
 iso
 ja
 ko
@@ -31,6 +33,8 @@ mis
 mr
 nl
 NLP
+nltk
+NLTK
 pl
 Rcv
 ro
@@ -51,6 +55,6 @@ tl
 tr
 uk
 ur
+YAML
 zh
 zu
-YAML

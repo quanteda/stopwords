@@ -13,6 +13,7 @@ stopwordsiso <- stopwords::data_stopwords_stopwordsiso
 misc <- stopwords::data_stopwords_misc
 smart <- stopwords::data_stopwords_smart
 marimo <- stopwords::data_stopwords_marimo
+nltk <- stopwords::data_stopwords_nltk
 
 test_that("all languages work for source: Snowball", {
   test_data <- create_test_data(snowball, "snowball")
@@ -32,6 +33,11 @@ test_that("all languages work for source: Misc", {
 test_that("all languages work for source: Smart", {
   test_data <- create_test_data(smart, "smart")
   expect_equal(smart, test_data)
+})
+
+test_that("all languages work for source: NLTK", {
+  test_data <- create_test_data(nltk, "nltk")
+  expect_equal(nltk, test_data)
 })
 
 test_that("full name language returns same values", {
