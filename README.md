@@ -3,6 +3,7 @@
 
 [![CRAN
 Version](https://www.r-pkg.org/badges/version/stopwords)](https://CRAN.R-project.org/package=stopwords)
+[![](https://img.shields.io/badge/devel%20version-1.1-royalblue.svg)](https://github.com/quanteda/stopwords)
 [![Travis-CI Build
 Status](https://travis-ci.org/quanteda/stopwords.svg?branch=master)](https://travis-ci.org/quanteda/stopwords)
 [![Coverage
@@ -61,7 +62,8 @@ Explore sources and languages:
 ``` r
 # list all sources
 stopwords::stopwords_getsources()
-## [1] "snowball"      "stopwords-iso" "misc"          "smart"
+## [1] "snowball"      "stopwords-iso" "misc"          "smart"        
+## [5] "marimo"        "ancient"
 
 # list languages for a specific source
 stopwords::stopwords_getlanguages("snowball")
@@ -77,69 +79,72 @@ necessarily mean that the source is better than one with more limited
 coverage. (There may be many reasons to prefer the default “snowball”
 source over the “stopwords-iso” source, for instance.)
 
-The following languages are currently
-available:
+The following languages are currently available:
 
-| Language       | [ISO-639-1 Code](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) | `stopwords-iso` | `snowball` | `SMART` | `misc` |
-| :------------- | :---------------------------------------------------------------------: | :-------------: | :--------: | :-----: | :----: |
-| Afrikaans      |                                   af                                    |        ✔        |            |         |        |
-| Arabic         |                                   ar                                    |        ✔        |            |         |   ✔    |
-| Armenian       |                                   hy                                    |        ✔        |            |         |        |
-| Basque         |                                   eu                                    |        ✔        |            |         |        |
-| Bengali        |                                   bn                                    |        ✔        |            |         |        |
-| Breton         |                                   br                                    |        ✔        |            |         |        |
-| Bulgarian      |                                   bg                                    |        ✔        |            |         |        |
-| Catalan        |                                   ca                                    |        ✔        |            |         |   ✔    |
-| Chinese        |                                   zh                                    |        ✔        |            |         |   ✔    |
-| Croatian       |                                   hr                                    |        ✔        |            |         |        |
-| Czech          |                                   cs                                    |        ✔        |            |         |        |
-| Danish         |                                   da                                    |        ✔        |     ✔      |         |        |
-| Dutch          |                                   nl                                    |        ✔        |     ✔      |         |        |
-| English        |                                   en                                    |        ✔        |     ✔      |    ✔    |        |
-| Esperanto      |                                   eo                                    |        ✔        |            |         |        |
-| Estonian       |                                   et                                    |        ✔        |            |         |        |
-| Finnish        |                                   fi                                    |        ✔        |     ✔      |         |        |
-| French         |                                   fr                                    |        ✔        |     ✔      |         |        |
-| Galician       |                                   gl                                    |        ✔        |            |         |        |
-| German         |                                   de                                    |        ✔        |     ✔      |         |        |
-| Greek          |                                   el                                    |        ✔        |            |         |   ✔    |
-| Gujarati       |                                   gu                                    |                 |            |         |   ✔    |
-| Hausa          |                                   ha                                    |        ✔        |            |         |        |
-| Hebrew         |                                   he                                    |        ✔        |            |         |        |
-| Hindi          |                                   hi                                    |        ✔        |            |         |        |
-| Hungarian      |                                   hu                                    |        ✔        |     ✔      |         |        |
-| Indonesian     |                                   id                                    |        ✔        |            |         |        |
-| Irish          |                                   ga                                    |        ✔        |            |         |        |
-| Italian        |                                   it                                    |        ✔        |     ✔      |         |        |
-| Japanese       |                                   ja                                    |        ✔        |            |         |        |
-| Korean         |                                   ko                                    |        ✔        |            |         |        |
-| Kurdish        |                                   ku                                    |        ✔        |            |         |        |
-| Latin          |                                   la                                    |        ✔        |            |         |        |
-| Lithuanian     |                                   lt                                    |        ✔        |            |         |        |
-| Latvian        |                                   lv                                    |        ✔        |            |         |        |
-| Malay          |                                   ms                                    |        ✔        |            |         |        |
-| Marathi        |                                   mr                                    |        ✔        |            |         |        |
-| Norwegian      |                                   no                                    |        ✔        |     ✔      |         |        |
-| Persian        |                                   fa                                    |        ✔        |            |         |        |
-| Polish         |                                   pl                                    |        ✔        |            |         |        |
-| Portuguese     |                                   pt                                    |        ✔        |     ✔      |         |        |
-| Romanian       |                                   ro                                    |        ✔        |     ✔      |         |        |
-| Russian        |                                   ru                                    |        ✔        |     ✔      |         |        |
-| Slovak         |                                   sk                                    |        ✔        |            |         |        |
-| Slovenian      |                                   sl                                    |        ✔        |            |         |        |
-| Somali         |                                   so                                    |        ✔        |            |         |        |
-| Southern Sotho |                                   st                                    |        ✔        |            |         |        |
-| Spanish        |                                   es                                    |        ✔        |     ✔      |         |        |
-| Swahili        |                                   sw                                    |        ✔        |            |         |        |
-| Swedish        |                                   sv                                    |        ✔        |     ✔      |         |        |
-| Thai           |                                   th                                    |        ✔        |            |         |        |
-| Tagalog        |                                   tl                                    |        ✔        |            |         |        |
-| Turkish        |                                   tr                                    |        ✔        |            |         |        |
-| Ukrainian      |                                   uk                                    |        ✔        |            |         |        |
-| Urdu           |                                   ur                                    |        ✔        |            |         |        |
-| Vietnamese     |                                   vi                                    |        ✔        |            |         |        |
-| Yoruba         |                                   yo                                    |        ✔        |            |         |        |
-| Zulu           |                                   zu                                    |        ✔        |            |         |        |
+| Language       | [ISO-639-1 Code](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) | `stopwords-iso` | `snowball` | `SMART` | `misc` | `NLTK` |
+| :------------- | :---------------------------------------------------------------------: | :-------------: | :--------: | :-----: | :----: | :----: |
+| Afrikaans      |                                   af                                    |        ✔        |            |         |        |        |
+| Arabic         |                                   ar                                    |        ✔        |            |         |   ✔    |   ✔    |
+| Armenian       |                                   hy                                    |        ✔        |            |         |        |        |
+| Azerbaijani    |                                   az                                    |                 |            |         |        |   ✔    |
+| Basque         |                                   eu                                    |        ✔        |            |         |        |        |
+| Bengali        |                                   bn                                    |        ✔        |            |         |        |        |
+| Breton         |                                   br                                    |        ✔        |            |         |        |        |
+| Bulgarian      |                                   bg                                    |        ✔        |            |         |        |        |
+| Catalan        |                                   ca                                    |        ✔        |            |         |   ✔    |        |
+| Chinese        |                                   zh                                    |        ✔        |            |         |   ✔    |        |
+| Croatian       |                                   hr                                    |        ✔        |            |         |        |        |
+| Czech          |                                   cs                                    |        ✔        |            |         |        |        |
+| Danish         |                                   da                                    |        ✔        |     ✔      |         |        |   ✔    |
+| Dutch          |                                   nl                                    |        ✔        |     ✔      |         |        |   ✔    |
+| English        |                                   en                                    |        ✔        |     ✔      |    ✔    |        |   ✔    |
+| Esperanto      |                                   eo                                    |        ✔        |            |         |        |        |
+| Estonian       |                                   et                                    |        ✔        |            |         |        |        |
+| Finnish        |                                   fi                                    |        ✔        |     ✔      |         |        |   ✔    |
+| French         |                                   fr                                    |        ✔        |     ✔      |         |        |   ✔    |
+| Galician       |                                   gl                                    |        ✔        |            |         |        |        |
+| German         |                                   de                                    |        ✔        |     ✔      |         |        |   ✔    |
+| Greek          |                                   el                                    |        ✔        |            |         |   ✔    |        |
+| Gujarati       |                                   gu                                    |                 |            |         |   ✔    |        |
+| Hausa          |                                   ha                                    |        ✔        |            |         |        |        |
+| Hebrew         |                                   he                                    |        ✔        |            |         |        |        |
+| Hindi          |                                   hi                                    |        ✔        |            |         |        |        |
+| Hungarian      |                                   hu                                    |        ✔        |     ✔      |         |        |   ✔    |
+| Indonesian     |                                   id                                    |        ✔        |            |         |        |   ✔    |
+| Irish          |                                   ga                                    |        ✔        |            |         |        |        |
+| Italian        |                                   it                                    |        ✔        |     ✔      |         |        |   ✔    |
+| Japanese       |                                   ja                                    |        ✔        |            |         |        |        |
+| Kazakh         |                                   kk                                    |                 |            |         |        |   ✔    |
+| Korean         |                                   ko                                    |        ✔        |            |         |        |        |
+| Kurdish        |                                   ku                                    |        ✔        |            |         |        |        |
+| Latin          |                                   la                                    |        ✔        |            |         |        |        |
+| Lithuanian     |                                   lt                                    |        ✔        |            |         |        |        |
+| Latvian        |                                   lv                                    |        ✔        |            |         |        |        |
+| Malay          |                                   ms                                    |        ✔        |            |         |        |        |
+| Marathi        |                                   mr                                    |        ✔        |            |         |        |        |
+| Nepali         |                                   mr                                    |                 |            |         |        |   ✔    |
+| Norwegian      |                                   no                                    |        ✔        |     ✔      |         |        |   ✔    |
+| Persian        |                                   fa                                    |        ✔        |            |         |        |        |
+| Polish         |                                   pl                                    |        ✔        |            |         |        |        |
+| Portuguese     |                                   pt                                    |        ✔        |     ✔      |         |        |   ✔    |
+| Romanian       |                                   ro                                    |        ✔        |     ✔      |         |        |   ✔    |
+| Russian        |                                   ru                                    |        ✔        |     ✔      |         |        |   ✔    |
+| Slovak         |                                   sk                                    |        ✔        |            |         |        |        |
+| Slovenian      |                                   sl                                    |        ✔        |            |         |        |   ✔    |
+| Somali         |                                   so                                    |        ✔        |            |         |        |        |
+| Southern Sotho |                                   st                                    |        ✔        |            |         |        |        |
+| Spanish        |                                   es                                    |        ✔        |     ✔      |         |        |   ✔    |
+| Swahili        |                                   sw                                    |        ✔        |            |         |        |        |
+| Swedish        |                                   sv                                    |        ✔        |     ✔      |         |        |   ✔    |
+| Thai           |                                   th                                    |        ✔        |            |         |        |        |
+| Tagalog        |                                   tl                                    |        ✔        |            |         |        |        |
+| Tajik          |                                   tg                                    |                 |            |         |        |   ✔    |
+| Turkish        |                                   tr                                    |        ✔        |            |         |        |   ✔    |
+| Ukrainian      |                                   uk                                    |        ✔        |            |         |        |        |
+| Urdu           |                                   ur                                    |        ✔        |            |         |        |        |
+| Vietnamese     |                                   vi                                    |        ✔        |            |         |        |        |
+| Yoruba         |                                   yo                                    |        ✔        |            |         |        |        |
+| Zulu           |                                   zu                                    |        ✔        |            |         |        |        |
 
 ## Adding stopwords to your own package
 
