@@ -15,6 +15,7 @@ smart <- stopwords::data_stopwords_smart
 marimo <- stopwords::data_stopwords_marimo
 ancient <- stopwords::data_stopwords_ancient
 nltk <- stopwords::data_stopwords_nltk
+bouge <- stopwords::data_stopwords_bouge
 
 test_that("all languages work for source: Snowball", {
   test_data <- create_test_data(snowball, "snowball")
@@ -40,10 +41,15 @@ test_that("all languages work for source: ancient", {
   test_data <- create_test_data(ancient, "ancient")
   expect_equal(ancient, test_data)
 })
-                      
+
 test_that("all languages work for source: NLTK", {
   test_data <- create_test_data(nltk, "nltk")
   expect_equal(nltk, test_data)
+})
+
+test_that("all languages work for source: bouge", {
+  test_data <- create_test_data(bouge, "bouge")
+  expect_equal(bouge, test_data)
 })
 
 test_that("full name language returns same values", {

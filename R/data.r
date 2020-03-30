@@ -110,3 +110,13 @@
 #' Bird, Steven, Edward Loper and Ewan Klein (2009). Natural Language Processing
 #' with Python.  O'Reilly Media Inc.
 "data_stopwords_nltk"
+
+#' stopword lists from Kevin Bougé
+#'
+#' Stopword lists for 28 languages from Kevin Bougé.
+#'
+#' @usage NULL
+#' @section Usage: `stopwords(language = "en", source = "bouge")`
+#' @source
+#' https://sites.google.com/site/kevinbouge/stopwords-lists
+"data_stopwords_bouge"

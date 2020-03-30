@@ -5,6 +5,7 @@ stopwords v1.1
 * Adds ancient language stopword lists (Greek and Latin).
 * Adds the NLTK source, containing stopwords from the Python NLTK library, in 23
   languages.
+* Adds stopword lists from Kevin Bougé, for 28 languages.
 
 stopwords v1.0
 ==============
