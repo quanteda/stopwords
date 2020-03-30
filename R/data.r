@@ -87,3 +87,16 @@
 #' stopwords::data_stopwords_marimo$en$pronoun
 #'
 "data_stopwords_marimo"
+
+#' stopword lists from the Python NLTK library
+#'
+#' Stopword lists for 23 languages from the Python NLTK library.
+#'
+#' @usage NULL
+#' @section Usage: `stopwords(language = "en", source = "nltk")`
+#' @source
+#' https://github.com/nltk/nltk_data/blob/gh-pages/packages/corpora/stopwords.zip
+#' @references
+#' Bird, Steven, Edward Loper and Ewan Klein (2009). Natural Language Processing
+#' with Python.  O'Reilly Media Inc.
+"data_stopwords_nltk"

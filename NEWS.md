@@ -2,6 +2,8 @@ stopwords v1.1
 ==============
 * Adds `use_stopwords()`, for adding a re-export of this function to any package.
 * Adds the "marimo" source, for 5 languages, created by Kohei Watanabe.
+* Adds the NLTK source, containing stopwords from the Python NLTK library, in 23
+  languages.
 
 
 stopwords v1.0
