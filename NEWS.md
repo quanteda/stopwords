@@ -2,7 +2,7 @@ stopwords v1.1
 ==============
 * Adds `use_stopwords()`, for adding a re-export of this function to any package.
 * Adds the "marimo" source, for 5 languages, created by Kohei Watanabe.
-* Adds ancient language stoplists (Greek and Latin).
+* Adds ancient language stopword lists (Greek and Latin).
 
 
 stopwords v1.0
