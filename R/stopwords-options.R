@@ -12,7 +12,8 @@ stopwords_options <- function() {
                           "stopwords-iso" = "data_stopwords_stopwordsiso",
                           misc = "data_stopwords_misc",
                           smart = "data_stopwords_smart",
-                          marimo = "data_stopwords_marimo")
+                          marimo = "data_stopwords_marimo",
+                          ancient = "data_stopwords_ancient")
   )
 }
 

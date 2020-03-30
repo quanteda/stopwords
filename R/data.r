@@ -87,3 +87,13 @@
 #' stopwords::data_stopwords_marimo$en$pronoun
 #'
 "data_stopwords_marimo"
+
+#' stopword lists for ancient languages
+#'
+#' Stopword lists for ancient Greek and Latin.  While technically there is no
+#' 2-letter code for ancient Greek in ISO-639, we use "gr" to denote Greek.
+#' @usage NULL
+#' @section Usage: `stopwords(language = "grc", source = "ancient")`
+#' @source The [Digital Classicist Wiki](https://wiki.digitalclassicist.org/Main_Page).
+#' See [https://wiki.digitalclassicist.org/Stopwords_for_Greek_and_Latin]().
+"data_stopwords_ancient"
