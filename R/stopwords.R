@@ -36,11 +36,6 @@ stopwords <- function(language = "en", source = "snowball", simplify = TRUE) {
   if (length(source) > 1)
     stop("only one source may be specified")
 
-  error <- create_error(
-    default = paste0("Language ", "\"", language, "\" not available in source \"", source, "\"."),
-    note = "See `stopwords_getlanguages` for more information on supported languages."
-  )
-
   # for quanteda compability
   if (missing(source) && tolower(language) == "smart") {
     .Deprecated(old = paste0("stopwords(language = \"", language, "\")"),
@@ -49,9 +44,14 @@ stopwords <- function(language = "en", source = "snowball", simplify = TRUE) {
     language <- "en"
   }
 
+  error <- create_error(
+    default = paste0("Language ", "\"", language, "\" not available in source \"", source, "\"."),
+    note = "See `?stopwords_getlanguages` for more information on supported languages."
+  )
+
   if (nchar(language) > 2) {
     language <- tryCatch(
-      lookup_iso_639_1(language),
+      lookup_iso_639_1(language, source),
       error = function(message) error(message)
     )
   }
@@ -70,7 +70,7 @@ stopwords <- function(language = "en", source = "snowball", simplify = TRUE) {
   )
 
   if (is.null(words)) {
-    error()
+    error(paste0("Language \"", language, "\" not found."))
   }
 
   if (simplify) unlist(words, use.names = FALSE) else words
@@ -97,7 +97,7 @@ stopwords_getlanguages <- function(source) {
 
   error <- create_error(
     default = paste0("Source \"", source, "\" not found."),
-    note = "See `stopwords_getsources` for a list of all available sources."
+    note = "See `?stopwords_getsources` for a list of all available sources."
   )
 
   tryCatch(
@@ -113,7 +113,8 @@ stopwords_getlanguages <- function(source) {
 #' @importFrom stats na.omit
 #' @keywords internal
 #' @param language_name character; name of a language
-lookup_iso_639_1 <- function(language_name) {
+#' @param source the short name for a language source, e.g. "snowball"
+lookup_iso_639_1 <- function(language_name, source) {
   language_data <- na.omit(ISOcodes::ISO_639_2[, c("Alpha_2", "Name")])
 
   # remove Norwegian variants
@@ -122,7 +123,9 @@ lookup_iso_639_1 <- function(language_name) {
   # match the language to the name
   language_code_index <- grep(language_name, language_data[["Name"]], ignore.case = TRUE)
   if (!length(language_code_index)) {
-    stop()
+    if (!language_name %in% stopwords_getlanguages(source))
+      stop("Language \"", language_name, "\" not found for source \"", source, "\".")
+    language_name
   } else if (length(language_code_index) > 1) {
     message <- paste0("Multiple language codes found for \"", language_name, "\":\n",
                paste0(language_data[language_code_index, 2], collapse = "\n"))
@@ -133,7 +136,7 @@ lookup_iso_639_1 <- function(language_name) {
 }
 
 # Create consistent error messages
-create_error <- function(default, note, message) {
+create_error <- function(default, note, message = character(0)) {
   function(message) {
     message <- message[1] # ensure that condition is length 1
     msg <- paste0(ifelse(missing(message) || message == "", default, message), "\n", note)
