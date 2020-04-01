@@ -4,10 +4,12 @@
 \alias{lookup_iso_639_1}
 \title{return ISO-639-1 code for a given language name}
 \usage{
-lookup_iso_639_1(language_name)
+lookup_iso_639_1(language_name, source)
 }
 \arguments{
 \item{language_name}{character; name of a language}
+
+\item{source}{the short name for a language source, e.g. "snowball"}
 }
 \description{
 Looks up the two-character ISO-639-1 language code for a given

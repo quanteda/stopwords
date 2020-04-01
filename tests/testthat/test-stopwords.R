@@ -40,7 +40,7 @@ test_that("all languages work for source: ancient", {
   test_data <- create_test_data(ancient, "ancient")
   expect_equal(ancient, test_data)
 })
-                      
+
 test_that("all languages work for source: NLTK", {
   test_data <- create_test_data(nltk, "nltk")
   expect_equal(nltk, test_data)
@@ -95,3 +95,8 @@ test_that("simplify works", {
   expect_is(stopwords("en", source = "marimo", simplify = FALSE),
             "list")
 })
+
+expect_identical(
+  stopwords("zh_tw", source = "marimo"),
+  unlist(stopwords::data_stopwords_marimo$zh_tw, use.names = FALSE)
+)
