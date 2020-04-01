@@ -1,28 +1,39 @@
+# Created by Oul Han for the marimo stopwords: https://github.com/koheiw/marimo
 pronoun: 
     basic: 
-        - [ich, mein, meine, mir, wir, unser, unsere, uns, du, deine, dir, dich, ihr, ihre, ihnen, er, ihn, seine, ihm, sie, es, dies, solche, den, des, dem,]
+        - [ich, mir, wir, uns, du, dir, dich, ihnen, er, ihn, ihm, sie, es, nicht, nichts, alle, allen, allem, aller, alles, beide, manche, manchem, manchen, mancher, manches, jede, jedem, jeden, jeder, jedes, jene, jenem, jenen, jener, jenes, meisten, andere, anderem, anderen, anderer, anderes, solche, solchem, solchen, solcher, solches, kein, keine, keinem, keinen, keiner, keines, keinerlei, einzig, einzige, dies, diese, diesem, diesen, dieser, dieses, einig, einige, einigem, einigen, einiger, einiges, derselbe, derselben, denselben, desselben, demselben, dieselbe, dieselben, dasselbe, sich]
     possessive: 
-        - [mein, meine, meinem, meinen, meiner, meines, meine, unser, unsere, dein, deine, deinem, deinen, deiner, deines, sein, seine, seinem, seinen, seiner, seines, seine, ihr, ihre, deren, derer, dessen, euer, eure, euren, eurem, eurer, eures]
+        - [mein, meinem, meinen, meiner, meines, meine, unser, unsere, dein, deine, deinem, deinen, deiner, deines, sein, seine, seinem, seinen, seiner, seines, ihr, ihre, deren, derer, dessen, euer, eure, euren, eurem, eurer, eures, selbst, selber, selbe, selben]
     interrogative: 
-        - [was, welche, welchem, welchen, welcher, welches, wer, wessen, wem, wann, wo, warum, wie, wieso, weshalb]
+        - [was, welche, welchem, welchen, welcher, welches, wer, wessen, wem, wann, wo, warum, wie, wieso, weshalb, wo, womit, wofür, worüber]
 verb: 
     basic: 
-        - [sein, bin, bist, ist, sind, war, waren, gewesen, haben, hat, hatte, hatten, gehabt, tun, tat, taten, getan, machen, machten, machte, gemacht, gehen, ging, gingen, gegangen, muss, musste, werde, werden, wird, wirst]
+        - [sein, bin, bist, ist, sind, war, waren, gewesen, haben, hat, hatte, hatten, gehabt, tun, tat, taten, getan, machen, machten, machte, gemacht, gehen, ging, gingen, gegangen, musste, wird, werden, werde, wirst]
     modal: 
-        - [wäre, wären, würde, würden, kann, könnte, könnten, soll, sollte, sollten, muss, müsste, müssten, wird, werden]
+        - [wäre, wären, würde, würden, kann, könnte, könnten, soll, sollte, sollten, muss, müsste, müssten]
+    contraction: 
+        - [ans, fürs, ums, vom, zur, zum, beim]
     reporting: 
-        - [sagen, sagt, sagte, berichten, berichtete, berichtet, erzählen, erzählt, erzählte]
+        - [sagen, sagt, sagte, berichten, berichtete, berichtet, erzählen, erzählt, erzählte, behauptet, behauptete]
 article: 
-    - [ein, eine, einem, einen, einer, eines, der, die, das]
+    - [der, die, das, des, den, dem, ein, ein, eine, einem, einen, einer, eines]
 conjunction: 
-    - [und, aber, wenn, falls, oder, da, weil, denn, deshalb, deswegen, folglich, während, währenddessen, weder, also, nun, ob, sondern, sonst, um, weiter, wieder, zwar, zwischen, aber, also, damit, dass, daß, dazu]
+    - [und, aber, wenn, falls, oder, da, weil, denn, deshalb, deswegen, folglich, während, währenddessen, weder, also, nun, ob, sondern, sonst, um, weiter, wieder, zwar, aber, also, damit, dass, daß, dazu, ferner, solange, abermals, sobald, anlässlich, aufgrund, dank, mangels, trotz, wegen, seit, halber, infolge, mithilfe, willen, zwecks, folgendermaßen, abzüglich, anhand, anstatt, anstelle, aufseiten, ausschließlich, ausweislich, bar, einbezüglich, einschließlich, exklusive, hinsichtlich, in puncto, inklusive, minus, mittels, namens, plus, punkto, rücksichtlich, seitens, statt, unbeschadet, uneingedenk, unerachtet, ungeachtet, ungerechnet, vermittels, vermittelst, vermöge, voller, vonseiten, vorbehaltlich, vorbehältlich, vorgängig, zufolge, zugunsten, zuhanden, zulasten, zuungunsten, zuzüglich, angesichts, kraft, betreffs, beziehentlich, bezüglich, eingedenk, gelegentlich, nächst, vis-à-vis, entgegen, gemäß, getreu, laut, mit, mitsamt, nebst, samt, zuwider, zulieb, zuliebe, gen, lang, betreffend, bis auf, contra, je, kontra, ohne, per, pro, sonder, versus, wider]
 adverb: 
-    - [nicht, nichts, noch, nur, oder, ohne, als, sobald, hier, dort, alle, allen, allem, aller, alles, jegliche, beide, manche, manchem, manchen, mancher, manches, jede, jedem, jeden, jeder, jedes, jene, jenem, jenen, jener, jenes, wenige, viele, mehrere, meisten, andere, anderem, anderen, anderer, anderes, solche, solchem, solchen, solcher, solches, kein, keine, keinem, keinen, keiner, keines, keinerlei, nur, einzig, einzige, dann, auch, ebenfalls, sehr, ziemlich, manche, dies, diese, diesem, diesen, dieser, dieses, einig, einige, einigem, einigen, einiger, einiges, etwas]
+    - [nur, ebenfalls, dann, auch, ziemlich, etwas, wenige, viele, mehrere, meistens, jegliche, bald, bereits, bisher, danach, davor, einst, endlich, gestern, immer, inzwischen, neulich, nie, oft, regelmäßig, sofort, stets, täglich, vorhin, zurzeit, also, dadurch, darum, demnach, demzufolge, anstandshalber, sicherheitshalber, somit, trotzdem, anders, äußerst, beinahe, bekanntlich, fast, ganz, genauso, genug, gern, hoffentlich, kaum, leider, möglicherweise, sehr, so, vielleicht, wirklich]
 preposition: 
-    - [zu, zur, von, vom, bei, durch, für, mit, über, gegen, zwischen, hinein, via, während, solange, vor, nach, über, unter, ab, hoch, runter, in, aus, auf, hinunter, wieder, abermals, weiter, ferner, am, an, bis, nach, hinter, im]
-adjectives: 
-    - [selbst, selber, selbe, selben, sich, derselbe, derselben, denselben, desselben, demselben, dieselbe, dieselben, dasselbe] 
+    - [zu, durch, für, über, zwischen, via, unter, ab, hoch, runter, aus, hinunter, am, an, hinter, im, noch, als, des, an, auf, neben, vor, bis, in, nach, um, von, gegen, beiderseits, diesseits, jenseits, abseits, entlang, oberhalb, unterhalb, außerhalb, innerhalb, längs, seitlich, außer, bei, entsprechend, gegenüber, nahe, aufwärts, außen, da, dort, drinnen, fort, hier, hierhin, hinein, hinten, irgendwo, links, nebenan, überall, unten, vorn, ausgangs, eingangs, fern, fernab, inmitten, längsseits, nördlich, nordöstlich, nordwestlich, östlich, rechts, seitwärts, südlich, südöstlich, südwestlich, unfern, unweit, vis-à-vis, westlich, weitab, zunächst, zuseiten, anfangs, außerhalb, binnen, innerhalb]
+adjective: 
+    - [gleich] 
 time: 
-    - [minute, stunde, monat, jahr, jahrhundert, morgens, abends, vormittags, nachmittags]
-    - [januar, februar, märz, april, mai, juni, juli, august, september, oktober, november, dezember]
+    unit:
+        - [minute, stunde, monat, jahr, jahrhundert, vormittag, nachmittag]
+    month:
+        - [januar, februar, märz, april, mai, juni, juli, august, september, oktober, november, dezember]
+    day:        
+        - [sonntag, montag, dienstag, mittwoch, donnerstag, freitag, samstag]
+number:
+    cardinal:
+        - [eins, zwei, drei, vier, fünf, sechs, sieben, acht, neun, zehn]
+
 

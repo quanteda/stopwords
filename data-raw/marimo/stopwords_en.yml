@@ -1,3 +1,4 @@
+# Created by Kohei Watanabe for the marimo stopwords: https://github.com/koheiw/marimo
 pronoun: 
     basic: 
         - [i, me, myself, we, ours, ourselves, you, yours, yourself, yourselves, he, him, himself, she, hers, herself, it, itself, they, them, theirs, themselves, this, that, these, those]
@@ -28,13 +29,19 @@ adverb:
     - [as, until, once, here, there, all, any, both, each, few, many, more, most, other, some, such, "no", not, only, then, too, very, little, less]
 preposition: 
     - [of, at, by, for, with, about, against, between, into, through, during, before, after, above, below, to, from, up, down, in, out, "on", "off", over, under, again, further, than]
-adjectives: 
+adjective: 
     - [own, same] 
 time: 
     # added
-    - [minute, hour, month, year, century, am, pm]
-    - [january, february, march, april, may, june, july, august, september, october, november, december, jan, feb, mar, apr, may, jun, jul, aug, sep, sept, oct, nov, dec]
-    - [sunday, monday, tuesday, wednesday, thursday, friday, saturday]
+    unit:
+        - [minute, hour, month, year, century, am, pm]
+    month:
+        - [january, february, march, april, may, june, july, august, september, october, november, december, jan, feb, mar, apr, may, jun, jul, aug, sep, sept, oct, nov, dec]
+    day:
+        - [sunday, monday, tuesday, wednesday, thursday, friday, saturday]
 number:
     # added
-    - [one, two, three, four, five, six, seven, eight, nine, ten]
+    cardinal:
+        - [one, two, three, four, five, six, seven, eight, nine, ten]
+    #ordinal:    
+    #    - [first, second, third, fourth, fifth, seventh, eighth, nineth, tenth]

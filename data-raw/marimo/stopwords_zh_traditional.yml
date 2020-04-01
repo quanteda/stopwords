@@ -1,0 +1,66 @@
+# Created by Chung-hong Chan for the marimo stopwords: https://github.com/koheiw/marimo
+pronoun: 
+    basic:
+        # [i, me, myself, we, ours, ourselves, you, yours, yourself, yourselves, he, him, himself, she, hers, herself]
+        - [我, 把我, 對我, 我自己, 我們, 把我們, 對我們, 我們自己, 你, 把你, 對你, 你自己, 你們, 把你們, 對你們, 你們自己, 您, 把您, 對您, 您自己, 您們, 把您們, 對您們, 您們自己, 他, 把他, 對他, 他自己, 她, 把她, 對她, 她自己]
+        # [it, itself, they, them, theirs, themselves, this, that, these, those]
+        - [牠, 把牠, 對牠, 牠自己, 它, 把它, 對它, 它自己, 你們, 把你們, 對你們, 你們自己, 這, 那, 這些, 那些, 該, 這個, 這麼, 這樣, 這是]
+    possessive: 
+        # [my, our, your, his, her, its, their]
+        - [我的, 我們的, 你的, 你們的, 他的, 她的, 牠的, 它的, 他們的, 其]
+    interrogative: 
+        # [what, which, who, whom, whose, when, where, why, how]
+        - [甚麼, 什麼, 哪一, 那一, 哪一個, 那一個, 哪個, 那個, 誰, 誰人, 誰人的, 哪時, 那時, 何時, 幾時, 哪裡, 那裡, 哪裏, 那裏, 哪兒, 那兒, 如何, 為何, 怎樣, 何方]
+verb: 
+    basic: 
+        # [am, is, are, was, were, be, been, being, have, has, had, having, do, does, did, doing]
+        - [是, 有, 擁有, 確有]
+    modal: 
+        # [would, should, could, ought, will]
+        - [可能, 應該, 將會, 或能, 未必, 似乎]
+    reporting: 
+        # [say, says, said, tell, tells, told, report, reports, reported]
+        - [說, 表示, 講, 提出, 透露, 陳述, 講述, 報道, 報導, 報告, 匯報]
+conjunction: 
+    # [and, but, if, or, while, nor]
+    - [和, 與, 及, 以及, 兼, 並, 但, 但是, 然而, 而, 而是, 而且, 不過, 如果, 如, 若果, 若, 即使, 假如, 或者, 或, 或是, 還是, 抑或, 換言之, 換句話說, 當時, 也沒有, 也不]
+    # [because, so]
+    - [因為, 因, 由於, 所以, 那樣, 那麼, 正是, 同樣地, 大概]
+adverb:
+    # [as, until, once] 
+    - [跟, 像, 都很, 直至, 直到, 迄, 曾經, 一度, 以前, 從前]
+    # [here, there]
+    - [這地, 這處, 這地方, 這個地方, 那地, 那處, 那地方, 那個地方]
+    # [all, any, both, each]
+    - [全部, 所有, 完全, 共, 每一, 任何, 都, 皆, 兩者都, 均, 各自, 個別, 彼此, 亦]
+    # [few, many, more, most, some]
+    - [少量, 少數, 少, 多, 多數, 大量, 更多, 更大量, 更, 最多, 大多數, 大部份, 最, 極, 極其, 幾乎, 一些, 若干, 部份]
+    # [other, such, "no", not, only, then]
+    - [其他, 其餘, 個別, 剩餘, 如此, 如, 因此, 固此, 不, 不是, 非, 否, 沒, 只是, 只, 那末, 那麼, 然後]
+    # [too, very]
+    - [也, 太, 過於, 非常, 很, 頗]
+preposition: 
+    # [of, at, in, by, for, with, against]
+    - [的, 屬於, 於, 屬, 之中, 之內, 入, 在, 由, 至, 到, 內, 裡面, 裏面, 給, 為了, 為, 作為, 就, 和, 跟隨, 同, 以, 有, 關於, 對於, 至於, 反對, 對立, 倚, 靠]
+    # [about]
+    - [關於, 有關, 涉及]
+    # [between, into, through] 
+    - [之間, 中間, 期間, 進入, 成為, 轉為, 朝著, 朝着, 通過, 穿越, 由於, 透過, 經]
+    # [during, before, after, above, below, up, down, in, out, "on", "off", over, under]
+    - [中, 其中, 前, 之前, 後, 之後, 其後, 上, 之上, 其上, 下, 之下, 其下, 向上, 向下, 在上, 在下, 往上, 往下, 之中, 之外, 其外, 處於, 離, 遠離, 掉, 去掉, 除, 除掉, 靠近, 覆蓋, 過, 從, 多於, 超過, 高於, 根據, 受, 外]
+    # from, to, again, further, than]
+    - [自, 始於, 以防, 以免, 朝, 向, 往, 前往, 對著,對着, 對, 給, 距, 到, 至, 差, 令, 又, 又一, 再一次, 再, 復, 屢, 更, 進一步, 之外, 此外, 比]
+adjective: 
+    # [own, same] 
+    - [自己的, 獨立地, 獨立的, 本人的, 相同, 同樣, 相同的, 同樣的]
+time:
+    unit:
+        - [分, 時, 日, 月, 年, 年代, 年份, 年度, 世紀, 早上, 上午, 晚上, 下午, 中午]
+    month:
+        - [一月, 二月, 三月, 四月, 五月, 六月, 七月, 八月, 九月, 十月, 十一月, 十二月]
+    day:
+        - [星期一, 周一, 星期二, 周二, 星期三, 周三, 星期四, 周四, 星期五, 周五, 星期六, 周六, 星期日, 周日]
+number:
+    cardinal:
+        - [一, 二, 三, 四, 五, 六, 七, 八, 九, 十]
+

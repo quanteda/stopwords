@@ -1,0 +1,67 @@
+# Created by Chung-hong Chan for the marimo stopwords: https://github.com/koheiw/marimo
+# With contributions from: @yuanzhouIR
+
+pronoun:
+    basic:
+        # [i, me, myself, we, ours, ourselves, you, yours, yourself, yourselves, he, him, himself, she, hers, herself]
+        - [我, 把我, 对我, 我自己, 我们, 把我们, 对我们, 我们自己, 你, 把你, 对你, 你自己, 你们, 把你们, 对你们, 你们自己, 您, 把您, 对您, 您自己, 您们, 把您们, 对您们, 您们自己, 他, 把他, 对他, 他自己, 她, 把她, 对她, 她自己]
+        # [it, itself, they, them, theirs, themselves, this, that, these, those]
+        - [它, 把它, 对它, 它自己, 你们, 把你们, 对你们, 你们自己, 这, 那, 这些, 那些, 该, 这个, 这么, 这样, 这是]
+    possessive:
+        # [my, our, your, his, her, its, their]
+        - [我的, 我们的, 你的, 你们的, 他的, 她的, 它的, 他们的, 其]
+    interrogative:
+        # [what, which, who, whom, whose, when, where, why, how]
+        - [甚么, 什么, 哪一, 那一, 哪一个, 那一个, 哪个, 那个, 谁, 谁人, 谁人的, 哪时, 那时, 何时, 几时, 哪里, 那里, 哪里, 那里, 哪儿, 那儿, 如何, 为何, 怎样, 何方]
+verb:
+    basic:
+        # [am, is, are, was, were, be, been, being, have, has, had, having, do, does, did, doing]
+        - [是, 有, 拥有, 确有]
+    modal:
+        # [would, should, could, ought, will]
+        - [可能, 应该, 将会, 或能, 未必, 似乎]
+    reporting:
+        # [say, says, said, tell, tells, told, report, reports, reported]
+        - [说, 表示, 讲, 提出, 透露, 陈述, 讲述, 报道, 报导, 报告, 汇报]
+conjunction:
+    # [and, but, if, or, while, nor]
+    - [和, 与, 及, 以及, 兼, 并, 但, 但是, 然而, 而, 而是, 而且, 不过, 如果, 如, 若果, 若, 即使, 假如, 或者, 或, 或是, 还是, 抑或, 换言之, 换句话说, 当时, 也没有, 也不]
+    # [because, so]
+    - [因为, 因, 由于, 所以, 那样, 那么, 正是, 同样地, 大概]
+adverb:
+    # [as, until, once]
+    - [跟, 像, 都很, 直至, 直到, 迄, 曾经, 一度, 以前, 从前]
+    # [here, there]
+    - [这地, 这处, 这地方, 这个地方, 那地, 那处, 那地方, 那个地方]
+    # [all, any, both, each]
+    - [全部, 所有, 完全, 共, 每一, 任何, 都, 皆, 两者都, 均, 各自, 个别, 彼此, 亦]
+    # [few, many, more, most, some]
+    - [少量, 少数, 少, 多, 多数, 大量, 更多, 更大量, 更, 最多, 大多数, 大部份, 最, 极, 极其, 几乎, 一些, 若干, 部份]
+    # [other, such, "no", not, only, then]
+    - [其他, 其余, 个别, 剩余, 如此, 如, 因此, 固此, 不, 不是, 非, 否, 没, 只是, 只, 那么, 那末, 然后]
+    # [too, very]
+    - [也, 太, 过于, 非常, 很, 颇]
+preposition:
+    # [of, at, in, by, for, with, against]
+    - [的, 属于, 于, 属, 之中, 之内, 入, 在, 由, 至, 到, 内, 里面, 里面, 给, 为了, 为, 作为, 就, 和, 跟随, 同, 以, 有, 关于, 对于, 至于, 反对, 对立, 倚, 靠]
+    # [about]
+    - [关于, 有关, 涉及]
+    # [between, into, through]
+    - [之间, 中间, 期间, 进入, 成为, 转为, 朝着, 通过, 穿越, 由于, 透过, 经]
+    # [during, before, after, above, below, up, down, in, out, "on", "off", over, under]
+    - [中, 其中, 前, 之前, 后, 之后, 其后, 上, 之上, 其上, 下, 之下, 其下, 向上, 向下, 在上, 在下, 往上, 往下, 之中, 之外, 其外, 处于, 离, 远离, 掉, 去掉, 除, 除掉, 靠近, 覆盖, 过, 从, 多于, 超过, 高于, 根据, 受, 外]
+    # from, to, again, further, than]
+    - [自, 始于, 以防, 以免, 朝, 向, 往, 前往, 对着, 对, 给, 距, 到, 至, 差, 令, 又, 又一, 再一次, 再, 复, 屡, 更, 进一步, 之外, 此外, 比]
+adjective:
+    # [own, same]
+    - [自己的, 独立地, 独立的, 本人的, 相同, 同样, 相同的, 同样的]
+time:
+    unit:
+        - [分, 时, 日, 月, 年, 年代, 年份, 年度, 世纪, 早上, 上午, 晚上, 下午, 中午]
+    month:
+        - [一月, 二月, 三月, 四月, 五月, 六月, 七月, 八月, 九月, 十月, 十一月, 十二月]
+    day:
+        - [星期一, 周一, 星期二, 周二, 星期三, 周三, 星期四, 周四, 星期五, 周五, 星期六, 周六, 星期日, 周日]
+number:
+    cardinal:
+        - [一, 二, 三, 四, 五, 六, 七, 八, 九, 十]
