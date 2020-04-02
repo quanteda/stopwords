@@ -90,10 +90,14 @@
 
 #' stopword lists for ancient languages
 #'
-#' Stopword lists for ancient Greek and Latin.  While technically there is no
-#' 2-letter code for ancient Greek in ISO-639, we use "gr" to denote Greek.
+#' Stopword lists for ancient Greek and Latin.  As there is no
+#' 2-letter code for ancient Greek in ISO-639-1, we use "grc" to denote Greek
+#' (as per [ISO-639-3](https://iso639-3.sil.org/code/grc)).
 #' @usage NULL
-#' @section Usage: `stopwords(language = "grc", source = "ancient")`
+#' @section Usage:
+#' `stopwords(language = "grc", source = "ancient")`
+#'
+#' `stopwords(language = "la", source = "ancient")`
 #' @source The [Digital Classicist Wiki](https://wiki.digitalclassicist.org/Main_Page).
 #' See [https://wiki.digitalclassicist.org/Stopwords_for_Greek_and_Latin]().
 "data_stopwords_ancient"
@@ -103,7 +107,8 @@
 #' Stopword lists for 23 languages from the Python NLTK library.
 #'
 #' @usage NULL
-#' @section Usage: `stopwords(language = "en", source = "nltk")`
+#' @section Usage:
+#' `stopwords(language = "en", source = "nltk")`
 #' @source
 #' https://github.com/nltk/nltk_data/blob/gh-pages/packages/corpora/stopwords.zip
 #' @references

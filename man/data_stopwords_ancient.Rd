@@ -12,11 +12,15 @@ The \href{https://wiki.digitalclassicist.org/Main_Page}{Digital Classicist Wiki}
 See \url{https://wiki.digitalclassicist.org/Stopwords_for_Greek_and_Latin}.
 }
 \description{
-Stopword lists for ancient Greek and Latin.  While technically there is no
-2-letter code for ancient Greek in ISO-639, we use "gr" to denote Greek.
+Stopword lists for ancient Greek and Latin.  As there is no
+2-letter code for ancient Greek in ISO-639-1, we use "grc" to denote Greek
+(as per \href{https://iso639-3.sil.org/code/grc}{ISO-639-3}).
 }
 \section{Usage}{
- \code{stopwords(language = "grc", source = "ancient")}
+
+\code{stopwords(language = "grc", source = "ancient")}
+
+\code{stopwords(language = "la", source = "ancient")}
 }
 
 \keyword{datasets}

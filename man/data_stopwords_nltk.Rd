@@ -14,7 +14,8 @@ https://github.com/nltk/nltk_data/blob/gh-pages/packages/corpora/stopwords.zip
 Stopword lists for 23 languages from the Python NLTK library.
 }
 \section{Usage}{
- \code{stopwords(language = "en", source = "nltk")}
+
+\code{stopwords(language = "en", source = "nltk")}
 }
 
 \references{
