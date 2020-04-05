@@ -51,7 +51,9 @@ stopwords_edit <- function(language, source, simplify = TRUE) {
 list_edit <- function(x) {
   tfile <- tempfile(fileext = ".yml")
   write_yaml(x, file = tfile)
+  # nolint start
   try(edited <- utils::edit(file = tfile), silent = TRUE)
+  # nolint end
   read_yaml(tfile)
 }
 
@@ -68,7 +70,9 @@ char_edit <- function(x, sep = "\n") {
     stop("x must be a character vector")
   tfile <- tempfile(fileext = ".txt")
   cat(x, sep = sep, file = tfile)
+  # nolint start
   try(edited <- utils::edit(file = tfile), silent = TRUE)
+  # nolint end
   readLines(tfile)
 }
 
