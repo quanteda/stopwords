@@ -5,7 +5,7 @@
 \alias{data_stopwords_marimo}
 \title{stopword lists including parts-of-speech}
 \format{
-An object of class \code{list} of length 7.
+An object of class \code{list} of length 6.
 }
 \source{
 The English version was adopted from the Snowball collection, and then
