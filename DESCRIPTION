@@ -12,7 +12,9 @@ Depends:
 Imports:
     ISOcodes,
     usethis,
-    desc
+    desc,
+    magrittr,
+    yaml
 Suggests: 
     covr,
     lintr,
