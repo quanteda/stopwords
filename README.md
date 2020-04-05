@@ -33,43 +33,6 @@ install.packages("stopwords")
 devtools::install_github("quanteda/stopwords")
 ```
 
-## Usage
-
-``` r
-head(stopwords::stopwords("de", source = "snowball"), 20)
-##  [1] "aber"    "alle"    "allem"   "allen"   "aller"   "alles"   "als"    
-##  [8] "also"    "am"      "an"      "ander"   "andere"  "anderem" "anderen"
-## [15] "anderer" "anderes" "anderm"  "andern"  "anderr"  "anders"
-
-head(stopwords::stopwords("de", source = "stopwords-iso"), 20)
-##  [1] "a"           "ab"          "aber"        "ach"         "acht"       
-##  [6] "achte"       "achten"      "achter"      "achtes"      "ag"         
-## [11] "alle"        "allein"      "allem"       "allen"       "aller"      
-## [16] "allerdings"  "alles"       "allgemeinen" "als"         "also"
-```
-
-For compatibility with the former `quanteda::stopwords()`:
-
-``` r
-head(stopwords::stopwords("german"), 20)
-##  [1] "aber"    "alle"    "allem"   "allen"   "aller"   "alles"   "als"    
-##  [8] "also"    "am"      "an"      "ander"   "andere"  "anderem" "anderen"
-## [15] "anderer" "anderes" "anderm"  "andern"  "anderr"  "anders"
-```
-
-Explore sources and languages:
-
-``` r
-# list all sources
-stopwords::stopwords_getsources()
-## [1] "snowball"      "stopwords-iso" "misc"          "smart"        
-## [5] "marimo"        "ancient"       "nltk"
-
-# list languages for a specific source
-stopwords::stopwords_getlanguages("snowball")
-##  [1] "da" "de" "en" "es" "fi" "fr" "hu" "ir" "it" "nl" "no" "pt" "ro" "ru" "sv"
-```
-
 ## Languages available
 
 The following coverage of languages is currently available, by source.
@@ -147,9 +110,98 @@ The following languages are currently available:
 | Yoruba          |                                   yo                                    |            |        |        ✔        |                   |
 | Zulu            |                                   zu                                    |            |        |        ✔        |                   |
 
+## Basic usage
+
+``` r
+head(stopwords::stopwords("de", source = "snowball"), 20)
+##  [1] "aber"    "alle"    "allem"   "allen"   "aller"   "alles"   "als"    
+##  [8] "also"    "am"      "an"      "ander"   "andere"  "anderem" "anderen"
+## [15] "anderer" "anderes" "anderm"  "andern"  "anderr"  "anders"
+
+head(stopwords::stopwords("de", source = "stopwords-iso"), 20)
+##  [1] "a"           "ab"          "aber"        "ach"         "acht"       
+##  [6] "achte"       "achten"      "achter"      "achtes"      "ag"         
+## [11] "alle"        "allein"      "allem"       "allen"       "aller"      
+## [16] "allerdings"  "alles"       "allgemeinen" "als"         "also"
+```
+
+For compatibility with the former `quanteda::stopwords()`:
+
+``` r
+head(stopwords::stopwords("german"), 20)
+##  [1] "aber"    "alle"    "allem"   "allen"   "aller"   "alles"   "als"    
+##  [8] "also"    "am"      "an"      "ander"   "andere"  "anderem" "anderen"
+## [15] "anderer" "anderes" "anderm"  "andern"  "anderr"  "anders"
+```
+
+Explore sources and languages:
+
+``` r
+# list all sources
+stopwords::stopwords_getsources()
+## [1] "snowball"      "stopwords-iso" "misc"          "smart"        
+## [5] "marimo"        "ancient"       "nltk"
+
+# list languages for a specific source
+stopwords::stopwords_getlanguages("snowball")
+##  [1] "da" "de" "en" "es" "fi" "fr" "hu" "ir" "it" "nl" "no" "pt" "ro" "ru" "sv"
+```
+
+## Modifying stopword lists
+
+We now make it easy to edit your own stopword lists, using the
+interactive editor. For instance to edit the English stopword list for
+the Snowball source:
+
+``` r
+# edit the English stopwords
+my_stopwords <- stopwords_edit("en", source = "snowball")
+```
+
+This also works for stopwords whose underlying structure is a lists,
+such as the “marimo” source:
+
+``` r
+# edit the English stopwords
+my_stopwordlist <- stopwords_edit("en", source = "marimo", simplify = FALSE)
+```
+
+Finally, it’s possible to remove stopwords using pattern matching. The
+default is the easy-to-use [“glob” style
+matching](https://en.wikipedia.org/wiki/Glob_\(programming\)), which is
+equivalent to fixed matching when no wildcard characters are used. So to
+remove personal pronouns from the English Snowball word list, for
+instance, this would work:
+
+``` r
+posspronouns <- stopwords::data_stopwords_marimo$en$pronoun$possessive
+posspronouns
+## [1] "my"    "our"   "your"  "his"   "her"   "its"   "their"
+stopwords("en", source = "snowball") %>%
+  head(10)
+##  [1] "i"         "me"        "my"        "myself"    "we"        "our"      
+##  [7] "ours"      "ourselves" "you"       "your"
+```
+
+See the difference when we remove them:
+
+``` r
+stopwords("en", source = "snowball") %>%
+  head(10) %>%
+  char_remove(pattern = posspronouns)
+## [1] "i"         "me"        "myself"    "we"        "ours"      "ourselves"
+## [7] "you"
+```
+
+There is no `char_add()`, since it’s just as easy to use `c()` for this.
+
+Note that as of version 2.0, we now re-export `%>%` operator from
+**magrittr** it possible to chaining operations without loading
+additional packages.
+
 ## Adding stopwords to your own package
 
-As of version 1.1, we’ve made it a one-step process to add `stopwords()`
+As of version 2, we’ve made it a one-step process to add `stopwords()`
 to your package through a re-export. Simply call `use_stopwords()` like
 this:
 

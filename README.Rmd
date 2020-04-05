@@ -11,6 +11,7 @@ knitr::opts_chunk$set(
 ```
 ```{r echo=FALSE, results="hide", message=FALSE}
 library("badger")
+library("stopwords")
 ```
 
 # stopwords: the R package
@@ -35,30 +36,6 @@ install.packages("stopwords")
 # Or get the development version from GitHub:
 # install.packages("devtools")
 devtools::install_github("quanteda/stopwords")
-```
-
-## Usage
-
-```{r}
-head(stopwords::stopwords("de", source = "snowball"), 20)
-
-head(stopwords::stopwords("de", source = "stopwords-iso"), 20)
-```
-
-For compatibility with the former `quanteda::stopwords()`:
-
-```{r}
-head(stopwords::stopwords("german"), 20)
-```
-
-Explore sources and languages:
-
-```{r}
-# list all sources
-stopwords::stopwords_getsources()
-
-# list languages for a specific source
-stopwords::stopwords_getlanguages("snowball")
 ```
 
 ## Languages available
@@ -134,10 +111,66 @@ The following languages are currently available:
 | Zulu            |       zu       |            |        |        ✔        |                   |
 
 
+## Basic usage
+
+```{r}
+head(stopwords::stopwords("de", source = "snowball"), 20)
+
+head(stopwords::stopwords("de", source = "stopwords-iso"), 20)
+```
+
+For compatibility with the former `quanteda::stopwords()`:
+
+```{r}
+head(stopwords::stopwords("german"), 20)
+```
+
+Explore sources and languages:
+
+```{r}
+# list all sources
+stopwords::stopwords_getsources()
+
+# list languages for a specific source
+stopwords::stopwords_getlanguages("snowball")
+```
+
+## Modifying stopword lists
+
+We now make it easy to edit your own stopword lists, using the interactive editor.  For instance to edit the English stopword list for the Snowball source:
+
+```{r eval = FALSE}
+# edit the English stopwords
+my_stopwords <- stopwords_edit("en", source = "snowball")
+```
+
+This also works for stopwords whose underlying structure is a lists, such as the "marimo" source:
+```{r eval = FALSE}
+# edit the English stopwords
+my_stopwordlist <- stopwords_edit("en", source = "marimo", simplify = FALSE)
+```
+
+Finally, it's possible to remove stopwords using pattern matching.  The default is the easy-to-use ["glob" style matching](https://en.wikipedia.org/wiki/Glob_(programming)), which is equivalent to fixed matching when no wildcard characters are used.  So to remove personal pronouns from the English Snowball word list, for instance, this would work:
+```{r}
+posspronouns <- stopwords::data_stopwords_marimo$en$pronoun$possessive
+posspronouns
+stopwords("en", source = "snowball") %>%
+  head(10)
+```
+See the difference when we remove them:
+```{r}
+stopwords("en", source = "snowball") %>%
+  head(10) %>%
+  char_remove(pattern = posspronouns)
+```
+
+There is no `char_add()`, since it's just as easy to use `c()` for this.
+
+Note that as of version 2.0, we now re-export `%>%` operator from **magrittr** it possible to chaining operations without loading additional packages.
 
 ## Adding stopwords to your own package
 
-As of version 1.1, we've made it a one-step process to add `stopwords()` to your package through a re-export.  Simply call `use_stopwords()` like this:
+As of version 2, we've made it a one-step process to add `stopwords()` to your package through a re-export.  Simply call `use_stopwords()` like this:
 
 ```{r eval = FALSE}
 > stopwords::use_stopwords()
