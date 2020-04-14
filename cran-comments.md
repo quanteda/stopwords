@@ -1,16 +1,16 @@
 ## Purpose
 
-To fix some code that issues warnings or errors under R >= 3.6, as well as to correct encodings in some stop word lists.
+To add new functions and new stopword lists.
 
 ## Test environments
 
-* local OS X install, R 3.6.1
+* local OS X install, R 3.6.4
 * ubuntu 18.04 (on travis-ci)
 * win-builder (devel and release)
 
 ## R CMD check results
 
-0 errors | 0 warnings | 0 note
+0 errors | 0 warnings | 0 notes
 
 ## Reverse dependencies
 

@@ -8,8 +8,8 @@
 An object of class \code{list} of length 2.
 }
 \source{
-The \href{https://wiki.digitalclassicist.org/Main_Page}{Digital Classicist Wiki}.
-See \url{https://wiki.digitalclassicist.org/Stopwords_for_Greek_and_Latin}.
+The \href{http://wiki.digitalclassicist.org/Main_Page}{Digital Classicist Wiki}.
+See \url{http://wiki.digitalclassicist.org/Main_Page}.
 }
 \description{
 Stopword lists for ancient Greek and Latin.  As there is no

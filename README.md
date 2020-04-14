@@ -147,6 +147,99 @@ The following languages are currently available:
 | Yoruba          |                                   yo                                    |            |        |        ✔        |                   |
 | Zulu            |                                   zu                                    |            |        |        ✔        |                   |
 
+## Basic usage
+
+``` r
+head(stopwords::stopwords("de", source = "snowball"), 20)
+##  [1] "aber"    "alle"    "allem"   "allen"   "aller"   "alles"   "als"    
+##  [8] "also"    "am"      "an"      "ander"   "andere"  "anderem" "anderen"
+## [15] "anderer" "anderes" "anderm"  "andern"  "anderr"  "anders"
+
+head(stopwords::stopwords("de", source = "stopwords-iso"), 20)
+##  [1] "a"           "ab"          "aber"        "ach"         "acht"       
+##  [6] "achte"       "achten"      "achter"      "achtes"      "ag"         
+## [11] "alle"        "allein"      "allem"       "allen"       "aller"      
+## [16] "allerdings"  "alles"       "allgemeinen" "als"         "also"
+```
+
+For compatibility with the former `quanteda::stopwords()`:
+
+``` r
+head(stopwords::stopwords("german"), 20)
+##  [1] "aber"    "alle"    "allem"   "allen"   "aller"   "alles"   "als"    
+##  [8] "also"    "am"      "an"      "ander"   "andere"  "anderem" "anderen"
+## [15] "anderer" "anderes" "anderm"  "andern"  "anderr"  "anders"
+```
+
+Explore sources and languages:
+
+``` r
+# list all sources
+stopwords::stopwords_getsources()
+## [1] "snowball"      "stopwords-iso" "misc"          "smart"        
+## [5] "marimo"        "ancient"       "nltk"
+
+# list languages for a specific source
+stopwords::stopwords_getlanguages("snowball")
+##  [1] "da" "de" "en" "es" "fi" "fr" "hu" "ir" "it" "nl" "no" "pt" "ro" "ru" "sv"
+```
+
+## Modifying stopword lists
+
+It is now possible to edit your own stopword lists, using the
+interactive editor, with functions from the **quanteda** package (\>=
+v2.02). For instance to edit the English stopword list for the Snowball
+source:
+
+``` r
+# edit the English stopwords
+my_stopwords <- quanteda::char_edit(stopwords("en", source = "snowball"))
+```
+
+To edit stopwords whose underlying structure is a list, such as the
+“marimo” source, we can use the `list_edit()` function:
+
+``` r
+# edit the English stopwords
+my_stopwordlist <- quanteda::list_edit(stopwords("en", source = "marimo", simplify = FALSE))
+```
+
+Finally, it’s possible to remove stopwords using pattern matching. The
+default is the easy-to-use [“glob” style
+matching](https://en.wikipedia.org/wiki/Glob_\(programming\)), which is
+equivalent to fixed matching when no wildcard characters are used. So to
+remove personal pronouns from the English Snowball word list, for
+instance, this would work:
+
+``` r
+library("quanteda", warn.conflicts = FALSE)
+## Package version: 2.0.2
+## Parallel computing: 2 of 8 threads used.
+## See https://quanteda.io for tutorials and examples.
+posspronouns <- stopwords::data_stopwords_marimo$en$pronoun$possessive
+posspronouns
+## [1] "my"    "our"   "your"  "his"   "her"   "its"   "their"
+
+stopwords("en", source = "snowball") %>%
+  head(n = 10)
+##  [1] "i"         "me"        "my"        "myself"    "we"        "our"      
+##  [7] "ours"      "ourselves" "you"       "your"
+```
+
+See the difference when we remove them – “my”, “ours”, and “your” are
+gone:
+
+``` r
+stopwords("en", source = "snowball") %>%
+  head(n = 10) %>%
+  char_remove(pattern = posspronouns)
+## [1] "i"         "me"        "myself"    "we"        "ours"      "ourselves"
+## [7] "you"
+```
+
+There is no `char_add()`, since it’s just as easy to use `c()` for this,
+but there is a `char_keep()` for positive selection rather than removal.
+
 ## Adding stopwords to your own package
 
 As of version 1.1, we’ve made it a one-step process to add `stopwords()`

@@ -98,8 +98,8 @@
 #' `stopwords(language = "grc", source = "ancient")`
 #'
 #' `stopwords(language = "la", source = "ancient")`
-#' @source The [Digital Classicist Wiki](https://wiki.digitalclassicist.org/Main_Page).
-#' See [https://wiki.digitalclassicist.org/Stopwords_for_Greek_and_Latin]().
+#' @source The [Digital Classicist Wiki](http://wiki.digitalclassicist.org/Main_Page).
+#' See [http://wiki.digitalclassicist.org/Main_Page]().
 "data_stopwords_ancient"
 
 #' stopword lists from the Python NLTK library
