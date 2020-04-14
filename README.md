@@ -3,7 +3,7 @@
 
 [![CRAN
 Version](https://www.r-pkg.org/badges/version/stopwords)](https://CRAN.R-project.org/package=stopwords)
-[![](https://img.shields.io/badge/devel%20version-1.1-royalblue.svg)](https://github.com/quanteda/stopwords)
+[![](https://img.shields.io/badge/devel%20version-2.0-royalblue.svg)](https://github.com/quanteda/stopwords)
 [![Travis-CI Build
 Status](https://travis-ci.org/quanteda/stopwords.svg?branch=master)](https://travis-ci.org/quanteda/stopwords)
 [![Coverage
