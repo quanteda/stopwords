@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Changelog • stopwords</title>
+<title>stopword lists for ancient languages — data_stopwords_ancient • stopwords</title>
 
 
 <!-- jquery -->
@@ -41,7 +41,10 @@
   <link href="../extra.css" rel="stylesheet">
   
 
-<meta property="og:title" content="Changelog" />
+<meta property="og:title" content="stopword lists for ancient languages — data_stopwords_ancient" />
+<meta property="og:description" content="Stopword lists for ancient Greek and Latin.  As there is no
+2-letter code for ancient Greek in ISO-639-1, we use &quot;grc&quot; to denote Greek
+(as per ISO-639-3)." />
 
 
 
@@ -60,7 +63,7 @@
   </head>
 
   <body data-spy="scroll" data-target="#toc">
-    <div class="container template-news">
+    <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
   <div class="container">
@@ -103,62 +106,39 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-      <h1 data-toc-skip>Changelog <small></small></h1>
-      <small>Source: <a href='https://github.com/quanteda/stopwords/blob/master/NEWS.md'><code>NEWS.md</code></a></small>
+    <h1>stopword lists for ancient languages</h1>
+    <small class="dont-index">Source: <a href='https://github.com/quanteda/stopwords/blob/master/R/data.r'><code>R/data.r</code></a></small>
+    <div class="hidden name"><code>data_stopwords_ancient.Rd</code></div>
     </div>
 
-    <div id="stopwords-v11" class="section level1">
-<h1 class="page-header" data-toc-text="1.1">
-<a href="#stopwords-v11" class="anchor"></a>stopwords v1.1<small> Unreleased </small>
-</h1>
-<ul>
-<li>Adds <code><a href="../reference/use_stopwords.html">use_stopwords()</a></code>, for adding a re-export of this function to any package.</li>
-<li>Adds the “marimo” source, for 5 languages, created by Kohei Watanabe.</li>
-<li>Adds ancient language stopword lists (Greek and Latin).</li>
-<li>Adds the NLTK source, containing stopwords from the Python NLTK library, in 23 languages.</li>
-</ul>
-</div>
-    <div id="stopwords-v10" class="section level1">
-<h1 class="page-header" data-toc-text="1.0">
-<a href="#stopwords-v10" class="anchor"></a>stopwords v1.0<small> 2019-07-24 </small>
-</h1>
-<ul>
-<li>Added Gujarati to misc stopwords.</li>
-<li>Fixed several mis-encoded characters for Turkish in stopwords-iso. (<a href='https://github.com/quanteda/stopwords/issues/15'>#15</a>)</li>
-<li>Fixed some exceptions related to newer R releases.</li>
-</ul>
-</div>
-    <div id="stopwords-v09" class="section level1">
-<h1 class="page-header" data-toc-text="0.9">
-<a href="#stopwords-v09" class="anchor"></a>stopwords v0.9<small> Unreleased </small>
-</h1>
-<p>Changes:</p>
-<ul>
-<li>Added Snowball, misc, and SMART stopwords.</li>
-<li>Replaced exposed data object with the function <code><a href="../reference/stopwords.html">stopwords()</a></code>.</li>
-<li>Made completely compatible with <code><a href="https://quanteda.io/reference/reexports.html">quanteda::stopwords()</a></code> to provide a replacement for that function.</li>
-<li>Significantly improved documentation.</li>
-</ul>
-</div>
-    <div id="stopwords-v010" class="section level1">
-<h1 class="page-header" data-toc-text="0.1.0">
-<a href="#stopwords-v010" class="anchor"></a>stopwords v0.1.0<small> 2017-11-12 </small>
-</h1>
-<p>Changes:</p>
-<ul>
-<li>Initial release</li>
-<li>Submission feedback (removed redundant “in R” in title and changed license to CRAN template)</li>
-<li>Submission feedback (added examples)</li>
-</ul>
-</div>
-  </div>
+    <div class="ref-description">
+    <p>Stopword lists for ancient Greek and Latin.  As there is no
+2-letter code for ancient Greek in ISO-639-1, we use "grc" to denote Greek
+(as per <a href='https://iso639-3.sil.org/code/grc'>ISO-639-3</a>).</p>
+    </div>
 
+
+
+    <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
+
+    <p>An object of class <code>list</code> of length 2.</p>
+    <h2 class="hasAnchor" id="source"><a class="anchor" href="#source"></a>Source</h2>
+
+    <p>The <a href='http://wiki.digitalclassicist.org/Main_Page'>Digital Classicist Wiki</a>.
+See <a href='http://wiki.digitalclassicist.org/Main_Page'>http://wiki.digitalclassicist.org/Main_Page</a>.</p>
+    <h2 class="hasAnchor" id="usage"><a class="anchor" href="#usage"></a>Usage</h2>
+
+    
+
+<p><code><a href='stopwords.html'>stopwords(language = "grc", source = "ancient")</a></code></p>
+<p><code><a href='stopwords.html'>stopwords(language = "la", source = "ancient")</a></code></p>
+
+  </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">
       <h2 data-toc-skip>Contents</h2>
     </nav>
   </div>
-
 </div>
 
 

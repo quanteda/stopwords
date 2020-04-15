@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Changelog • stopwords</title>
+<title>Use stopwords in your package — use_stopwords • stopwords</title>
 
 
 <!-- jquery -->
@@ -41,7 +41,15 @@
   <link href="../extra.css" rel="stylesheet">
   
 
-<meta property="og:title" content="Changelog" />
+<meta property="og:title" content="Use stopwords in your package — use_stopwords" />
+<meta property="og:description" content="Sets up your package to import and re-export the stopwords() function in
+your package. This function requires the use of the roxygen2 package.
+Adds stopwords`` to &quot;Imports&quot; in DESCRIPTION`.
+Imports stopwords(), which is necessary for internal use.
+Exports stopwords(), if export = TRUE, which is necessary to make
+the function available to the users of your package.
+
+" />
 
 
 
@@ -60,7 +68,7 @@
   </head>
 
   <body data-spy="scroll" data-target="#toc">
-    <div class="container template-news">
+    <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
   <div class="container">
@@ -103,62 +111,47 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-      <h1 data-toc-skip>Changelog <small></small></h1>
-      <small>Source: <a href='https://github.com/quanteda/stopwords/blob/master/NEWS.md'><code>NEWS.md</code></a></small>
+    <h1>Use stopwords in your package</h1>
+    <small class="dont-index">Source: <a href='https://github.com/quanteda/stopwords/blob/master/R/use_stopwords.R'><code>R/use_stopwords.R</code></a></small>
+    <div class="hidden name"><code>use_stopwords.Rd</code></div>
     </div>
 
-    <div id="stopwords-v11" class="section level1">
-<h1 class="page-header" data-toc-text="1.1">
-<a href="#stopwords-v11" class="anchor"></a>stopwords v1.1<small> Unreleased </small>
-</h1>
-<ul>
-<li>Adds <code><a href="../reference/use_stopwords.html">use_stopwords()</a></code>, for adding a re-export of this function to any package.</li>
-<li>Adds the “marimo” source, for 5 languages, created by Kohei Watanabe.</li>
-<li>Adds ancient language stopword lists (Greek and Latin).</li>
-<li>Adds the NLTK source, containing stopwords from the Python NLTK library, in 23 languages.</li>
+    <div class="ref-description">
+    <p>Sets up your package to import and re-export the <code><a href='stopwords.html'>stopwords()</a></code> function in
+your package. This function requires the use of the <span class="pkg">roxygen2</span> package.</p><ul>
+<li><p>Adds <code>stopwords`` to "Imports" in </code>DESCRIPTION`.</p></li>
+<li><p>Imports <code><a href='stopwords.html'>stopwords()</a></code>, which is necessary for internal use.</p></li>
+<li><p>Exports <code><a href='stopwords.html'>stopwords()</a></code>, if <code>export = TRUE</code>, which is necessary to make
+the function available to the users of your package.</p></li>
 </ul>
-</div>
-    <div id="stopwords-v10" class="section level1">
-<h1 class="page-header" data-toc-text="1.0">
-<a href="#stopwords-v10" class="anchor"></a>stopwords v1.0<small> 2019-07-24 </small>
-</h1>
-<ul>
-<li>Added Gujarati to misc stopwords.</li>
-<li>Fixed several mis-encoded characters for Turkish in stopwords-iso. (<a href='https://github.com/quanteda/stopwords/issues/15'>#15</a>)</li>
-<li>Fixed some exceptions related to newer R releases.</li>
-</ul>
-</div>
-    <div id="stopwords-v09" class="section level1">
-<h1 class="page-header" data-toc-text="0.9">
-<a href="#stopwords-v09" class="anchor"></a>stopwords v0.9<small> Unreleased </small>
-</h1>
-<p>Changes:</p>
-<ul>
-<li>Added Snowball, misc, and SMART stopwords.</li>
-<li>Replaced exposed data object with the function <code><a href="../reference/stopwords.html">stopwords()</a></code>.</li>
-<li>Made completely compatible with <code><a href="https://quanteda.io/reference/reexports.html">quanteda::stopwords()</a></code> to provide a replacement for that function.</li>
-<li>Significantly improved documentation.</li>
-</ul>
-</div>
-    <div id="stopwords-v010" class="section level1">
-<h1 class="page-header" data-toc-text="0.1.0">
-<a href="#stopwords-v010" class="anchor"></a>stopwords v0.1.0<small> 2017-11-12 </small>
-</h1>
-<p>Changes:</p>
-<ul>
-<li>Initial release</li>
-<li>Submission feedback (removed redundant “in R” in title and changed license to CRAN template)</li>
-<li>Submission feedback (added examples)</li>
-</ul>
-</div>
-  </div>
 
+    </div>
+
+    <pre class="usage"><span class='fu'>use_stopwords</span>(<span class='kw'>export</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)</pre>
+
+    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
+    <table class="ref-arguments">
+    <colgroup><col class="name" /><col class="desc" /></colgroup>
+    <tr>
+      <th>export</th>
+      <td><p>If <code>TRUE</code>, the file <code>R/stopwords.R</code> is added, which provides
+the roxygen template to import and re-export <code><a href='stopwords.html'>stopwords()</a></code>. If <code>FALSE</code>, the
+necessary roxygen directive is added, if possible, or otherwise
+instructions are given.</p></td>
+    </tr>
+    </table>
+
+
+    <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
+    <pre class="examples"><div class='input'><span class='kw'>if</span> (<span class='fl'>FALSE</span>) {
+<span class='fu'>use_stopwords</span>()
+}</div></pre>
+  </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">
       <h2 data-toc-skip>Contents</h2>
     </nav>
   </div>
-
 </div>
 
 

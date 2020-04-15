@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Changelog • stopwords</title>
+<title>stopword lists including parts-of-speech — data_stopwords_marimo • stopwords</title>
 
 
 <!-- jquery -->
@@ -41,7 +41,9 @@
   <link href="../extra.css" rel="stylesheet">
   
 
-<meta property="og:title" content="Changelog" />
+<meta property="og:title" content="stopword lists including parts-of-speech — data_stopwords_marimo" />
+<meta property="og:description" content="Stopword lists that include specific parts of speech, maintained by Kohei
+Watanabe." />
 
 
 
@@ -60,7 +62,7 @@
   </head>
 
   <body data-spy="scroll" data-target="#toc">
-    <div class="container template-news">
+    <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
   <div class="container">
@@ -103,62 +105,63 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-      <h1 data-toc-skip>Changelog <small></small></h1>
-      <small>Source: <a href='https://github.com/quanteda/stopwords/blob/master/NEWS.md'><code>NEWS.md</code></a></small>
+    <h1>stopword lists including parts-of-speech</h1>
+    <small class="dont-index">Source: <a href='https://github.com/quanteda/stopwords/blob/master/R/data.r'><code>R/data.r</code></a></small>
+    <div class="hidden name"><code>data_stopwords_marimo.Rd</code></div>
     </div>
 
-    <div id="stopwords-v11" class="section level1">
-<h1 class="page-header" data-toc-text="1.1">
-<a href="#stopwords-v11" class="anchor"></a>stopwords v1.1<small> Unreleased </small>
-</h1>
-<ul>
-<li>Adds <code><a href="../reference/use_stopwords.html">use_stopwords()</a></code>, for adding a re-export of this function to any package.</li>
-<li>Adds the “marimo” source, for 5 languages, created by Kohei Watanabe.</li>
-<li>Adds ancient language stopword lists (Greek and Latin).</li>
-<li>Adds the NLTK source, containing stopwords from the Python NLTK library, in 23 languages.</li>
-</ul>
-</div>
-    <div id="stopwords-v10" class="section level1">
-<h1 class="page-header" data-toc-text="1.0">
-<a href="#stopwords-v10" class="anchor"></a>stopwords v1.0<small> 2019-07-24 </small>
-</h1>
-<ul>
-<li>Added Gujarati to misc stopwords.</li>
-<li>Fixed several mis-encoded characters for Turkish in stopwords-iso. (<a href='https://github.com/quanteda/stopwords/issues/15'>#15</a>)</li>
-<li>Fixed some exceptions related to newer R releases.</li>
-</ul>
-</div>
-    <div id="stopwords-v09" class="section level1">
-<h1 class="page-header" data-toc-text="0.9">
-<a href="#stopwords-v09" class="anchor"></a>stopwords v0.9<small> Unreleased </small>
-</h1>
-<p>Changes:</p>
-<ul>
-<li>Added Snowball, misc, and SMART stopwords.</li>
-<li>Replaced exposed data object with the function <code><a href="../reference/stopwords.html">stopwords()</a></code>.</li>
-<li>Made completely compatible with <code><a href="https://quanteda.io/reference/reexports.html">quanteda::stopwords()</a></code> to provide a replacement for that function.</li>
-<li>Significantly improved documentation.</li>
-</ul>
-</div>
-    <div id="stopwords-v010" class="section level1">
-<h1 class="page-header" data-toc-text="0.1.0">
-<a href="#stopwords-v010" class="anchor"></a>stopwords v0.1.0<small> 2017-11-12 </small>
-</h1>
-<p>Changes:</p>
-<ul>
-<li>Initial release</li>
-<li>Submission feedback (removed redundant “in R” in title and changed license to CRAN template)</li>
-<li>Submission feedback (added examples)</li>
-</ul>
-</div>
-  </div>
+    <div class="ref-description">
+    <p>Stopword lists that include specific parts of speech, maintained by Kohei
+Watanabe.</p>
+    </div>
 
+
+
+    <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
+
+    <p>An object of class <code>list</code> of length 6.</p>
+    <h2 class="hasAnchor" id="source"><a class="anchor" href="#source"></a>Source</h2>
+
+    <p>The English version was adopted from the Snowball collection, and then
+extended and translated into other languages by contributors. Names of
+contributors are in the header of the <a href='https://github.com/koheiw/marimo/tree/master/yaml'>original YAML files</a>.</p>
+    <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
+
+    <p>These are multi-level lists, in the original data.  If you wish to use them
+as lists, please access the data object directly.</p>
+    <h2 class="hasAnchor" id="usage"><a class="anchor" href="#usage"></a>Usage</h2>
+
+    <p><code><a href='stopwords.html'>stopwords(language = "en", source = "marimo")</a></code></p>
+
+    <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
+    <pre class="examples"><div class='input'><span class='co'># access English pronouns directly</span>
+<span class='kw pkg'>stopwords</span><span class='kw ns'>::</span><span class='no'>data_stopwords_marimo</span>$<span class='no'>en</span>$<span class='no'>pronoun</span></div><div class='output co'>#&gt; $basic
+#&gt;  [1] "i"          "me"         "myself"     "we"         "ours"      
+#&gt;  [6] "ourselves"  "you"        "yours"      "yourself"   "yourselves"
+#&gt; [11] "he"         "him"        "himself"    "she"        "hers"      
+#&gt; [16] "herself"    "it"         "itself"     "they"       "them"      
+#&gt; [21] "theirs"     "themselves" "this"       "that"       "these"     
+#&gt; [26] "those"     
+#&gt; 
+#&gt; $possessive
+#&gt; [1] "my"    "our"   "your"  "his"   "her"   "its"   "their"
+#&gt; 
+#&gt; $interrogative
+#&gt; [1] "what"  "which" "who"   "whom"  "whose" "when"  "where" "why"   "how"  
+#&gt; 
+#&gt; $contraction
+#&gt;  [1] "i'm"     "you're"  "he's"    "she's"   "it's"    "we're"   "they're"
+#&gt;  [8] "i've"    "you've"  "we've"   "they've" "i'd"     "you'd"   "he'd"   
+#&gt; [15] "she'd"   "we'd"    "they'd"  "i'll"    "you'll"  "he'll"   "she'll" 
+#&gt; [22] "we'll"   "they'll"
+#&gt; </div><div class='input'>
+</div></pre>
+  </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">
       <h2 data-toc-skip>Contents</h2>
     </nav>
   </div>
-
 </div>
 
 

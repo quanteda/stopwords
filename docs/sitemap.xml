@@ -4,7 +4,16 @@
     <loc>http://stopwords.quanteda.io/index.html</loc>
   </url>
   <url>
+    <loc>http://stopwords.quanteda.io/reference/data_stopwords_ancient.html</loc>
+  </url>
+  <url>
+    <loc>http://stopwords.quanteda.io/reference/data_stopwords_marimo.html</loc>
+  </url>
+  <url>
     <loc>http://stopwords.quanteda.io/reference/data_stopwords_misc.html</loc>
+  </url>
+  <url>
+    <loc>http://stopwords.quanteda.io/reference/data_stopwords_nltk.html</loc>
   </url>
   <url>
     <loc>http://stopwords.quanteda.io/reference/data_stopwords_smart.html</loc>
@@ -32,5 +41,8 @@
   </url>
   <url>
     <loc>http://stopwords.quanteda.io/reference/stopwords_options.html</loc>
+  </url>
+  <url>
+    <loc>http://stopwords.quanteda.io/reference/use_stopwords.html</loc>
   </url>
 </urlset>
