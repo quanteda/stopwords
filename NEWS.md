@@ -1,10 +1,10 @@
-stopwords v1.1
+stopwords v2.0
 ==============
 * Adds `use_stopwords()`, for adding a re-export of this function to any package.
-* Adds the "marimo" source, for 5 languages, created by Kohei Watanabe.
-* Adds ancient language stopword lists (Greek and Latin).
 * Adds the NLTK source, containing stopwords from the Python NLTK library, in 23
   languages.
+* Adds the "marimo" source, for 5 languages, created by Kohei Watanabe.
+* Adds ancient language stopword lists (Greek and Latin).
 
 stopwords v1.0
 ==============
