@@ -9,12 +9,12 @@ An object of class \code{list} of length 2.
 }
 \source{
 Aurélien Berra, Ancient Greek and Latin stopwords,
-http://doi.org/10.5281/zenodo.1165205. See
-https://github.com/aurelberra/stopwords/blob/master/rationale.md.
+\url{http://doi.org/10.5281/zenodo.1165205}. See
+\url{https://github.com/aurelberra/stopwords/blob/master/rationale.md}.
 }
 \description{
 Stopword lists for ancient Greek and Latin.  These lists are far more
-extensive than the \href{data_stopwords_perseus}{Perseus lists} for ancient Greek
+extensive than the \link[=data_stopwords_perseus]{Perseus lists} for ancient Greek
 and Latin from the Perseus Digital Library.
 }
 \details{

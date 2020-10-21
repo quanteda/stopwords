@@ -91,7 +91,7 @@
 #' stopword lists for ancient languages
 #'
 #' Stopword lists for ancient Greek and Latin.  These lists are far more
-#' extensive than the [Perseus lists](data_stopwords_perseus) for ancient Greek
+#' extensive than the [Perseus lists][data_stopwords_perseus] for ancient Greek
 #' and Latin from the Perseus Digital Library.
 #'
 #' As there is no 2-letter code for ancient Greek in ISO-639-1, we use "grc" to
@@ -102,8 +102,8 @@
 #'
 #' `stopwords(language = "la", source = "ancient")`
 #' @source Aurélien Berra, Ancient Greek and Latin stopwords,
-#'   http://doi.org/10.5281/zenodo.1165205. See
-#'   https://github.com/aurelberra/stopwords/blob/master/rationale.md.
+#'   [http://doi.org/10.5281/zenodo.1165205](). See
+#'   [https://github.com/aurelberra/stopwords/blob/master/rationale.md]().
 #' @seealso [data_stopwords_perseus]
 "data_stopwords_ancient"
 
