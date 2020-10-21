@@ -91,7 +91,7 @@ The following languages are currently available:
 | Galician        |       gl       |            |        |        ✔        |                   |
 | German          |       de       |      ✔     |    ✔   |        ✔        |      `marimo`     |
 | Greek           |       el       |            |        |        ✔        |       `misc`      |
-| Greek (ancient) | grc            |            |        |                 | `ancient`         |
+| Greek (ancient) | grc            |            |        |                 | `ancient`, `perseus` |
 | Gujarati        |       gu       |            |        |                 |       `misc`      |
 | Hausa           |       ha       |            |        |        ✔        |                   |
 | Hebrew          |       he       |            |        |        ✔        |      `marimo`     |
@@ -104,7 +104,7 @@ The following languages are currently available:
 | Kazakh          |       kk       |            |    ✔   |                 |                   |
 | Korean          |       ko       |            |        |        ✔        |                   |
 | Kurdish         |       ku       |            |        |        ✔        |                   |
-| Latin           |       la       |            |        |        ✔        |     `ancient`     |
+| Latin           |       la       |            |        |        ✔        | `ancient`, `perseus` |
 | Lithuanian      |       lt       |            |        |        ✔        |                   |
 | Latvian         |       lv       |            |        |        ✔        |                   |
 | Malay           |       ms       |            |        |        ✔        |                   |
