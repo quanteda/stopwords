@@ -1,3 +1,7 @@
+stopwords v2.1
+==============
+* Updates the ancient Greek and Latin stopwords in the `ancient` source, and moves older ancient stopwords lists to a new `perseus` source.
+
 stopwords v2.0
 ==============
 * Adds `use_stopwords()`, for adding a re-export of this function to any package.

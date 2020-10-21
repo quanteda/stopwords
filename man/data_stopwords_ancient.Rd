@@ -8,13 +8,18 @@
 An object of class \code{list} of length 2.
 }
 \source{
-The \href{http://wiki.digitalclassicist.org/Main_Page}{Digital Classicist Wiki}.
-See \url{http://wiki.digitalclassicist.org/Main_Page}.
+Aurélien Berra, Ancient Greek and Latin stopwords,
+http://doi.org/10.5281/zenodo.1165205. See
+https://github.com/aurelberra/stopwords/blob/master/rationale.md.
 }
 \description{
-Stopword lists for ancient Greek and Latin.  As there is no
-2-letter code for ancient Greek in ISO-639-1, we use "grc" to denote Greek
-(as per \href{https://iso639-3.sil.org/code/grc}{ISO-639-3}).
+Stopword lists for ancient Greek and Latin.  These lists are far more
+extensive than the \href{data_stopwords_perseus}{Perseus lists} for ancient Greek
+and Latin from the Perseus Digital Library.
+}
+\details{
+As there is no 2-letter code for ancient Greek in ISO-639-1, we use "grc" to
+denote Greek (as per \href{https://iso639-3.sil.org/code/grc}{ISO-639-3}).
 }
 \section{Usage}{
 
@@ -23,4 +28,7 @@ Stopword lists for ancient Greek and Latin.  As there is no
 \code{stopwords(language = "la", source = "ancient")}
 }
 
+\seealso{
+\link{data_stopwords_perseus}
+}
 \keyword{datasets}

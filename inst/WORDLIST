@@ -1,6 +1,9 @@
 af
 ar
+aurelberra
+Aurélien
 az
+Berra
 bg
 Bhogayata
 bn
@@ -8,6 +11,7 @@ br
 Chandrakant
 com
 cs
+doi
 el
 eo
 es
@@ -32,12 +36,14 @@ ku
 lt
 lv
 marimo
+md
 mis
 mr
 nl
 NLP
 nltk
 NLTK
+org
 pl
 quanteda
 Rcv
@@ -62,5 +68,6 @@ tr
 uk
 ur
 YAML
+zenodo
 zh
 zu

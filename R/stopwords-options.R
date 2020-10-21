@@ -14,7 +14,8 @@ stopwords_options <- function() {
                           smart = "data_stopwords_smart",
                           marimo = "data_stopwords_marimo",
                           ancient = "data_stopwords_ancient",
-                          nltk = "data_stopwords_nltk")
+                          nltk = "data_stopwords_nltk",
+                          perseus = "data_stopwords_perseus")
   )
 }
 
