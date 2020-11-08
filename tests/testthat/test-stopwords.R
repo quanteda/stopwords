@@ -15,6 +15,7 @@ smart <- stopwords::data_stopwords_smart
 marimo <- stopwords::data_stopwords_marimo
 ancient <- stopwords::data_stopwords_ancient
 nltk <- stopwords::data_stopwords_nltk
+perseus <- stopwords::data_stopwords_perseus
 
 test_that("all languages work for source: Snowball", {
   test_data <- create_test_data(snowball, "snowball")
@@ -39,6 +40,11 @@ test_that("all languages work for source: Smart", {
 test_that("all languages work for source: ancient", {
   test_data <- create_test_data(ancient, "ancient")
   expect_equal(ancient, test_data)
+})
+
+test_that("all languages work for source: perseus", {
+  test_data <- create_test_data(perseus, "perseus")
+  expect_equal(perseus, test_data)
 })
 
 test_that("all languages work for source: NLTK", {

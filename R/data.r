@@ -90,17 +90,38 @@
 
 #' stopword lists for ancient languages
 #'
-#' Stopword lists for ancient Greek and Latin.  As there is no
-#' 2-letter code for ancient Greek in ISO-639-1, we use "grc" to denote Greek
-#' (as per [ISO-639-3](https://iso639-3.sil.org/code/grc)).
+#' Stopword lists for ancient Greek and Latin.  These lists are far more
+#' extensive than the [Perseus lists][data_stopwords_perseus] for ancient Greek
+#' and Latin from the Perseus Digital Library.
+#'
+#' As there is no 2-letter code for ancient Greek in ISO-639-1, we use "grc" to
+#' denote Greek (as per [ISO-639-3](https://iso639-3.sil.org/code/grc)).
 #' @usage NULL
 #' @section Usage:
 #' `stopwords(language = "grc", source = "ancient")`
 #'
 #' `stopwords(language = "la", source = "ancient")`
-#' @source The [Digital Classicist Wiki](http://wiki.digitalclassicist.org/Main_Page).
-#' See [http://wiki.digitalclassicist.org/Main_Page]().
+#' @source Aurélien Berra, Ancient Greek and Latin stopwords,
+#'   [http://doi.org/10.5281/zenodo.1165205](). See
+#'   [https://github.com/aurelberra/stopwords/blob/master/rationale.md]().
+#' @seealso [data_stopwords_perseus]
 "data_stopwords_ancient"
+
+#' stopword lists for ancient languages - Perseus Digital Library
+#'
+#' Stopword lists for ancient Greek and Latin.  As there is no
+#' 2-letter code for ancient Greek in ISO-639-1, we use "grc" to denote Greek
+#' (as per [ISO-639-3](https://iso639-3.sil.org/code/grc)).
+#' @usage NULL
+#' @section Usage:
+#' `stopwords(language = "grc", source = "perseus")`
+#'
+#' `stopwords(language = "la", source = "perseus")`
+#' @source The [Perseus Digital Library](https://www.perseus.tufts.edu/hopper/).
+#' See [https://wiki.digitalclassicist.org/Stopwords_for_Greek_and_Latin]() and
+#' [https://wiki.digitalclassicist.org/Perseus_Digital_Library]().
+"data_stopwords_perseus"
+
 
 #' stopword lists from the Python NLTK library
 #'
