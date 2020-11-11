@@ -10,6 +10,7 @@ merge_unnamed <- function(x) {
 }
 
 files <- c("en" = "stopwords_en.yml",
+           "de" = "stopwords_de.yml",
            "ja" = "stopwords_ja.yml",
            "ar" = "stopwords_ar.yml",
            "he" = "stopwords_he.yml",
