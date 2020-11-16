@@ -42,7 +42,7 @@ devtools::install_github("quanteda/stopwords")
 ```{r}
 head(stopwords::stopwords("de", source = "snowball"), 20)
 
-head(stopwords::stopwords("de", source = "stopwords-iso"), 20)
+head(stopwords::stopwords("de", source = "marimo"), 20)
 ```
 
 For compatibility with the former `quanteda::stopwords()`:
@@ -67,72 +67,12 @@ The following coverage of languages is currently available, by source. Note that
 
 The following languages are currently available:
 
-| Language        | [ISO-639-1 Code](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) | `snowball` | `NLTK` | `stopwords-iso` |       Other       |
-|-----------------|:--------------:|:----------:|:------:|:---------------:|:-----------------:|
-| Afrikaans       |       af       |            |        |        ✔        |                   |
-| Arabic          |       ar       |            |    ✔   |        ✔        |  `misc`, `marimo` |
-| Armenian        |       hy       |            |        |        ✔        |                   |
-| Azerbaijani     |       az       |            |    ✔   |                 |                   |
-| Basque          |       eu       |            |        |        ✔        |                   |
-| Bengali         |       bn       |            |        |        ✔        |                   |
-| Breton          |       br       |            |        |        ✔        |                   |
-| Bulgarian       |       bg       |            |        |        ✔        |                   |
-| Catalan         |       ca       |            |        |        ✔        |       `misc`      |
-| Chinese         |       zh       |            |        |        ✔        | `misc`,  `marimo` |
-| Croatian        |       hr       |            |        |        ✔        |                   |
-| Czech           |       cs       |            |        |        ✔        |                   |
-| Danish          |       da       |      ✔     |    ✔   |        ✔        |                   |
-| Dutch           |       nl       |      ✔     |    ✔   |        ✔        |                   |
-| English         |       en       |      ✔     |    ✔   |        ✔        | `smart`, `marimo` |
-| Esperanto       |       eo       |            |        |        ✔        |                   |
-| Estonian        |       et       |            |        |        ✔        |                   |
-| Finnish         |       fi       |      ✔     |    ✔   |        ✔        |                   |
-| French          |       fr       |      ✔     |    ✔   |        ✔        |                   |
-| Galician        |       gl       |            |        |        ✔        |                   |
-| German          |       de       |      ✔     |    ✔   |        ✔        |      `marimo`     |
-| Greek           |       el       |            |        |        ✔        |       `misc`      |
-| Greek (ancient) | grc            |            |        |                 | `ancient`, `perseus` |
-| Gujarati        |       gu       |            |        |                 |       `misc`      |
-| Hausa           |       ha       |            |        |        ✔        |                   |
-| Hebrew          |       he       |            |        |        ✔        |      `marimo`     |
-| Hindi           |       hi       |            |        |        ✔        |                   |
-| Hungarian       |       hu       |      ✔     |    ✔   |        ✔        |                   |
-| Indonesian      |       id       |            |    ✔   |        ✔        |                   |
-| Irish           |       ga       |            |        |        ✔        |                   |
-| Italian         |       it       |      ✔     |    ✔   |        ✔        |                   |
-| Japanese        |       ja       |            |        |        ✔        |      `marimo`     |
-| Kazakh          |       kk       |            |    ✔   |                 |                   |
-| Korean          |       ko       |            |        |        ✔        |                   |
-| Kurdish         |       ku       |            |        |        ✔        |                   |
-| Latin           |       la       |            |        |        ✔        | `ancient`, `perseus` |
-| Lithuanian      |       lt       |            |        |        ✔        |                   |
-| Latvian         |       lv       |            |        |        ✔        |                   |
-| Malay           |       ms       |            |        |        ✔        |                   |
-| Marathi         |       mr       |            |        |        ✔        |                   |
-| Nepali          |       mr       |            |    ✔   |                 |                   |
-| Norwegian       |       no       |      ✔     |    ✔   |        ✔        |                   |
-| Persian         |       fa       |            |        |        ✔        |                   |
-| Polish          |       pl       |            |        |        ✔        |                   |
-| Portuguese      |       pt       |      ✔     |    ✔   |        ✔        |                   |
-| Romanian        |       ro       |      ✔     |    ✔   |        ✔        |                   |
-| Russian         |       ru       |      ✔     |    ✔   |        ✔        |                   |
-| Slovak          |       sk       |            |        |        ✔        |                   |
-| Slovenian       |       sl       |            |    ✔   |        ✔        |                   |
-| Somali          |       so       |            |        |        ✔        |                   |
-| Southern Sotho  |       st       |            |        |        ✔        |                   |
-| Spanish         |       es       |      ✔     |    ✔   |        ✔        |                   |
-| Swahili         |       sw       |            |        |        ✔        |                   |
-| Swedish         |       sv       |      ✔     |    ✔   |        ✔        |                   |
-| Thai            |       th       |            |        |        ✔        |                   |
-| Tagalog         |       tl       |            |        |        ✔        |                   |
-| Tajik           |       tg       |            |    ✔   |                 |                   |
-| Turkish         |       tr       |            |    ✔   |        ✔        |                   |
-| Ukrainian       |       uk       |            |        |        ✔        |                   |
-| Urdu            |       ur       |            |        |        ✔        |                   |
-| Vietnamese      |       vi       |            |        |        ✔        |                   |
-| Yoruba          |       yo       |            |        |        ✔        |                   |
-| Zulu            |       zu       |            |        |        ✔        |                   |
-
+```{r, echo=FALSE}
+dat <- read.csv("data-raw/language.csv", as.is = TRUE, check.names = FALSE)
+dat[is.na(dat)] <- ""
+dat[dat == "TRUE"] <- "\u2713"
+knitr::kable(dat, align = c("l", "l", "c", "c", "c", "c", "l"))
+```
 
 ## Basic usage
 
