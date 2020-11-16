@@ -1,0 +1,69 @@
+# Created by Oul Han for the marimo stopwords: https://github.com/koheiw/marimo
+pronoun: 
+    basic:
+        # [i, me, myself, we, ours, ourselves, you, yours, yourself, yourselves, he, him, himself, she, hers, herself]
+        - [나, 내, 나에게, 내게, 저는, 제가, 저에게, 제게, 우리, 우리들, 너희, 너희들, 당신, 당신들, 그, 그들, 그녀, 그녀들]
+        # [it, itself, they, them, theirs, themselves, this, that, these, those]
+        - [그, 그것, 저, 저것, 어떤, 이런, 저런, 어떠한, 그러한, 그런, 것]
+    possessive: 
+        # [my, our, your, his, her, its, their]
+        - [나의, 저의, 너의, 당신의, 그의, 그녀의, 그들의, 그녀들의, 우리의, 저희의, 당신의, 당신들의, 그들의]
+    interrogative: 
+        # [who, when, where, what, how, why]
+        - [누가, 언제, 어디서, 무엇을, 어떻게, 왜]
+verb: 
+    basic: 
+        # [am, is, are, was, were, be, been, being, have, has, had, having, do, does, did, doing]
+        - [이다, 입니다, 였다, 였습니다, 있다, 있습니다, 있었습니다, 계셨다, 계십니다, 계셨습니다, 하다, 했다, 했었다, 하시다, 하셨다, 하셨었다]
+    modal: 
+        # [would, should, could, ought, will]
+        - [된다, 안된다, 됩니다, 안됩니다, 한다, 합니다, 것이다, 것입니다]
+    reporting: 
+        # [say, says, said, tell, tells, told, report, reports, reported]
+        - [보도하다, 보도했다, 보도합니다, 보도했습니다, 전하다, 전했다, 전합니다, 전했습니다]
+conjunction: 
+    # [and, but, if, or, while, nor]
+    - [그리고, 하지만, 허나, 한다면, 그렇다면, 혹은, 및, 내지]
+    # [because, so]
+    - [그래서, 그렇기에, 따라서, 즉, 해서]
+adverb:
+    # [as, until, once] 
+    - [처럼, 까지, 거의, 전혀]
+    # [here, there]
+    - [여기, 저기, 이쪽, 저쪽]
+    # [all, any, both, each]
+    - [모든, 모두, 양쪽, 양측, 각자, 각, 개별별]
+    # [few, many, more, most, some]
+    - [적은, 많은, 더 많은, 가장 많은, 다소]
+    # [other, such, "no", not, only, then]
+    - [다른, 같은, 아닌, 오로지, 오직, 후]
+    # [too, very]
+    - [또한, 마찬가지로, 너무, 매우, 아주, 굉장히]
+preposition: 
+    # [of, at, in, by, for, with, against]
+    - [의, 에, 위해, 함께, 상대로]
+    # [about]
+    - [대해, 대하여, 관해, 관해서]
+    # [between, into, through] 
+    - [사이로, 속으로, 통해서]
+    # [during, before, after, above, below, up, down, in, out, "on", "off", over, under]
+    - [도중에, 전에, 후에, 안에, 밖에, 근처에, 위에, 밑에, 아래에, 옆에]
+    # from, to, again, further, than]
+    - [에서, 으로, 다시, 계속, 보다]
+adjective: 
+    # [own, same] 
+    - [자신의, 동일한, 본인의]
+time:
+    unit:
+        # [minute, hour, month, year, century, am, pm]
+        - [월, 달, 일, 년, 해, 권, 벌, 송이, 쪽, 장, 점, 원, 가지, 천, 만, 백만, 천만, 억, 조, 명, 분, 건, 초, 분, 살, 세]
+    month:
+        # [january, february, march, april, may, june, july, august, september, october, november, december, jan, feb, mar, apr, may, jun, jul, aug, sep, sept, oct, nov, dec]
+        - [일월, 이월, 삼월, 사월, 오월, 유월, 칠월, 팔월, 구월, 십월, 십일월, 십이월]
+    day:
+        # [one, two, three, four, five, six, seven, eight, nine, ten]
+        - [월요일, 화요일, 수요일, 목요일, 금요일, 토요일, 일요일]
+number:
+    cardinal:
+        # [one, two, three, four, five, six, seven, eight, nine, ten]
+        - [일, 이, 삼, 사, 오, 육, 칠, 팔, 구, 십, 하나, 둘, 셋, 넷, 다섯, 여섯, 일곱, 여덟, 아홉, 열]
