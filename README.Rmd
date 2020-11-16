@@ -42,7 +42,7 @@ devtools::install_github("quanteda/stopwords")
 ```{r}
 head(stopwords::stopwords("de", source = "snowball"), 20)
 
-head(stopwords::stopwords("de", source = "marimo"), 20)
+head(stopwords::stopwords("ja", source = "marimo"), 20)
 ```
 
 For compatibility with the former `quanteda::stopwords()`:

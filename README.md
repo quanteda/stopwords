@@ -41,10 +41,11 @@ head(stopwords::stopwords("de", source = "snowball"), 20)
 ##  [8] "also"    "am"      "an"      "ander"   "andere"  "anderem" "anderen"
 ## [15] "anderer" "anderes" "anderm"  "andern"  "anderr"  "anders"
 
-head(stopwords::stopwords("de", source = "marimo"), 20)
-##  [1] "ich"    "mir"    "wir"    "uns"    "du"     "dir"    "dich"   "ihnen" 
-##  [9] "er"     "ihn"    "ihm"    "sie"    "es"     "nicht"  "nichts" "alle"  
-## [17] "allen"  "allem"  "aller"  "alles"
+head(stopwords::stopwords("ja", source = "marimo"), 20)
+##  [1] "私"       "僕"       "自分"     "自身"     "我々"     "私達"    
+##  [7] "あなた"   "彼"       "彼女"     "彼ら"     "彼女ら"   "あれ"    
+## [13] "それ"     "これ"     "あれら"   "あれらの" "それら"   "それらの"
+## [19] "これら"   "これらの"
 ```
 
 For compatibility with the former `quanteda::stopwords()`:
