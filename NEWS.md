@@ -1,6 +1,7 @@
 stopwords v2.1
 ==============
 * Updates the ancient Greek and Latin stopwords in the `ancient` source, and moves older ancient stopwords lists to a new `perseus` source.
+* Added German and Korean stopwords to the "marimo" source.
 
 stopwords v2.0
 ==============
