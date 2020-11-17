@@ -214,7 +214,7 @@ instance, this would work:
 ``` r
 library("quanteda", warn.conflicts = FALSE)
 ## Package version: 2.1.2.9000
-## Parallel computing: 6 of 6 threads used.
+## Parallel computing: 12 of 12 threads used.
 ## See https://quanteda.io for tutorials and examples.
 posspronouns <- stopwords::data_stopwords_marimo$en$pronoun$possessive
 posspronouns
