@@ -11,11 +11,13 @@ merge_unnamed <- function(x) {
 
 files <- c("en" = "stopwords_en.yml",
            "de" = "stopwords_de.yml",
-           "ja" = "stopwords_ja.yml",
            "ar" = "stopwords_ar.yml",
            "he" = "stopwords_he.yml",
            "zh_tw" = "stopwords_zh_traditional.yml",
-           "zh_cn" = "stopwords_zh_simplified.yml")
+           "zh_cn" = "stopwords_zh_simplified.yml",
+           "ko" = "stopwords_ko.yml",
+           "ja" = "stopwords_ja.yml"
+           )
 
 data_stopwords_marimo <- list()
 for (lang in names(files)) {

@@ -55,12 +55,16 @@ adjective:
     - [自ら, 自己, 同じ, 同一]
 time:
     unit:
+        # [minute, hour, month, year, century, am, pm]
         - [分, 時, 日, 月, 年, 年代, 年度, 世紀, 午前, 午後]
     month:
+        # [january, february, march, april, may, june, july, august, september, october, november, december, jan, feb, mar, apr, may, jun, jul, aug, sep, sept, oct, nov, dec]
         - [一月, 二月, 三月, 四月, 五月, 六月, 七月, 八月, 九月, 十月, 十一月, 十二月]
-    day:    
+    day:
+        # [sunday, monday, tuesday, wednesday, thursday, friday, saturday]
         - [月曜, 火曜, 水曜, 木曜, 金曜, 土曜, 日曜]
 number:
     cardinal:
+        # [one, two, three, four, five, six, seven, eight, nine, ten]
         - [一, 二, 三, 四, 五, 六, 七, 八, 九, 十]
     
