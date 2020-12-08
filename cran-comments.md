@@ -4,8 +4,9 @@ To add new functions and new stopword lists.
 
 ## Test environments
 
-* local OS X install, R 3.6.4
-* ubuntu 18.04 (on travis-ci)
+All on R 4.0.3
+* local macOS 10.15.7 install
+* ubuntu 18.04 and 20.04 (on Travis-CI)
 * win-builder (devel and release)
 
 ## R CMD check results
@@ -14,4 +15,4 @@ To add new functions and new stopword lists.
 
 ## Reverse dependencies
 
-revdepcheck() indicates no problems with other packages reverse importing or reverse suggesting stopwords.
+`revdepcheck::revdep_check()` indicates no problems with other packages reverse importing or reverse suggesting stopwords.

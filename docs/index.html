@@ -32,7 +32,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="index.html">stopwords</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">2.0</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">2.1</span>
       </span>
     </div>
 
@@ -70,40 +70,44 @@
 <div id="installation" class="section level2">
 <h2 class="hasAnchor">
 <a href="#installation" class="anchor"></a>Installation</h2>
-<div class="sourceCode" id="cb1"><pre class="r"><span class="co"># from CRAN</span>
-<span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span>(<span class="st">"stopwords"</span>)
+<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="co"># from CRAN</span>
+<span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span><span class="op">(</span><span class="st">"stopwords"</span><span class="op">)</span>
 
 <span class="co"># Or get the development version from GitHub:</span>
 <span class="co"># install.packages("devtools")</span>
-<span class="kw pkg">devtools</span><span class="kw ns">::</span><span class="fu"><a href="https://devtools.r-lib.org//reference/remote-reexports.html">install_github</a></span>(<span class="st">"quanteda/stopwords"</span>)</pre></div>
+<span class="fu">devtools</span><span class="fu">::</span><span class="fu"><a href="https://devtools.r-lib.org//reference/remote-reexports.html">install_github</a></span><span class="op">(</span><span class="st">"quanteda/stopwords"</span><span class="op">)</span></code></pre></div>
 </div>
 <div id="usage" class="section level2">
 <h2 class="hasAnchor">
 <a href="#usage" class="anchor"></a>Usage</h2>
-<div class="sourceCode" id="cb2"><pre class="r"><span class="fu"><a href="https://rdrr.io/r/utils/head.html">head</a></span>(<span class="kw pkg">stopwords</span><span class="kw ns">::</span><span class="fu"><a href="reference/stopwords.html">stopwords</a></span>(<span class="st">"de"</span>, <span class="kw">source</span> <span class="kw">=</span> <span class="st">"snowball"</span>), <span class="fl">20</span>)
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/utils/head.html">head</a></span><span class="op">(</span><span class="fu">stopwords</span><span class="fu">::</span><span class="fu"><a href="reference/stopwords.html">stopwords</a></span><span class="op">(</span><span class="st">"de"</span>, source <span class="op">=</span> <span class="st">"snowball"</span><span class="op">)</span>, <span class="fl">20</span><span class="op">)</span>
 <span class="co">##  [1] "aber"    "alle"    "allem"   "allen"   "aller"   "alles"   "als"    </span>
 <span class="co">##  [8] "also"    "am"      "an"      "ander"   "andere"  "anderem" "anderen"</span>
 <span class="co">## [15] "anderer" "anderes" "anderm"  "andern"  "anderr"  "anders"</span>
 
-<span class="fu"><a href="https://rdrr.io/r/utils/head.html">head</a></span>(<span class="kw pkg">stopwords</span><span class="kw ns">::</span><span class="fu"><a href="reference/stopwords.html">stopwords</a></span>(<span class="st">"de"</span>, <span class="kw">source</span> <span class="kw">=</span> <span class="st">"stopwords-iso"</span>), <span class="fl">20</span>)
-<span class="co">##  [1] "a"           "ab"          "aber"        "ach"         "acht"       </span>
-<span class="co">##  [6] "achte"       "achten"      "achter"      "achtes"      "ag"         </span>
-<span class="co">## [11] "alle"        "allein"      "allem"       "allen"       "aller"      </span>
-<span class="co">## [16] "allerdings"  "alles"       "allgemeinen" "als"         "also"</span></pre></div>
-<p>For compatibility with the former <code><a href="https://quanteda.io/reference/reexports.html">quanteda::stopwords()</a></code>:</p>
-<div class="sourceCode" id="cb3"><pre class="r"><span class="fu"><a href="https://rdrr.io/r/utils/head.html">head</a></span>(<span class="kw pkg">stopwords</span><span class="kw ns">::</span><span class="fu"><a href="reference/stopwords.html">stopwords</a></span>(<span class="st">"german"</span>), <span class="fl">20</span>)
+<span class="fu"><a href="https://rdrr.io/r/utils/head.html">head</a></span><span class="op">(</span><span class="fu">stopwords</span><span class="fu">::</span><span class="fu"><a href="reference/stopwords.html">stopwords</a></span><span class="op">(</span><span class="st">"ja"</span>, source <span class="op">=</span> <span class="st">"marimo"</span><span class="op">)</span>, <span class="fl">20</span><span class="op">)</span>
+<span class="co">##  [1] "私"       "僕"       "自分"     "自身"     "我々"     "私達"    </span>
+<span class="co">##  [7] "あなた"   "彼"       "彼女"     "彼ら"     "彼女ら"   "あれ"    </span>
+<span class="co">## [13] "それ"     "これ"     "あれら"   "あれらの" "それら"   "それらの"</span>
+<span class="co">## [19] "これら"   "これらの"</span></code></pre></div>
+<p>For compatibility with the former <code><a href="https://rdrr.io/pkg/stopwords/man/stopwords.html">quanteda::stopwords()</a></code>:</p>
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/utils/head.html">head</a></span><span class="op">(</span><span class="fu">stopwords</span><span class="fu">::</span><span class="fu"><a href="reference/stopwords.html">stopwords</a></span><span class="op">(</span><span class="st">"german"</span><span class="op">)</span>, <span class="fl">20</span><span class="op">)</span>
 <span class="co">##  [1] "aber"    "alle"    "allem"   "allen"   "aller"   "alles"   "als"    </span>
 <span class="co">##  [8] "also"    "am"      "an"      "ander"   "andere"  "anderem" "anderen"</span>
-<span class="co">## [15] "anderer" "anderes" "anderm"  "andern"  "anderr"  "anders"</span></pre></div>
+<span class="co">## [15] "anderer" "anderes" "anderm"  "andern"  "anderr"  "anders"</span></code></pre></div>
 <p>Explore sources and languages:</p>
-<div class="sourceCode" id="cb4"><pre class="r"><span class="co"># list all sources</span>
-<span class="kw pkg">stopwords</span><span class="kw ns">::</span><span class="fu"><a href="reference/stopwords_getsources.html">stopwords_getsources</a></span>()
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="co"># list all sources</span>
+<span class="fu">stopwords</span><span class="fu">::</span><span class="fu"><a href="reference/stopwords_getsources.html">stopwords_getsources</a></span><span class="op">(</span><span class="op">)</span>
 <span class="co">## [1] "snowball"      "stopwords-iso" "misc"          "smart"        </span>
 <span class="co">## [5] "marimo"        "ancient"       "nltk"</span>
 
 <span class="co"># list languages for a specific source</span>
-<span class="kw pkg">stopwords</span><span class="kw ns">::</span><span class="fu"><a href="reference/stopwords_getlanguages.html">stopwords_getlanguages</a></span>(<span class="st">"snowball"</span>)
-<span class="co">##  [1] "da" "de" "en" "es" "fi" "fr" "hu" "ir" "it" "nl" "no" "pt" "ro" "ru" "sv"</span></pre></div>
+<span class="fu">stopwords</span><span class="fu">::</span><span class="fu"><a href="reference/stopwords_getlanguages.html">stopwords_getlanguages</a></span><span class="op">(</span><span class="st">"snowball"</span><span class="op">)</span>
+<span class="co">##  [1] "da" "de" "en" "es" "fi" "fr" "hu" "ir" "it" "nl" "no" "pt" "ro" "ru" "sv"</span></code></pre></div>
 </div>
 <div id="languages-available" class="section level2">
 <h2 class="hasAnchor">
@@ -112,523 +116,581 @@
 <p>The following languages are currently available:</p>
 <table class="table">
 <thead><tr class="header">
-<th>Language</th>
-<th align="center"><a href="https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes">ISO-639-1 Code</a></th>
-<th align="center"><code>snowball</code></th>
-<th align="center"><code>NLTK</code></th>
-<th align="center"><code>stopwords-iso</code></th>
-<th align="center">Other</th>
+<th align="left">Language</th>
+<th align="left">Code</th>
+<th align="center">snowball</th>
+<th align="center">marimo</th>
+<th align="center">nltk</th>
+<th align="center">stopwords-iso</th>
+<th align="left">Other</th>
 </tr></thead>
 <tbody>
 <tr class="odd">
-<td>Afrikaans</td>
-<td align="center">af</td>
+<td align="left">Afrikaans</td>
+<td align="left">af</td>
 <td align="center"></td>
 <td align="center"></td>
-<td align="center">✔</td>
 <td align="center"></td>
+<td align="center">✓</td>
+<td align="left"></td>
 </tr>
 <tr class="even">
-<td>Arabic</td>
-<td align="center">ar</td>
+<td align="left">Arabic</td>
+<td align="left">ar</td>
 <td align="center"></td>
-<td align="center">✔</td>
-<td align="center">✔</td>
-<td align="center">
-<code>misc</code>, <code>marimo</code>
-</td>
+<td align="center">✓</td>
+<td align="center">✓</td>
+<td align="center">✓</td>
+<td align="left">misc</td>
 </tr>
 <tr class="odd">
-<td>Armenian</td>
-<td align="center">hy</td>
+<td align="left">Armenian</td>
+<td align="left">hy</td>
 <td align="center"></td>
 <td align="center"></td>
-<td align="center">✔</td>
 <td align="center"></td>
+<td align="center">✓</td>
+<td align="left"></td>
 </tr>
 <tr class="even">
-<td>Azerbaijani</td>
-<td align="center">az</td>
-<td align="center"></td>
-<td align="center">✔</td>
+<td align="left">Azerbaijani</td>
+<td align="left">az</td>
 <td align="center"></td>
 <td align="center"></td>
+<td align="center">✓</td>
+<td align="center"></td>
+<td align="left"></td>
 </tr>
 <tr class="odd">
-<td>Basque</td>
-<td align="center">eu</td>
+<td align="left">Basque</td>
+<td align="left">eu</td>
 <td align="center"></td>
 <td align="center"></td>
-<td align="center">✔</td>
 <td align="center"></td>
+<td align="center">✓</td>
+<td align="left"></td>
 </tr>
 <tr class="even">
-<td>Bengali</td>
-<td align="center">bn</td>
+<td align="left">Bengali</td>
+<td align="left">bn</td>
 <td align="center"></td>
 <td align="center"></td>
-<td align="center">✔</td>
 <td align="center"></td>
+<td align="center">✓</td>
+<td align="left"></td>
 </tr>
 <tr class="odd">
-<td>Breton</td>
-<td align="center">br</td>
+<td align="left">Breton</td>
+<td align="left">br</td>
 <td align="center"></td>
 <td align="center"></td>
-<td align="center">✔</td>
 <td align="center"></td>
+<td align="center">✓</td>
+<td align="left"></td>
 </tr>
 <tr class="even">
-<td>Bulgarian</td>
-<td align="center">bg</td>
+<td align="left">Bulgarian</td>
+<td align="left">bg</td>
 <td align="center"></td>
 <td align="center"></td>
-<td align="center">✔</td>
 <td align="center"></td>
+<td align="center">✓</td>
+<td align="left"></td>
 </tr>
 <tr class="odd">
-<td>Catalan</td>
-<td align="center">ca</td>
+<td align="left">Catalan</td>
+<td align="left">ca</td>
 <td align="center"></td>
 <td align="center"></td>
-<td align="center">✔</td>
-<td align="center"><code>misc</code></td>
+<td align="center"></td>
+<td align="center">✓</td>
+<td align="left">misc</td>
 </tr>
 <tr class="even">
-<td>Chinese</td>
-<td align="center">zh</td>
+<td align="left">Chinese</td>
+<td align="left">zh</td>
 <td align="center"></td>
+<td align="center">✓</td>
 <td align="center"></td>
-<td align="center">✔</td>
-<td align="center">
-<code>misc</code>, <code>marimo</code>
-</td>
+<td align="center">✓</td>
+<td align="left">misc</td>
 </tr>
 <tr class="odd">
-<td>Croatian</td>
-<td align="center">hr</td>
+<td align="left">Croatian</td>
+<td align="left">hr</td>
 <td align="center"></td>
 <td align="center"></td>
-<td align="center">✔</td>
 <td align="center"></td>
+<td align="center">✓</td>
+<td align="left"></td>
 </tr>
 <tr class="even">
-<td>Czech</td>
-<td align="center">cs</td>
+<td align="left">Czech</td>
+<td align="left">cs</td>
 <td align="center"></td>
 <td align="center"></td>
-<td align="center">✔</td>
 <td align="center"></td>
+<td align="center">✓</td>
+<td align="left"></td>
 </tr>
 <tr class="odd">
-<td>Danish</td>
-<td align="center">da</td>
-<td align="center">✔</td>
-<td align="center">✔</td>
-<td align="center">✔</td>
+<td align="left">Danish</td>
+<td align="left">da</td>
+<td align="center">✓</td>
 <td align="center"></td>
+<td align="center">✓</td>
+<td align="center">✓</td>
+<td align="left"></td>
 </tr>
 <tr class="even">
-<td>Dutch</td>
-<td align="center">nl</td>
-<td align="center">✔</td>
-<td align="center">✔</td>
-<td align="center">✔</td>
+<td align="left">Dutch</td>
+<td align="left">nl</td>
+<td align="center">✓</td>
 <td align="center"></td>
+<td align="center">✓</td>
+<td align="center">✓</td>
+<td align="left"></td>
 </tr>
 <tr class="odd">
-<td>English</td>
-<td align="center">en</td>
-<td align="center">✔</td>
-<td align="center">✔</td>
-<td align="center">✔</td>
-<td align="center">
-<code>smart</code>, <code>marimo</code>
-</td>
+<td align="left">English</td>
+<td align="left">en</td>
+<td align="center">✓</td>
+<td align="center">✓</td>
+<td align="center">✓</td>
+<td align="center">✓</td>
+<td align="left">smart</td>
 </tr>
 <tr class="even">
-<td>Esperanto</td>
-<td align="center">eo</td>
+<td align="left">Esperanto</td>
+<td align="left">eo</td>
 <td align="center"></td>
 <td align="center"></td>
-<td align="center">✔</td>
 <td align="center"></td>
+<td align="center">✓</td>
+<td align="left"></td>
 </tr>
 <tr class="odd">
-<td>Estonian</td>
-<td align="center">et</td>
+<td align="left">Estonian</td>
+<td align="left">et</td>
 <td align="center"></td>
 <td align="center"></td>
-<td align="center">✔</td>
 <td align="center"></td>
+<td align="center">✓</td>
+<td align="left"></td>
 </tr>
 <tr class="even">
-<td>Finnish</td>
-<td align="center">fi</td>
-<td align="center">✔</td>
-<td align="center">✔</td>
-<td align="center">✔</td>
+<td align="left">Finnish</td>
+<td align="left">fi</td>
+<td align="center">✓</td>
 <td align="center"></td>
+<td align="center">✓</td>
+<td align="center">✓</td>
+<td align="left"></td>
 </tr>
 <tr class="odd">
-<td>French</td>
-<td align="center">fr</td>
-<td align="center">✔</td>
-<td align="center">✔</td>
-<td align="center">✔</td>
+<td align="left">French</td>
+<td align="left">fr</td>
+<td align="center">✓</td>
 <td align="center"></td>
+<td align="center">✓</td>
+<td align="center">✓</td>
+<td align="left"></td>
 </tr>
 <tr class="even">
-<td>Galician</td>
-<td align="center">gl</td>
+<td align="left">Galician</td>
+<td align="left">gl</td>
 <td align="center"></td>
 <td align="center"></td>
-<td align="center">✔</td>
 <td align="center"></td>
+<td align="center">✓</td>
+<td align="left"></td>
 </tr>
 <tr class="odd">
-<td>German</td>
-<td align="center">de</td>
-<td align="center">✔</td>
-<td align="center">✔</td>
-<td align="center">✔</td>
-<td align="center"><code>marimo</code></td>
+<td align="left">German</td>
+<td align="left">de</td>
+<td align="center">✓</td>
+<td align="center">✓</td>
+<td align="center">✓</td>
+<td align="center">✓</td>
+<td align="left"></td>
 </tr>
 <tr class="even">
-<td>Greek</td>
-<td align="center">el</td>
+<td align="left">Greek</td>
+<td align="left">el</td>
 <td align="center"></td>
 <td align="center"></td>
-<td align="center">✔</td>
-<td align="center"><code>misc</code></td>
+<td align="center"></td>
+<td align="center">✓</td>
+<td align="left">misc</td>
 </tr>
 <tr class="odd">
-<td>Greek (ancient)</td>
-<td align="center">grc</td>
+<td align="left">Greek (ancient)</td>
+<td align="left">grc</td>
 <td align="center"></td>
 <td align="center"></td>
 <td align="center"></td>
-<td align="center"><code>ancient</code></td>
+<td align="center"></td>
+<td align="left">ancient, perseus</td>
 </tr>
 <tr class="even">
-<td>Gujarati</td>
-<td align="center">gu</td>
+<td align="left">Gujarati</td>
+<td align="left">gu</td>
 <td align="center"></td>
 <td align="center"></td>
 <td align="center"></td>
-<td align="center"><code>misc</code></td>
+<td align="center"></td>
+<td align="left">misc</td>
 </tr>
 <tr class="odd">
-<td>Hausa</td>
-<td align="center">ha</td>
+<td align="left">Hausa</td>
+<td align="left">ha</td>
 <td align="center"></td>
 <td align="center"></td>
-<td align="center">✔</td>
 <td align="center"></td>
+<td align="center">✓</td>
+<td align="left"></td>
 </tr>
 <tr class="even">
-<td>Hebrew</td>
-<td align="center">he</td>
+<td align="left">Hebrew</td>
+<td align="left">he</td>
 <td align="center"></td>
+<td align="center">✓</td>
 <td align="center"></td>
-<td align="center">✔</td>
-<td align="center"><code>marimo</code></td>
+<td align="center">✓</td>
+<td align="left"></td>
 </tr>
 <tr class="odd">
-<td>Hindi</td>
-<td align="center">hi</td>
+<td align="left">Hindi</td>
+<td align="left">hi</td>
 <td align="center"></td>
 <td align="center"></td>
-<td align="center">✔</td>
 <td align="center"></td>
+<td align="center">✓</td>
+<td align="left"></td>
 </tr>
 <tr class="even">
-<td>Hungarian</td>
-<td align="center">hu</td>
-<td align="center">✔</td>
-<td align="center">✔</td>
-<td align="center">✔</td>
+<td align="left">Hungarian</td>
+<td align="left">hu</td>
+<td align="center">✓</td>
 <td align="center"></td>
+<td align="center">✓</td>
+<td align="center">✓</td>
+<td align="left"></td>
 </tr>
 <tr class="odd">
-<td>Indonesian</td>
-<td align="center">id</td>
+<td align="left">Indonesian</td>
+<td align="left">id</td>
 <td align="center"></td>
-<td align="center">✔</td>
-<td align="center">✔</td>
 <td align="center"></td>
+<td align="center">✓</td>
+<td align="center">✓</td>
+<td align="left"></td>
 </tr>
 <tr class="even">
-<td>Irish</td>
-<td align="center">ga</td>
+<td align="left">Irish</td>
+<td align="left">ga</td>
 <td align="center"></td>
 <td align="center"></td>
-<td align="center">✔</td>
 <td align="center"></td>
+<td align="center">✓</td>
+<td align="left"></td>
 </tr>
 <tr class="odd">
-<td>Italian</td>
-<td align="center">it</td>
-<td align="center">✔</td>
-<td align="center">✔</td>
-<td align="center">✔</td>
+<td align="left">Italian</td>
+<td align="left">it</td>
+<td align="center">✓</td>
 <td align="center"></td>
+<td align="center">✓</td>
+<td align="center">✓</td>
+<td align="left"></td>
 </tr>
 <tr class="even">
-<td>Japanese</td>
-<td align="center">ja</td>
+<td align="left">Japanese</td>
+<td align="left">ja</td>
 <td align="center"></td>
+<td align="center">✓</td>
 <td align="center"></td>
-<td align="center">✔</td>
-<td align="center"><code>marimo</code></td>
+<td align="center">✓</td>
+<td align="left"></td>
 </tr>
 <tr class="odd">
-<td>Kazakh</td>
-<td align="center">kk</td>
-<td align="center"></td>
-<td align="center">✔</td>
+<td align="left">Kazakh</td>
+<td align="left">kk</td>
 <td align="center"></td>
 <td align="center"></td>
+<td align="center">✓</td>
+<td align="center"></td>
+<td align="left"></td>
 </tr>
 <tr class="even">
-<td>Korean</td>
-<td align="center">ko</td>
+<td align="left">Korean</td>
+<td align="left">ko</td>
 <td align="center"></td>
+<td align="center">✓</td>
 <td align="center"></td>
-<td align="center">✔</td>
-<td align="center"></td>
+<td align="center">✓</td>
+<td align="left"></td>
 </tr>
 <tr class="odd">
-<td>Kurdish</td>
-<td align="center">ku</td>
+<td align="left">Kurdish</td>
+<td align="left">ku</td>
 <td align="center"></td>
 <td align="center"></td>
-<td align="center">✔</td>
 <td align="center"></td>
+<td align="center">✓</td>
+<td align="left"></td>
 </tr>
 <tr class="even">
-<td>Latin</td>
-<td align="center">la</td>
+<td align="left">Latin</td>
+<td align="left">la</td>
 <td align="center"></td>
 <td align="center"></td>
-<td align="center">✔</td>
-<td align="center"><code>ancient</code></td>
+<td align="center"></td>
+<td align="center">✓</td>
+<td align="left">ancient, perseus</td>
 </tr>
 <tr class="odd">
-<td>Lithuanian</td>
-<td align="center">lt</td>
+<td align="left">Lithuanian</td>
+<td align="left">lt</td>
 <td align="center"></td>
 <td align="center"></td>
-<td align="center">✔</td>
 <td align="center"></td>
+<td align="center">✓</td>
+<td align="left"></td>
 </tr>
 <tr class="even">
-<td>Latvian</td>
-<td align="center">lv</td>
+<td align="left">Latvian</td>
+<td align="left">lv</td>
 <td align="center"></td>
 <td align="center"></td>
-<td align="center">✔</td>
 <td align="center"></td>
+<td align="center">✓</td>
+<td align="left"></td>
 </tr>
 <tr class="odd">
-<td>Malay</td>
-<td align="center">ms</td>
+<td align="left">Malay</td>
+<td align="left">ms</td>
 <td align="center"></td>
 <td align="center"></td>
-<td align="center">✔</td>
 <td align="center"></td>
+<td align="center">✓</td>
+<td align="left"></td>
 </tr>
 <tr class="even">
-<td>Marathi</td>
-<td align="center">mr</td>
+<td align="left">Marathi</td>
+<td align="left">mr</td>
 <td align="center"></td>
 <td align="center"></td>
-<td align="center">✔</td>
 <td align="center"></td>
+<td align="center">✓</td>
+<td align="left"></td>
 </tr>
 <tr class="odd">
-<td>Nepali</td>
-<td align="center">mr</td>
-<td align="center"></td>
-<td align="center">✔</td>
+<td align="left">Nepali</td>
+<td align="left">mr</td>
 <td align="center"></td>
 <td align="center"></td>
+<td align="center">✓</td>
+<td align="center"></td>
+<td align="left"></td>
 </tr>
 <tr class="even">
-<td>Norwegian</td>
-<td align="center">no</td>
-<td align="center">✔</td>
-<td align="center">✔</td>
-<td align="center">✔</td>
+<td align="left">Norwegian</td>
+<td align="left">no</td>
+<td align="center">✓</td>
 <td align="center"></td>
+<td align="center">✓</td>
+<td align="center">✓</td>
+<td align="left"></td>
 </tr>
 <tr class="odd">
-<td>Persian</td>
-<td align="center">fa</td>
+<td align="left">Persian</td>
+<td align="left">fa</td>
 <td align="center"></td>
 <td align="center"></td>
-<td align="center">✔</td>
 <td align="center"></td>
+<td align="center">✓</td>
+<td align="left"></td>
 </tr>
 <tr class="even">
-<td>Polish</td>
-<td align="center">pl</td>
+<td align="left">Polish</td>
+<td align="left">pl</td>
 <td align="center"></td>
 <td align="center"></td>
-<td align="center">✔</td>
 <td align="center"></td>
+<td align="center">✓</td>
+<td align="left"></td>
 </tr>
 <tr class="odd">
-<td>Portuguese</td>
-<td align="center">pt</td>
-<td align="center">✔</td>
-<td align="center">✔</td>
-<td align="center">✔</td>
+<td align="left">Portuguese</td>
+<td align="left">pt</td>
+<td align="center">✓</td>
 <td align="center"></td>
+<td align="center">✓</td>
+<td align="center">✓</td>
+<td align="left"></td>
 </tr>
 <tr class="even">
-<td>Romanian</td>
-<td align="center">ro</td>
-<td align="center">✔</td>
-<td align="center">✔</td>
-<td align="center">✔</td>
+<td align="left">Romanian</td>
+<td align="left">ro</td>
+<td align="center">✓</td>
 <td align="center"></td>
+<td align="center">✓</td>
+<td align="center">✓</td>
+<td align="left"></td>
 </tr>
 <tr class="odd">
-<td>Russian</td>
-<td align="center">ru</td>
-<td align="center">✔</td>
-<td align="center">✔</td>
-<td align="center">✔</td>
+<td align="left">Russian</td>
+<td align="left">ru</td>
+<td align="center">✓</td>
 <td align="center"></td>
+<td align="center">✓</td>
+<td align="center">✓</td>
+<td align="left"></td>
 </tr>
 <tr class="even">
-<td>Slovak</td>
-<td align="center">sk</td>
+<td align="left">Slovak</td>
+<td align="left">sk</td>
 <td align="center"></td>
 <td align="center"></td>
-<td align="center">✔</td>
 <td align="center"></td>
+<td align="center">✓</td>
+<td align="left"></td>
 </tr>
 <tr class="odd">
-<td>Slovenian</td>
-<td align="center">sl</td>
+<td align="left">Slovenian</td>
+<td align="left">sl</td>
 <td align="center"></td>
-<td align="center">✔</td>
-<td align="center">✔</td>
 <td align="center"></td>
+<td align="center">✓</td>
+<td align="center">✓</td>
+<td align="left"></td>
 </tr>
 <tr class="even">
-<td>Somali</td>
-<td align="center">so</td>
+<td align="left">Somali</td>
+<td align="left">so</td>
 <td align="center"></td>
 <td align="center"></td>
-<td align="center">✔</td>
 <td align="center"></td>
+<td align="center">✓</td>
+<td align="left"></td>
 </tr>
 <tr class="odd">
-<td>Southern Sotho</td>
-<td align="center">st</td>
+<td align="left">Southern Sotho</td>
+<td align="left">st</td>
 <td align="center"></td>
 <td align="center"></td>
-<td align="center">✔</td>
 <td align="center"></td>
+<td align="center">✓</td>
+<td align="left"></td>
 </tr>
 <tr class="even">
-<td>Spanish</td>
-<td align="center">es</td>
-<td align="center">✔</td>
-<td align="center">✔</td>
-<td align="center">✔</td>
+<td align="left">Spanish</td>
+<td align="left">es</td>
+<td align="center">✓</td>
 <td align="center"></td>
+<td align="center">✓</td>
+<td align="center">✓</td>
+<td align="left"></td>
 </tr>
 <tr class="odd">
-<td>Swahili</td>
-<td align="center">sw</td>
+<td align="left">Swahili</td>
+<td align="left">sw</td>
 <td align="center"></td>
 <td align="center"></td>
-<td align="center">✔</td>
 <td align="center"></td>
+<td align="center">✓</td>
+<td align="left"></td>
 </tr>
 <tr class="even">
-<td>Swedish</td>
-<td align="center">sv</td>
-<td align="center">✔</td>
-<td align="center">✔</td>
-<td align="center">✔</td>
+<td align="left">Swedish</td>
+<td align="left">sv</td>
+<td align="center">✓</td>
 <td align="center"></td>
+<td align="center">✓</td>
+<td align="center">✓</td>
+<td align="left"></td>
 </tr>
 <tr class="odd">
-<td>Thai</td>
-<td align="center">th</td>
+<td align="left">Thai</td>
+<td align="left">th</td>
 <td align="center"></td>
 <td align="center"></td>
-<td align="center">✔</td>
 <td align="center"></td>
+<td align="center">✓</td>
+<td align="left"></td>
 </tr>
 <tr class="even">
-<td>Tagalog</td>
-<td align="center">tl</td>
+<td align="left">Tagalog</td>
+<td align="left">tl</td>
 <td align="center"></td>
 <td align="center"></td>
-<td align="center">✔</td>
 <td align="center"></td>
+<td align="center">✓</td>
+<td align="left"></td>
 </tr>
 <tr class="odd">
-<td>Tajik</td>
-<td align="center">tg</td>
-<td align="center"></td>
-<td align="center">✔</td>
+<td align="left">Tajik</td>
+<td align="left">tg</td>
 <td align="center"></td>
 <td align="center"></td>
+<td align="center">✓</td>
+<td align="center"></td>
+<td align="left"></td>
 </tr>
 <tr class="even">
-<td>Turkish</td>
-<td align="center">tr</td>
+<td align="left">Turkish</td>
+<td align="left">tr</td>
 <td align="center"></td>
-<td align="center">✔</td>
-<td align="center">✔</td>
 <td align="center"></td>
+<td align="center">✓</td>
+<td align="center">✓</td>
+<td align="left"></td>
 </tr>
 <tr class="odd">
-<td>Ukrainian</td>
-<td align="center">uk</td>
+<td align="left">Ukrainian</td>
+<td align="left">uk</td>
 <td align="center"></td>
 <td align="center"></td>
-<td align="center">✔</td>
 <td align="center"></td>
+<td align="center">✓</td>
+<td align="left"></td>
 </tr>
 <tr class="even">
-<td>Urdu</td>
-<td align="center">ur</td>
+<td align="left">Urdu</td>
+<td align="left">ur</td>
 <td align="center"></td>
 <td align="center"></td>
-<td align="center">✔</td>
 <td align="center"></td>
+<td align="center">✓</td>
+<td align="left"></td>
 </tr>
 <tr class="odd">
-<td>Vietnamese</td>
-<td align="center">vi</td>
+<td align="left">Vietnamese</td>
+<td align="left">vi</td>
 <td align="center"></td>
 <td align="center"></td>
-<td align="center">✔</td>
 <td align="center"></td>
+<td align="center">✓</td>
+<td align="left"></td>
 </tr>
 <tr class="even">
-<td>Yoruba</td>
-<td align="center">yo</td>
+<td align="left">Yoruba</td>
+<td align="left">yo</td>
 <td align="center"></td>
 <td align="center"></td>
-<td align="center">✔</td>
 <td align="center"></td>
+<td align="center">✓</td>
+<td align="left"></td>
 </tr>
 <tr class="odd">
-<td>Zulu</td>
-<td align="center">zu</td>
+<td align="left">Zulu</td>
+<td align="left">zu</td>
 <td align="center"></td>
 <td align="center"></td>
-<td align="center">✔</td>
 <td align="center"></td>
+<td align="center">✓</td>
+<td align="left"></td>
 </tr>
 </tbody>
 </table>
@@ -636,78 +698,85 @@
 <div id="basic-usage" class="section level2">
 <h2 class="hasAnchor">
 <a href="#basic-usage" class="anchor"></a>Basic usage</h2>
-<div class="sourceCode" id="cb5"><pre class="r"><span class="fu"><a href="https://rdrr.io/r/utils/head.html">head</a></span>(<span class="kw pkg">stopwords</span><span class="kw ns">::</span><span class="fu"><a href="reference/stopwords.html">stopwords</a></span>(<span class="st">"de"</span>, <span class="kw">source</span> <span class="kw">=</span> <span class="st">"snowball"</span>), <span class="fl">20</span>)
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/utils/head.html">head</a></span><span class="op">(</span><span class="fu">stopwords</span><span class="fu">::</span><span class="fu"><a href="reference/stopwords.html">stopwords</a></span><span class="op">(</span><span class="st">"de"</span>, source <span class="op">=</span> <span class="st">"snowball"</span><span class="op">)</span>, <span class="fl">20</span><span class="op">)</span>
 <span class="co">##  [1] "aber"    "alle"    "allem"   "allen"   "aller"   "alles"   "als"    </span>
 <span class="co">##  [8] "also"    "am"      "an"      "ander"   "andere"  "anderem" "anderen"</span>
 <span class="co">## [15] "anderer" "anderes" "anderm"  "andern"  "anderr"  "anders"</span>
 
-<span class="fu"><a href="https://rdrr.io/r/utils/head.html">head</a></span>(<span class="kw pkg">stopwords</span><span class="kw ns">::</span><span class="fu"><a href="reference/stopwords.html">stopwords</a></span>(<span class="st">"de"</span>, <span class="kw">source</span> <span class="kw">=</span> <span class="st">"stopwords-iso"</span>), <span class="fl">20</span>)
+<span class="fu"><a href="https://rdrr.io/r/utils/head.html">head</a></span><span class="op">(</span><span class="fu">stopwords</span><span class="fu">::</span><span class="fu"><a href="reference/stopwords.html">stopwords</a></span><span class="op">(</span><span class="st">"de"</span>, source <span class="op">=</span> <span class="st">"stopwords-iso"</span><span class="op">)</span>, <span class="fl">20</span><span class="op">)</span>
 <span class="co">##  [1] "a"           "ab"          "aber"        "ach"         "acht"       </span>
 <span class="co">##  [6] "achte"       "achten"      "achter"      "achtes"      "ag"         </span>
 <span class="co">## [11] "alle"        "allein"      "allem"       "allen"       "aller"      </span>
-<span class="co">## [16] "allerdings"  "alles"       "allgemeinen" "als"         "also"</span></pre></div>
-<p>For compatibility with the former <code><a href="https://quanteda.io/reference/reexports.html">quanteda::stopwords()</a></code>:</p>
-<div class="sourceCode" id="cb6"><pre class="r"><span class="fu"><a href="https://rdrr.io/r/utils/head.html">head</a></span>(<span class="kw pkg">stopwords</span><span class="kw ns">::</span><span class="fu"><a href="reference/stopwords.html">stopwords</a></span>(<span class="st">"german"</span>), <span class="fl">20</span>)
+<span class="co">## [16] "allerdings"  "alles"       "allgemeinen" "als"         "also"</span></code></pre></div>
+<p>For compatibility with the former <code><a href="https://rdrr.io/pkg/stopwords/man/stopwords.html">quanteda::stopwords()</a></code>:</p>
+<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/utils/head.html">head</a></span><span class="op">(</span><span class="fu">stopwords</span><span class="fu">::</span><span class="fu"><a href="reference/stopwords.html">stopwords</a></span><span class="op">(</span><span class="st">"german"</span><span class="op">)</span>, <span class="fl">20</span><span class="op">)</span>
 <span class="co">##  [1] "aber"    "alle"    "allem"   "allen"   "aller"   "alles"   "als"    </span>
 <span class="co">##  [8] "also"    "am"      "an"      "ander"   "andere"  "anderem" "anderen"</span>
-<span class="co">## [15] "anderer" "anderes" "anderm"  "andern"  "anderr"  "anders"</span></pre></div>
+<span class="co">## [15] "anderer" "anderes" "anderm"  "andern"  "anderr"  "anders"</span></code></pre></div>
 <p>Explore sources and languages:</p>
-<div class="sourceCode" id="cb7"><pre class="r"><span class="co"># list all sources</span>
-<span class="kw pkg">stopwords</span><span class="kw ns">::</span><span class="fu"><a href="reference/stopwords_getsources.html">stopwords_getsources</a></span>()
+<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="co"># list all sources</span>
+<span class="fu">stopwords</span><span class="fu">::</span><span class="fu"><a href="reference/stopwords_getsources.html">stopwords_getsources</a></span><span class="op">(</span><span class="op">)</span>
 <span class="co">## [1] "snowball"      "stopwords-iso" "misc"          "smart"        </span>
 <span class="co">## [5] "marimo"        "ancient"       "nltk"</span>
 
 <span class="co"># list languages for a specific source</span>
-<span class="kw pkg">stopwords</span><span class="kw ns">::</span><span class="fu"><a href="reference/stopwords_getlanguages.html">stopwords_getlanguages</a></span>(<span class="st">"snowball"</span>)
-<span class="co">##  [1] "da" "de" "en" "es" "fi" "fr" "hu" "ir" "it" "nl" "no" "pt" "ro" "ru" "sv"</span></pre></div>
+<span class="fu">stopwords</span><span class="fu">::</span><span class="fu"><a href="reference/stopwords_getlanguages.html">stopwords_getlanguages</a></span><span class="op">(</span><span class="st">"snowball"</span><span class="op">)</span>
+<span class="co">##  [1] "da" "de" "en" "es" "fi" "fr" "hu" "ir" "it" "nl" "no" "pt" "ro" "ru" "sv"</span></code></pre></div>
 </div>
 <div id="modifying-stopword-lists" class="section level2">
 <h2 class="hasAnchor">
 <a href="#modifying-stopword-lists" class="anchor"></a>Modifying stopword lists</h2>
 <p>It is now possible to edit your own stopword lists, using the interactive editor, with functions from the <strong>quanteda</strong> package (&gt;= v2.02). For instance to edit the English stopword list for the Snowball source:</p>
-<div class="sourceCode" id="cb8"><pre class="r"><span class="co"># edit the English stopwords</span>
-<span class="no">my_stopwords</span> <span class="kw">&lt;-</span> <span class="kw pkg">quanteda</span><span class="kw ns">::</span><span class="fu"><a href="https://quanteda.io/reference/dictionary_edit.html">char_edit</a></span>(<span class="fu"><a href="reference/stopwords.html">stopwords</a></span>(<span class="st">"en"</span>, <span class="kw">source</span> <span class="kw">=</span> <span class="st">"snowball"</span>))</pre></div>
+<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="co"># edit the English stopwords</span>
+<span class="va">my_stopwords</span> <span class="op">&lt;-</span> <span class="fu">quanteda</span><span class="fu">::</span><span class="fu"><a href="https://quanteda.io/reference/dictionary_edit.html">char_edit</a></span><span class="op">(</span><span class="fu"><a href="reference/stopwords.html">stopwords</a></span><span class="op">(</span><span class="st">"en"</span>, source <span class="op">=</span> <span class="st">"snowball"</span><span class="op">)</span><span class="op">)</span></code></pre></div>
 <p>To edit stopwords whose underlying structure is a list, such as the “marimo” source, we can use the <code><a href="https://quanteda.io/reference/dictionary_edit.html">list_edit()</a></code> function:</p>
-<div class="sourceCode" id="cb9"><pre class="r"><span class="co"># edit the English stopwords</span>
-<span class="no">my_stopwordlist</span> <span class="kw">&lt;-</span> <span class="kw pkg">quanteda</span><span class="kw ns">::</span><span class="fu"><a href="https://quanteda.io/reference/dictionary_edit.html">list_edit</a></span>(<span class="fu"><a href="reference/stopwords.html">stopwords</a></span>(<span class="st">"en"</span>, <span class="kw">source</span> <span class="kw">=</span> <span class="st">"marimo"</span>, <span class="kw">simplify</span> <span class="kw">=</span> <span class="fl">FALSE</span>))</pre></div>
+<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="co"># edit the English stopwords</span>
+<span class="va">my_stopwordlist</span> <span class="op">&lt;-</span> <span class="fu">quanteda</span><span class="fu">::</span><span class="fu"><a href="https://quanteda.io/reference/dictionary_edit.html">list_edit</a></span><span class="op">(</span><span class="fu"><a href="reference/stopwords.html">stopwords</a></span><span class="op">(</span><span class="st">"en"</span>, source <span class="op">=</span> <span class="st">"marimo"</span>, simplify <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span><span class="op">)</span></code></pre></div>
 <p>Finally, it’s possible to remove stopwords using pattern matching. The default is the easy-to-use <a href="https://en.wikipedia.org/wiki/Glob_(programming)">“glob” style matching</a>, which is equivalent to fixed matching when no wildcard characters are used. So to remove personal pronouns from the English Snowball word list, for instance, this would work:</p>
-<div class="sourceCode" id="cb10"><pre class="r"><span class="fu"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="st">"quanteda"</span>, <span class="kw">warn.conflicts</span> <span class="kw">=</span> <span class="fl">FALSE</span>)
-<span class="co">## Package version: 2.0.2</span>
-<span class="co">## Parallel computing: 2 of 8 threads used.</span>
+<div class="sourceCode" id="cb10"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="st"><a href="https://quanteda.io">"quanteda"</a></span>, warn.conflicts <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span>
+<span class="co">## Package version: 2.1.2.9000</span>
+<span class="co">## Parallel computing: 12 of 12 threads used.</span>
 <span class="co">## See https://quanteda.io for tutorials and examples.</span>
-<span class="no">posspronouns</span> <span class="kw">&lt;-</span> <span class="kw pkg">stopwords</span><span class="kw ns">::</span><span class="no"><a href="reference/data_stopwords_marimo.html">data_stopwords_marimo</a></span>$<span class="no">en</span>$<span class="no">pronoun</span>$<span class="no">possessive</span>
-<span class="no">posspronouns</span>
+<span class="va">posspronouns</span> <span class="op">&lt;-</span> <span class="fu">stopwords</span><span class="fu">::</span><span class="va"><a href="reference/data_stopwords_marimo.html">data_stopwords_marimo</a></span><span class="op">$</span><span class="va">en</span><span class="op">$</span><span class="va">pronoun</span><span class="op">$</span><span class="va">possessive</span>
+<span class="va">posspronouns</span>
 <span class="co">## [1] "my"    "our"   "your"  "his"   "her"   "its"   "their"</span>
 
-<span class="fu"><a href="reference/stopwords.html">stopwords</a></span>(<span class="st">"en"</span>, <span class="kw">source</span> <span class="kw">=</span> <span class="st">"snowball"</span>) <span class="kw">%&gt;%</span>
-  <span class="fu"><a href="https://rdrr.io/r/utils/head.html">head</a></span>(<span class="kw">n</span> <span class="kw">=</span> <span class="fl">10</span>)
+<span class="fu"><a href="reference/stopwords.html">stopwords</a></span><span class="op">(</span><span class="st">"en"</span>, source <span class="op">=</span> <span class="st">"snowball"</span><span class="op">)</span> <span class="op">%&gt;%</span>
+  <span class="fu"><a href="https://rdrr.io/r/utils/head.html">head</a></span><span class="op">(</span>n <span class="op">=</span> <span class="fl">10</span><span class="op">)</span>
 <span class="co">##  [1] "i"         "me"        "my"        "myself"    "we"        "our"      </span>
-<span class="co">##  [7] "ours"      "ourselves" "you"       "your"</span></pre></div>
+<span class="co">##  [7] "ours"      "ourselves" "you"       "your"</span></code></pre></div>
 <p>See the difference when we remove them – “my”, “ours”, and “your” are gone:</p>
-<div class="sourceCode" id="cb11"><pre class="r"><span class="fu"><a href="reference/stopwords.html">stopwords</a></span>(<span class="st">"en"</span>, <span class="kw">source</span> <span class="kw">=</span> <span class="st">"snowball"</span>) <span class="kw">%&gt;%</span>
-  <span class="fu"><a href="https://rdrr.io/r/utils/head.html">head</a></span>(<span class="kw">n</span> <span class="kw">=</span> <span class="fl">10</span>) <span class="kw">%&gt;%</span>
-  <span class="fu"><a href="https://quanteda.io/reference/char_select.html">char_remove</a></span>(<span class="kw">pattern</span> <span class="kw">=</span> <span class="no">posspronouns</span>)
+<div class="sourceCode" id="cb11"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu"><a href="reference/stopwords.html">stopwords</a></span><span class="op">(</span><span class="st">"en"</span>, source <span class="op">=</span> <span class="st">"snowball"</span><span class="op">)</span> <span class="op">%&gt;%</span>
+  <span class="fu"><a href="https://rdrr.io/r/utils/head.html">head</a></span><span class="op">(</span>n <span class="op">=</span> <span class="fl">10</span><span class="op">)</span> <span class="op">%&gt;%</span>
+  <span class="fu"><a href="https://quanteda.io/reference/char_select.html">char_remove</a></span><span class="op">(</span>pattern <span class="op">=</span> <span class="va">posspronouns</span><span class="op">)</span>
 <span class="co">## [1] "i"         "me"        "myself"    "we"        "ours"      "ourselves"</span>
-<span class="co">## [7] "you"</span></pre></div>
+<span class="co">## [7] "you"</span></code></pre></div>
 <p>There is no <code>char_add()</code>, since it’s just as easy to use <code><a href="https://rdrr.io/r/base/c.html">c()</a></code> for this, but there is a <code><a href="https://quanteda.io/reference/char_select.html">char_keep()</a></code> for positive selection rather than removal.</p>
 </div>
 <div id="adding-stopwords-to-your-own-package" class="section level2">
 <h2 class="hasAnchor">
 <a href="#adding-stopwords-to-your-own-package" class="anchor"></a>Adding stopwords to your own package</h2>
 <p>As of version 1.1, we’ve made it a one-step process to add <code><a href="reference/stopwords.html">stopwords()</a></code> to your package through a re-export. Simply call <code><a href="reference/use_stopwords.html">use_stopwords()</a></code> like this:</p>
-<div class="sourceCode" id="cb12"><pre class="r">&gt; stopwords::use_stopwords()
-✔ Setting active project to '/Users/me/GitHub/mypackage'
-✔ Adding 'stopwords' to Imports field in DESCRIPTION
-✔ Writing 'R/use-stopwords.R'
-● Run `devtools::document()` to update 'NAMESPACE'
-
-&gt; devtools::document()
-Updating mypackage documentation
-Updating collate directive in  /Users/me/GitHub/mypackage/DESCRIPTION 
-Writing NAMESPACE
-Loading mypackage
-Writing NAMESPACE
-Writing stopwords.Rd</pre></div>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1"></a><span class="op">&gt;</span><span class="st"> </span>stopwords<span class="op">::</span><span class="kw">use_stopwords</span>()</span>
+<span id="cb12-2"><a href="#cb12-2"></a>✔ Setting active project to <span class="st">'/Users/me/GitHub/mypackage'</span></span>
+<span id="cb12-3"><a href="#cb12-3"></a>✔ Adding <span class="st">'stopwords'</span> to Imports field <span class="cf">in</span> DESCRIPTION</span>
+<span id="cb12-4"><a href="#cb12-4"></a>✔ Writing <span class="st">'R/use-stopwords.R'</span></span>
+<span id="cb12-5"><a href="#cb12-5"></a>● Run <span class="st">`</span><span class="dt">devtools::document()</span><span class="st">`</span> to update <span class="st">'NAMESPACE'</span></span>
+<span id="cb12-6"><a href="#cb12-6"></a></span>
+<span id="cb12-7"><a href="#cb12-7"></a><span class="op">&gt;</span><span class="st"> </span>devtools<span class="op">::</span><span class="kw">document</span>()</span>
+<span id="cb12-8"><a href="#cb12-8"></a>Updating mypackage documentation</span>
+<span id="cb12-9"><a href="#cb12-9"></a>Updating collate directive <span class="cf">in</span>  <span class="op">/</span>Users<span class="op">/</span>me<span class="op">/</span>GitHub<span class="op">/</span>mypackage<span class="op">/</span>DESCRIPTION </span>
+<span id="cb12-10"><a href="#cb12-10"></a>Writing NAMESPACE</span>
+<span id="cb12-11"><a href="#cb12-11"></a>Loading mypackage</span>
+<span id="cb12-12"><a href="#cb12-12"></a>Writing NAMESPACE</span>
+<span id="cb12-13"><a href="#cb12-13"></a>Writing stopwords.Rd</span></code></pre></div>
 </div>
 <div id="contributing" class="section level2">
 <h2 class="hasAnchor">
@@ -759,7 +828,7 @@ Writing stopwords.Rd</pre></div>
 <h2>Dev status</h2>
 <ul class="list-unstyled">
 <li><a href="https://CRAN.R-project.org/package=stopwords"><img src="https://www.r-pkg.org/badges/version/stopwords" alt="CRAN Version"></a></li>
-<li><a href="https://github.com/quanteda/stopwords"><img src="https://img.shields.io/badge/devel%20version-2.0-royalblue.svg"></a></li>
+<li><a href="https://github.com/quanteda/stopwords"><img src="https://img.shields.io/badge/devel%20version-2.0.9001-royalblue.svg"></a></li>
 <li><a href="https://travis-ci.org/quanteda/stopwords"><img src="https://travis-ci.org/quanteda/stopwords.svg?branch=master" alt="Travis-CI Build Status"></a></li>
 <li><a href="https://codecov.io/github/davnn/stopwords?branch=master"><img src="https://codecov.io/gh/davnn/stopwords/branch/master/graph/badge.svg" alt="Coverage status"></a></li>
 <li><a href="https://CRAN.R-project.org/package=stopwords"><img src="https://cranlogs.r-pkg.org/badges/stopwords" alt="Downloads"></a></li>
@@ -775,7 +844,7 @@ Writing stopwords.Rd</pre></div>
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
 </div>
 
       </footer>

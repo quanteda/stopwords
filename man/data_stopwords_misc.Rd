@@ -22,7 +22,7 @@ The Gujarati stopwords are taken from
 Chandrakant Bhogayata.
 
 The Chinese stopwords are taken from the
-\href{http://www.baiduguide.com/baidu-stopwords/}{Baidu stopword list}.
+Baidu stopword list (see http://www.baiduguide.com/baidu-stopwords/).
 }
 \description{
 Other, miscellaneous stopword lists.

@@ -47,7 +47,7 @@
 #'   Chandrakant Bhogayata.
 #'
 #'   The Chinese stopwords are taken from the
-#'   [Baidu stopword list](http://www.baiduguide.com/baidu-stopwords/).
+#'   Baidu stopword list (see http://www.baiduguide.com/baidu-stopwords/).
 "data_stopwords_misc"
 
 #' stopword lists from the SMART system
