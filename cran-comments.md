@@ -1,3 +1,7 @@
+## Resubmission
+
+Fixes URL issues from previous submission on 8 Dec 2020, including now using the \doi{} macro.
+
 ## Purpose
 
 To add new functions and new stopword lists.

@@ -20,7 +20,7 @@
 #'   languages, based on the Snowball stemmer's word lists.
 #' @source
 #'   The main stopword lists are taken from the Snowball stemmer project in
-#'   different languages (see <http://snowballstem.org/projects.html>).
+#'   different languages (see <https://snowballstem.org/projects.html>).
 #'
 #'   The stopword lists can be found in <http://snowball.tartarus.org/dist/snowball_all.tgz>.
 #' @seealso [stopwords()]
@@ -65,7 +65,7 @@
 #' @references
 #'   Lewis, David D., et al. (2004) "[Rcv1: A new benchmark collection for text
 #'   categorization
-#'   research.](http://www.jmlr.org/papers/volume5/lewis04a/lewis04a.pdf)"
+#'   research.](https://www.jmlr.org/papers/volume5/lewis04a/lewis04a.pdf)"
 #'   *Journal of machine learning research* 5: 361-397.
 "data_stopwords_smart"
 
@@ -102,7 +102,7 @@
 #'
 #' `stopwords(language = "la", source = "ancient")`
 #' @source Aurélien Berra, Ancient Greek and Latin stopwords,
-#'   [http://doi.org/10.5281/zenodo.1165205](). See
+#'   \doi{10.5281/zenodo.1165205}. See
 #'   [https://github.com/aurelberra/stopwords/blob/master/rationale.md]().
 #' @seealso [data_stopwords_perseus]
 "data_stopwords_ancient"

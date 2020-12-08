@@ -22,7 +22,7 @@ system developed at Cornell University in the 1960s.
 }
 
 \references{
-Lewis, David D., et al. (2004) "\href{http://www.jmlr.org/papers/volume5/lewis04a/lewis04a.pdf}{Rcv1: A new benchmark collection for text categorization research.}"
+Lewis, David D., et al. (2004) "\href{https://www.jmlr.org/papers/volume5/lewis04a/lewis04a.pdf}{Rcv1: A new benchmark collection for text categorization research.}"
 \emph{Journal of machine learning research} 5: 361-397.
 }
 \keyword{datasets}

@@ -2,7 +2,7 @@ pandoc: 2.9.2.1
 pkgdown: 1.6.1
 pkgdown_sha: ~
 articles: {}
-last_built: 2020-12-08T09:47Z
+last_built: 2020-12-08T10:23Z
 urls:
   reference: http://stopwords.quanteda.io/reference
   article: http://stopwords.quanteda.io/articles

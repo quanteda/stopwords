@@ -9,7 +9,7 @@ An object of class \code{list} of length 2.
 }
 \source{
 Aurélien Berra, Ancient Greek and Latin stopwords,
-\url{http://doi.org/10.5281/zenodo.1165205}. See
+\doi{10.5281/zenodo.1165205}. See
 \url{https://github.com/aurelberra/stopwords/blob/master/rationale.md}.
 }
 \description{

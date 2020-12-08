@@ -9,7 +9,7 @@ An object of class \code{list} of length 15.
 }
 \source{
 The main stopword lists are taken from the Snowball stemmer project in
-different languages (see \url{http://snowballstem.org/projects.html}).
+different languages (see \url{https://snowballstem.org/projects.html}).
 
 The stopword lists can be found in \url{http://snowball.tartarus.org/dist/snowball_all.tgz}.
 }
