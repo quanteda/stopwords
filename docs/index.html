@@ -103,7 +103,7 @@
 <code class="sourceCode R"><span class="co"># list all sources</span>
 <span class="fu">stopwords</span><span class="fu">::</span><span class="fu"><a href="reference/stopwords_getsources.html">stopwords_getsources</a></span><span class="op">(</span><span class="op">)</span>
 <span class="co">## [1] "snowball"      "stopwords-iso" "misc"          "smart"        </span>
-<span class="co">## [5] "marimo"        "ancient"       "nltk"</span>
+<span class="co">## [5] "marimo"        "ancient"       "nltk"          "perseus"</span>
 
 <span class="co"># list languages for a specific source</span>
 <span class="fu">stopwords</span><span class="fu">::</span><span class="fu"><a href="reference/stopwords_getlanguages.html">stopwords_getlanguages</a></span><span class="op">(</span><span class="st">"snowball"</span><span class="op">)</span>
@@ -720,7 +720,7 @@
 <code class="sourceCode R"><span class="co"># list all sources</span>
 <span class="fu">stopwords</span><span class="fu">::</span><span class="fu"><a href="reference/stopwords_getsources.html">stopwords_getsources</a></span><span class="op">(</span><span class="op">)</span>
 <span class="co">## [1] "snowball"      "stopwords-iso" "misc"          "smart"        </span>
-<span class="co">## [5] "marimo"        "ancient"       "nltk"</span>
+<span class="co">## [5] "marimo"        "ancient"       "nltk"          "perseus"</span>
 
 <span class="co"># list languages for a specific source</span>
 <span class="fu">stopwords</span><span class="fu">::</span><span class="fu"><a href="reference/stopwords_getlanguages.html">stopwords_getlanguages</a></span><span class="op">(</span><span class="st">"snowball"</span><span class="op">)</span>
@@ -740,7 +740,7 @@
 <p>Finally, it’s possible to remove stopwords using pattern matching. The default is the easy-to-use <a href="https://en.wikipedia.org/wiki/Glob_(programming)">“glob” style matching</a>, which is equivalent to fixed matching when no wildcard characters are used. So to remove personal pronouns from the English Snowball word list, for instance, this would work:</p>
 <div class="sourceCode" id="cb10"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="st"><a href="https://quanteda.io">"quanteda"</a></span>, warn.conflicts <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span>
-<span class="co">## Package version: 2.1.2.9000</span>
+<span class="co">## Package version: 2.9.9000</span>
 <span class="co">## Parallel computing: 12 of 12 threads used.</span>
 <span class="co">## See https://quanteda.io for tutorials and examples.</span>
 <span class="va">posspronouns</span> <span class="op">&lt;-</span> <span class="fu">stopwords</span><span class="fu">::</span><span class="va"><a href="reference/data_stopwords_marimo.html">data_stopwords_marimo</a></span><span class="op">$</span><span class="va">en</span><span class="op">$</span><span class="va">pronoun</span><span class="op">$</span><span class="va">possessive</span>
@@ -828,7 +828,7 @@
 <h2>Dev status</h2>
 <ul class="list-unstyled">
 <li><a href="https://CRAN.R-project.org/package=stopwords"><img src="https://www.r-pkg.org/badges/version/stopwords" alt="CRAN Version"></a></li>
-<li><a href="https://github.com/quanteda/stopwords"><img src="https://img.shields.io/badge/devel%20version-2.0.9001-royalblue.svg"></a></li>
+<li><a href="https://github.com/quanteda/stopwords"><img src="https://img.shields.io/badge/devel%20version-2.1-royalblue.svg"></a></li>
 <li><a href="https://travis-ci.org/quanteda/stopwords"><img src="https://travis-ci.org/quanteda/stopwords.svg?branch=master" alt="Travis-CI Build Status"></a></li>
 <li><a href="https://codecov.io/github/davnn/stopwords?branch=master"><img src="https://codecov.io/gh/davnn/stopwords/branch/master/graph/badge.svg" alt="Coverage status"></a></li>
 <li><a href="https://CRAN.R-project.org/package=stopwords"><img src="https://cranlogs.r-pkg.org/badges/stopwords" alt="Downloads"></a></li>

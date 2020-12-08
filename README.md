@@ -3,7 +3,7 @@
 
 [![CRAN
 Version](https://www.r-pkg.org/badges/version/stopwords)](https://CRAN.R-project.org/package=stopwords)
-[![](https://img.shields.io/badge/devel%20version-2.0.9001-royalblue.svg)](https://github.com/quanteda/stopwords)
+[![](https://img.shields.io/badge/devel%20version-2.1-royalblue.svg)](https://github.com/quanteda/stopwords)
 [![Travis-CI Build
 Status](https://travis-ci.org/quanteda/stopwords.svg?branch=master)](https://travis-ci.org/quanteda/stopwords)
 [![Coverage
@@ -63,7 +63,7 @@ Explore sources and languages:
 # list all sources
 stopwords::stopwords_getsources()
 ## [1] "snowball"      "stopwords-iso" "misc"          "smart"        
-## [5] "marimo"        "ancient"       "nltk"
+## [5] "marimo"        "ancient"       "nltk"          "perseus"
 
 # list languages for a specific source
 stopwords::stopwords_getlanguages("snowball")
@@ -177,7 +177,7 @@ Explore sources and languages:
 # list all sources
 stopwords::stopwords_getsources()
 ## [1] "snowball"      "stopwords-iso" "misc"          "smart"        
-## [5] "marimo"        "ancient"       "nltk"
+## [5] "marimo"        "ancient"       "nltk"          "perseus"
 
 # list languages for a specific source
 stopwords::stopwords_getlanguages("snowball")
@@ -213,7 +213,7 @@ instance, this would work:
 
 ``` r
 library("quanteda", warn.conflicts = FALSE)
-## Package version: 2.1.2.9000
+## Package version: 2.9.9000
 ## Parallel computing: 12 of 12 threads used.
 ## See https://quanteda.io for tutorials and examples.
 posspronouns <- stopwords::data_stopwords_marimo$en$pronoun$possessive
