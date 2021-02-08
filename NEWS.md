@@ -1,3 +1,7 @@
+stopwords v2.2
+==============
+* Removes `use_stopword()`, as this introduces too many higher-order dependencies via **usethis**.
+
 stopwords v2.1
 ==============
 * Updates the ancient Greek and Latin stopwords in the `ancient` source, and moves older ancient stopwords lists to a new `perseus` source.
