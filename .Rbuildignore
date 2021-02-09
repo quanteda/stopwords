@@ -15,3 +15,4 @@ languages_by_source.xlsx
 ^\.lintr$
 ^revdep/
 ^CRAN-RELEASE$
+^\.github/

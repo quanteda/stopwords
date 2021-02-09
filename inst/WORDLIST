@@ -19,6 +19,7 @@ baiduguide
 bg
 bn
 br
+codecov
 com
 cs
 el
@@ -51,7 +52,6 @@ perseus
 pl
 quanteda
 ro
-roxygen
 ru
 sk
 sl
