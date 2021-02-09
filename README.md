@@ -4,10 +4,9 @@
 [![CRAN
 Version](https://www.r-pkg.org/badges/version/stopwords)](https://CRAN.R-project.org/package=stopwords)
 [![](https://img.shields.io/badge/devel%20version-2.1.9000-royalblue.svg)](https://github.com/quanteda/stopwords)
-[![Travis-CI Build
-Status](https://travis-ci.org/quanteda/stopwords.svg?branch=master)](https://travis-ci.org/quanteda/stopwords)
-[![Coverage
-status](https://codecov.io/gh/davnn/stopwords/branch/master/graph/badge.svg)](https://codecov.io/github/davnn/stopwords?branch=master)
+[![R build
+status](https://github.com/quanteda/stopwords/workflows/R-CMD-check/badge.svg)](https://github.com/quanteda/stopwords/actions)
+[![codecov](https://codecov.io/gh/quanteda/stopwords/branch/master/graph/badge.svg)](https://codecov.io/gh/quanteda/stopwords)
 [![Downloads](https://cranlogs.r-pkg.org/badges/stopwords)](https://CRAN.R-project.org/package=stopwords)
 [![Total
 Downloads](https://cranlogs.r-pkg.org/badges/grand-total/stopwords?color=orange)](https://CRAN.R-project.org/package=stopwords)
