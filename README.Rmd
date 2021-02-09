@@ -134,23 +134,26 @@ There is no `char_add()`, since it's just as easy to use `c()` for this, but the
 
 ## Adding stopwords to your own package
 
-As of version 1.1, we've made it a one-step process to add `stopwords()` to your package through a re-export.  Simply call `use_stopwords()` like this:
+In v2.2, we've removed the function `use_stopwords()` because the dependency on
+**usethis** added too many downstream package dependencies, and **stopwords** is
+meant to be a lightweight package.
 
-```{r eval = FALSE}
-> stopwords::use_stopwords()
-✔ Setting active project to '/Users/me/GitHub/mypackage'
-✔ Adding 'stopwords' to Imports field in DESCRIPTION
-✔ Writing 'R/use-stopwords.R'
-● Run `devtools::document()` to update 'NAMESPACE'
+However it is very easy to add a re-export for `stopwords()` to your package by adding this file as `stopwords.R`:
 
-> devtools::document()
-Updating mypackage documentation
-Updating collate directive in  /Users/me/GitHub/mypackage/DESCRIPTION 
-Writing NAMESPACE
-Loading mypackage
-Writing NAMESPACE
-Writing stopwords.Rd
+```{r, eval = FALSE}
+#' Stopwords
+#'
+#' @description
+#' Return a character vector of stopwords.
+#' See \code{stopwords::\link[stopwords:stopwords]{stopwords()}} for details.
+#' @usage stopwords(language = "en", source = "snowball")
+#' @name stopwords
+#' @importFrom stopwords stopwords
+#' @export
+NULL
 ```
+
+and add `stopwords` to the list of `Imports:` in your `DESCRIPTION` file.
 
 
 ## Contributing

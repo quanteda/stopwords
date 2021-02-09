@@ -3,7 +3,7 @@
 
 [![CRAN
 Version](https://www.r-pkg.org/badges/version/stopwords)](https://CRAN.R-project.org/package=stopwords)
-[![](https://img.shields.io/badge/devel%20version-2.1-royalblue.svg)](https://github.com/quanteda/stopwords)
+[![](https://img.shields.io/badge/devel%20version-2.1.9000-royalblue.svg)](https://github.com/quanteda/stopwords)
 [![Travis-CI Build
 Status](https://travis-ci.org/quanteda/stopwords.svg?branch=master)](https://travis-ci.org/quanteda/stopwords)
 [![Coverage
@@ -82,7 +82,7 @@ source over the “stopwords-iso” source, for instance.)
 The following languages are currently available:
 
 | Language        | Code | snowball | marimo | nltk | stopwords-iso | Other            |
-| :-------------- | :--- | :------: | :----: | :--: | :-----------: | :--------------- |
+|:----------------|:-----|:--------:|:------:|:----:|:-------------:|:-----------------|
 | Afrikaans       | af   |          |        |      |       ✓       |                  |
 | Arabic          | ar   |          |   ✓    |  ✓   |       ✓       | misc             |
 | Armenian        | hy   |          |        |      |       ✓       |                  |
@@ -187,7 +187,7 @@ stopwords::stopwords_getlanguages("snowball")
 ## Modifying stopword lists
 
 It is now possible to edit your own stopword lists, using the
-interactive editor, with functions from the **quanteda** package (\>=
+interactive editor, with functions from the **quanteda** package (&gt;=
 v2.02). For instance to edit the English stopword list for the Snowball
 source:
 
@@ -206,7 +206,7 @@ my_stopwordlist <- quanteda::list_edit(stopwords("en", source = "marimo", simpli
 
 Finally, it’s possible to remove stopwords using pattern matching. The
 default is the easy-to-use [“glob” style
-matching](https://en.wikipedia.org/wiki/Glob_\(programming\)), which is
+matching](https://en.wikipedia.org/wiki/Glob_(programming)), which is
 equivalent to fixed matching when no wildcard characters are used. So to
 remove personal pronouns from the English Snowball word list, for
 instance, this would work:
@@ -214,6 +214,8 @@ instance, this would work:
 ``` r
 library("quanteda", warn.conflicts = FALSE)
 ## Package version: 2.9.9000
+## Unicode version: 10.0
+## ICU version: 61.1
 ## Parallel computing: 12 of 12 threads used.
 ## See https://quanteda.io for tutorials and examples.
 posspronouns <- stopwords::data_stopwords_marimo$en$pronoun$possessive
@@ -242,25 +244,28 @@ but there is a `char_keep()` for positive selection rather than removal.
 
 ## Adding stopwords to your own package
 
-As of version 1.1, we’ve made it a one-step process to add `stopwords()`
-to your package through a re-export. Simply call `use_stopwords()` like
-this:
+In v2.2, we’ve removed the function `use_stopwords()` because the
+dependency on **usethis** added too many downstream package
+dependencies, and **stopwords** is meant to be a lightweight package.
+
+However it is very easy to add a re-export for `stopwords()` to your
+package by adding this file as `stopwords.R`:
 
 ``` r
-> stopwords::use_stopwords()
-✔ Setting active project to '/Users/me/GitHub/mypackage'
-✔ Adding 'stopwords' to Imports field in DESCRIPTION
-✔ Writing 'R/use-stopwords.R'
-● Run `devtools::document()` to update 'NAMESPACE'
-
-> devtools::document()
-Updating mypackage documentation
-Updating collate directive in  /Users/me/GitHub/mypackage/DESCRIPTION 
-Writing NAMESPACE
-Loading mypackage
-Writing NAMESPACE
-Writing stopwords.Rd
+#' Stopwords
+#'
+#' @description
+#' Return a character vector of stopwords.
+#' See \code{stopwords::\link[stopwords:stopwords]{stopwords()}} for details.
+#' @usage stopwords(language = "en", source = "snowball")
+#' @name stopwords
+#' @importFrom stopwords stopwords
+#' @export
+NULL
 ```
+
+and add `stopwords` to the list of `Imports:` in your `DESCRIPTION`
+file.
 
 ## Contributing
 
