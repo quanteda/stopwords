@@ -32,7 +32,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="index.html">stopwords</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">2.1</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">2.2</span>
       </span>
     </div>
 
@@ -741,7 +741,7 @@
 <div class="sourceCode" id="cb10"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="st"><a href="https://quanteda.io">"quanteda"</a></span>, warn.conflicts <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span>
 <span class="co">## Package version: 2.9.9000</span>
-<span class="co">## Parallel computing: 12 of 12 threads used.</span>
+<span class="co">## Parallel computing: 8 of 8 threads used.</span>
 <span class="co">## See https://quanteda.io for tutorials and examples.</span>
 <span class="va">posspronouns</span> <span class="op">&lt;-</span> <span class="fu">stopwords</span><span class="fu">::</span><span class="va"><a href="reference/data_stopwords_marimo.html">data_stopwords_marimo</a></span><span class="op">$</span><span class="va">en</span><span class="op">$</span><span class="va">pronoun</span><span class="op">$</span><span class="va">possessive</span>
 <span class="va">posspronouns</span>
@@ -763,20 +763,20 @@
 <div id="adding-stopwords-to-your-own-package" class="section level2">
 <h2 class="hasAnchor">
 <a href="#adding-stopwords-to-your-own-package" class="anchor"></a>Adding stopwords to your own package</h2>
-<p>As of version 1.1, we’ve made it a one-step process to add <code><a href="reference/stopwords.html">stopwords()</a></code> to your package through a re-export. Simply call <code><a href="reference/use_stopwords.html">use_stopwords()</a></code> like this:</p>
-<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1"></a><span class="op">&gt;</span><span class="st"> </span>stopwords<span class="op">::</span><span class="kw">use_stopwords</span>()</span>
-<span id="cb12-2"><a href="#cb12-2"></a>✔ Setting active project to <span class="st">'/Users/me/GitHub/mypackage'</span></span>
-<span id="cb12-3"><a href="#cb12-3"></a>✔ Adding <span class="st">'stopwords'</span> to Imports field <span class="cf">in</span> DESCRIPTION</span>
-<span id="cb12-4"><a href="#cb12-4"></a>✔ Writing <span class="st">'R/use-stopwords.R'</span></span>
-<span id="cb12-5"><a href="#cb12-5"></a>● Run <span class="st">`</span><span class="dt">devtools::document()</span><span class="st">`</span> to update <span class="st">'NAMESPACE'</span></span>
-<span id="cb12-6"><a href="#cb12-6"></a></span>
-<span id="cb12-7"><a href="#cb12-7"></a><span class="op">&gt;</span><span class="st"> </span>devtools<span class="op">::</span><span class="kw">document</span>()</span>
-<span id="cb12-8"><a href="#cb12-8"></a>Updating mypackage documentation</span>
-<span id="cb12-9"><a href="#cb12-9"></a>Updating collate directive <span class="cf">in</span>  <span class="op">/</span>Users<span class="op">/</span>me<span class="op">/</span>GitHub<span class="op">/</span>mypackage<span class="op">/</span>DESCRIPTION </span>
-<span id="cb12-10"><a href="#cb12-10"></a>Writing NAMESPACE</span>
-<span id="cb12-11"><a href="#cb12-11"></a>Loading mypackage</span>
-<span id="cb12-12"><a href="#cb12-12"></a>Writing NAMESPACE</span>
-<span id="cb12-13"><a href="#cb12-13"></a>Writing stopwords.Rd</span></code></pre></div>
+<p>In v2.2, we’ve removed the function <code>use_stopwords()</code> because the dependency on <strong>usethis</strong> added too many downstream package dependencies, and <strong>stopwords</strong> is meant to be a lightweight package.</p>
+<p>However it is very easy to add a re-export for <code><a href="reference/stopwords.html">stopwords()</a></code> to your package by adding this file as <code>stopwords.R</code>:</p>
+<div class="sourceCode" id="cb12"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="co">#' Stopwords</span>
+<span class="co">#'</span>
+<span class="co">#' @description</span>
+<span class="co">#' Return a character vector of stopwords.</span>
+<span class="co">#' See \code{stopwords::\link[stopwords:stopwords]{stopwords()}} for details.</span>
+<span class="co">#' @usage stopwords(language = "en", source = "snowball")</span>
+<span class="co">#' @name stopwords</span>
+<span class="co">#' @importFrom stopwords stopwords</span>
+<span class="co">#' @export</span>
+<span class="cn">NULL</span></code></pre></div>
+<p>and add <code>stopwords</code> to the list of <code>Imports:</code> in your <code>DESCRIPTION</code> file.</p>
 </div>
 <div id="contributing" class="section level2">
 <h2 class="hasAnchor">
@@ -828,9 +828,9 @@
 <h2>Dev status</h2>
 <ul class="list-unstyled">
 <li><a href="https://CRAN.R-project.org/package=stopwords"><img src="https://www.r-pkg.org/badges/version/stopwords" alt="CRAN Version"></a></li>
-<li><a href="https://github.com/quanteda/stopwords"><img src="https://img.shields.io/badge/devel%20version-2.1-royalblue.svg"></a></li>
-<li><a href="https://travis-ci.org/quanteda/stopwords"><img src="https://travis-ci.org/quanteda/stopwords.svg?branch=master" alt="Travis-CI Build Status"></a></li>
-<li><a href="https://codecov.io/github/davnn/stopwords?branch=master"><img src="https://codecov.io/gh/davnn/stopwords/branch/master/graph/badge.svg" alt="Coverage status"></a></li>
+<li><a href="https://github.com/quanteda/stopwords"><img src="https://img.shields.io/badge/devel%20version-2.2-royalblue.svg"></a></li>
+<li><a href="https://github.com/quanteda/stopwords/actions"><img src="https://github.com/quanteda/stopwords/workflows/R-CMD-check/badge.svg" alt="R build status"></a></li>
+<li><a href="https://codecov.io/gh/quanteda/stopwords"><img src="https://codecov.io/gh/quanteda/stopwords/branch/master/graph/badge.svg" alt="codecov"></a></li>
 <li><a href="https://CRAN.R-project.org/package=stopwords"><img src="https://cranlogs.r-pkg.org/badges/stopwords" alt="Downloads"></a></li>
 <li><a href="https://CRAN.R-project.org/package=stopwords"><img src="https://cranlogs.r-pkg.org/badges/grand-total/stopwords?color=orange" alt="Total Downloads"></a></li>
 </ul>

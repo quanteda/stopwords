@@ -1,7 +1,7 @@
 Package: stopwords
 Type: Package
 Title: Multilingual Stopword Lists
-Version: 2.1.9000
+Version: 2.2
 Authors@R: c(person("Kenneth", "Benoit", email = "kbenoit@lse.ac.uk", role = c("aut", "cre")),
     person("David", "Muhr", email = "muhrdavid+github@gmail.com", role = "aut"), 
     person("Kohei", "Watanabe", email = "watanabe.kohei@gmail.com", role = "aut"))

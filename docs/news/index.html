@@ -73,7 +73,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">stopwords</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">2.1</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">2.2</span>
       </span>
     </div>
 
@@ -107,9 +107,17 @@
       <small>Source: <a href='https://github.com/quanteda/stopwords/blob/master/NEWS.md'><code>NEWS.md</code></a></small>
     </div>
 
+    <div id="stopwords-v22" class="section level1">
+<h1 class="page-header" data-toc-text="2.2">
+<a href="#stopwords-v22" class="anchor"></a>stopwords v2.2<small> Unreleased </small>
+</h1>
+<ul>
+<li>Removes <code>use_stopword()</code>, as this introduces too many higher-order dependencies via <strong>usethis</strong>.</li>
+</ul>
+</div>
     <div id="stopwords-v21" class="section level1">
 <h1 class="page-header" data-toc-text="2.1">
-<a href="#stopwords-v21" class="anchor"></a>stopwords v2.1<small> Unreleased </small>
+<a href="#stopwords-v21" class="anchor"></a>stopwords v2.1<small> 2020-12-08 </small>
 </h1>
 <ul>
 <li>Updates the ancient Greek and Latin stopwords in the <code>ancient</code> source, and moves older ancient stopwords lists to a new <code>perseus</code> source.</li>
@@ -121,7 +129,7 @@
 <a href="#stopwords-v20" class="anchor"></a>stopwords v2.0<small> 2020-04-14 </small>
 </h1>
 <ul>
-<li>Adds <code><a href="../reference/use_stopwords.html">use_stopwords()</a></code>, for adding a re-export of this function to any package.</li>
+<li>Adds <code>use_stopwords()</code>, for adding a re-export of this function to any package.</li>
 <li>Adds the NLTK source, containing stopwords from the Python NLTK library, in 23 languages.</li>
 <li>Adds the “marimo” source, for 5 languages, created by Kohei Watanabe.</li>
 <li>Adds ancient language stopword lists (Greek and Latin).</li>
