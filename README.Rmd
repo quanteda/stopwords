@@ -9,6 +9,7 @@ knitr::opts_chunk$set(
   fig.path = "man/images/"
 )
 ```
+
 ```{r echo=FALSE, results="hide", message=FALSE}
 library("badger")
 ```
