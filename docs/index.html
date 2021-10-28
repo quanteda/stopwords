@@ -32,7 +32,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="index.html">stopwords</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">2.2</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">2.3</span>
       </span>
     </div>
 
@@ -45,7 +45,7 @@
 <ul class="nav navbar-nav navbar-right">
 <li>
   <a href="https://github.com/quanteda/stopwords/">
-    <span class="fab fa fab fa-github fa-lg"></span>
+    <span class="fab fa-github fa-lg"></span>
      
   </a>
 </li>
@@ -543,7 +543,7 @@
 <td align="left">Russian</td>
 <td align="left">ru</td>
 <td align="center">✓</td>
-<td align="center"></td>
+<td align="center">✓</td>
 <td align="center">✓</td>
 <td align="center">✓</td>
 <td align="left"></td>
@@ -732,16 +732,18 @@
 <p>It is now possible to edit your own stopword lists, using the interactive editor, with functions from the <strong>quanteda</strong> package (&gt;= v2.02). For instance to edit the English stopword list for the Snowball source:</p>
 <div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># edit the English stopwords</span>
-<span class="va">my_stopwords</span> <span class="op">&lt;-</span> <span class="fu">quanteda</span><span class="fu">::</span><span class="fu"><a href="https://quanteda.io/reference/dictionary_edit.html">char_edit</a></span><span class="op">(</span><span class="fu"><a href="reference/stopwords.html">stopwords</a></span><span class="op">(</span><span class="st">"en"</span>, source <span class="op">=</span> <span class="st">"snowball"</span><span class="op">)</span><span class="op">)</span></code></pre></div>
-<p>To edit stopwords whose underlying structure is a list, such as the “marimo” source, we can use the <code><a href="https://quanteda.io/reference/dictionary_edit.html">list_edit()</a></code> function:</p>
+<span class="va">my_stopwords</span> <span class="op">&lt;-</span> <span class="fu">quanteda</span><span class="fu">::</span><span class="fu">char_edit</span><span class="op">(</span><span class="fu"><a href="reference/stopwords.html">stopwords</a></span><span class="op">(</span><span class="st">"en"</span>, source <span class="op">=</span> <span class="st">"snowball"</span><span class="op">)</span><span class="op">)</span></code></pre></div>
+<p>To edit stopwords whose underlying structure is a list, such as the “marimo” source, we can use the <code>list_edit()</code> function:</p>
 <div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># edit the English stopwords</span>
-<span class="va">my_stopwordlist</span> <span class="op">&lt;-</span> <span class="fu">quanteda</span><span class="fu">::</span><span class="fu"><a href="https://quanteda.io/reference/dictionary_edit.html">list_edit</a></span><span class="op">(</span><span class="fu"><a href="reference/stopwords.html">stopwords</a></span><span class="op">(</span><span class="st">"en"</span>, source <span class="op">=</span> <span class="st">"marimo"</span>, simplify <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span><span class="op">)</span></code></pre></div>
+<span class="va">my_stopwordlist</span> <span class="op">&lt;-</span> <span class="fu">quanteda</span><span class="fu">::</span><span class="fu">list_edit</span><span class="op">(</span><span class="fu"><a href="reference/stopwords.html">stopwords</a></span><span class="op">(</span><span class="st">"en"</span>, source <span class="op">=</span> <span class="st">"marimo"</span>, simplify <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span><span class="op">)</span></code></pre></div>
 <p>Finally, it’s possible to remove stopwords using pattern matching. The default is the easy-to-use <a href="https://en.wikipedia.org/wiki/Glob_(programming)">“glob” style matching</a>, which is equivalent to fixed matching when no wildcard characters are used. So to remove personal pronouns from the English Snowball word list, for instance, this would work:</p>
 <div class="sourceCode" id="cb10"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="st"><a href="https://quanteda.io">"quanteda"</a></span>, warn.conflicts <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span>
-<span class="co">## Package version: 2.9.9000</span>
-<span class="co">## Parallel computing: 8 of 8 threads used.</span>
+<span class="co">## Package version: 3.1.0.9000</span>
+<span class="co">## Unicode version: 13.0</span>
+<span class="co">## ICU version: 69.1</span>
+<span class="co">## Parallel computing: 12 of 12 threads used.</span>
 <span class="co">## See https://quanteda.io for tutorials and examples.</span>
 <span class="va">posspronouns</span> <span class="op">&lt;-</span> <span class="fu">stopwords</span><span class="fu">::</span><span class="va"><a href="reference/data_stopwords_marimo.html">data_stopwords_marimo</a></span><span class="op">$</span><span class="va">en</span><span class="op">$</span><span class="va">pronoun</span><span class="op">$</span><span class="va">possessive</span>
 <span class="va">posspronouns</span>
@@ -828,9 +830,9 @@
 <h2>Dev status</h2>
 <ul class="list-unstyled">
 <li><a href="https://CRAN.R-project.org/package=stopwords"><img src="https://www.r-pkg.org/badges/version/stopwords" alt="CRAN Version"></a></li>
-<li><a href="https://github.com/quanteda/stopwords"><img src="https://img.shields.io/badge/devel%20version-2.2-royalblue.svg"></a></li>
+<li><a href="https://github.com/quanteda/stopwords"><img src="https://img.shields.io/badge/devel%20version-2.3-royalblue.svg"></a></li>
 <li><a href="https://github.com/quanteda/stopwords/actions"><img src="https://github.com/quanteda/stopwords/workflows/R-CMD-check/badge.svg" alt="R build status"></a></li>
-<li><a href="https://codecov.io/gh/quanteda/stopwords"><img src="https://codecov.io/gh/quanteda/stopwords/branch/master/graph/badge.svg" alt="codecov"></a></li>
+<li><a href="https://app.codecov.io/gh/quanteda/stopwords"><img src="https://codecov.io/gh/quanteda/stopwords/branch/master/graph/badge.svg" alt="codecov"></a></li>
 <li><a href="https://CRAN.R-project.org/package=stopwords"><img src="https://cranlogs.r-pkg.org/badges/stopwords" alt="Downloads"></a></li>
 <li><a href="https://CRAN.R-project.org/package=stopwords"><img src="https://cranlogs.r-pkg.org/badges/grand-total/stopwords?color=orange" alt="Total Downloads"></a></li>
 </ul>

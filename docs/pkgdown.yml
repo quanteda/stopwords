@@ -1,8 +1,8 @@
-pandoc: 2.9.2.1
+pandoc: 2.14.0.1
 pkgdown: 1.6.1
 pkgdown_sha: ~
 articles: {}
-last_built: 2021-02-10T08:56Z
+last_built: 2021-10-28T14:04Z
 urls:
   reference: http://stopwords.quanteda.io/reference
   article: http://stopwords.quanteda.io/articles
