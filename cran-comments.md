@@ -1,16 +1,12 @@
-## Resubmission
-
-Fixes URL issues from previous submission on 8 Dec 2020, including now using the \doi{} macro.
-
 ## Purpose
 
-To add new functions and new stopword lists.
+Fixes CRAN failures caused by a usage of lintr in tests.
 
 ## Test environments
 
-All on R 4.0.3
-* local macOS 10.15.7 install
-* ubuntu 18.04 and 20.04 (on Travis-CI)
+All on R 4.1.1
+* local macOS 11.6 install
+* ubuntu 20.04 (on Travis-CI)
 * win-builder (devel and release)
 
 ## R CMD check results

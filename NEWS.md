@@ -1,3 +1,7 @@
+stopwords v2.3
+==============
+* Move the **lintr** checks from `testthat.R` to GitHub actions.
+
 stopwords v2.2
 ==============
 * Removes `use_stopword()`, as this introduces too many higher-order dependencies via **usethis**.
