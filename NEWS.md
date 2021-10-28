@@ -1,6 +1,7 @@
 stopwords v2.3
 ==============
 * Move the **lintr** checks from `testthat.R` to GitHub actions.
+* A longer list of Russian stopwords are added to the "marimo" source (#40).
 
 stopwords v2.2
 ==============
