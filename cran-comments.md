@@ -1,3 +1,9 @@
+## Resubmission
+
+- Updated WORDLIST to stop a spell-check failure for a note added to NEWS.md.
+- Changed URLs to new versions that caused NOTES.
+- Knitted README.Rmd to change URLs in README.md.
+
 ## Purpose
 
 Fixes CRAN failures caused by a usage of lintr in tests.

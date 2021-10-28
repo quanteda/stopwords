@@ -102,7 +102,7 @@
 #'
 #' `stopwords(language = "la", source = "ancient")`
 #' @source Aurélien Berra, Ancient Greek and Latin stopwords,
-#'   \doi{10.5281/zenodo.1165205}. See
+#'   `doi: 10.5281/zenodo.1165205`. See
 #'   [https://github.com/aurelberra/stopwords/blob/master/rationale.md]().
 #' @seealso [data_stopwords_perseus]
 "data_stopwords_ancient"

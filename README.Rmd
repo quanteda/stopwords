@@ -19,7 +19,7 @@ library("badger")
 [![CRAN Version](https://www.r-pkg.org/badges/version/stopwords)](https://CRAN.R-project.org/package=stopwords)
 `r badge_devel("quanteda/stopwords", "royalblue")`
 [![R build status](https://github.com/quanteda/stopwords/workflows/R-CMD-check/badge.svg)](https://github.com/quanteda/stopwords/actions)
-[![codecov](https://codecov.io/gh/quanteda/stopwords/branch/master/graph/badge.svg)](https://codecov.io/gh/quanteda/stopwords)
+[![codecov](https://codecov.io/gh/quanteda/stopwords/branch/master/graph/badge.svg)](https://app.codecov.io/gh/quanteda/stopwords)
 [![Downloads](https://cranlogs.r-pkg.org/badges/stopwords)](https://CRAN.R-project.org/package=stopwords)
 [![Total Downloads](https://cranlogs.r-pkg.org/badges/grand-total/stopwords?color=orange)](https://CRAN.R-project.org/package=stopwords)
 

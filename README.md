@@ -3,10 +3,10 @@
 
 [![CRAN
 Version](https://www.r-pkg.org/badges/version/stopwords)](https://CRAN.R-project.org/package=stopwords)
-[![](https://img.shields.io/badge/devel%20version-2.2-royalblue.svg)](https://github.com/quanteda/stopwords)
+[![](https://img.shields.io/badge/devel%20version-2.3-royalblue.svg)](https://github.com/quanteda/stopwords)
 [![R build
 status](https://github.com/quanteda/stopwords/workflows/R-CMD-check/badge.svg)](https://github.com/quanteda/stopwords/actions)
-[![codecov](https://codecov.io/gh/quanteda/stopwords/branch/master/graph/badge.svg)](https://codecov.io/gh/quanteda/stopwords)
+[![codecov](https://codecov.io/gh/quanteda/stopwords/branch/master/graph/badge.svg)](https://app.codecov.io/gh/quanteda/stopwords)
 [![Downloads](https://cranlogs.r-pkg.org/badges/stopwords)](https://CRAN.R-project.org/package=stopwords)
 [![Total
 Downloads](https://cranlogs.r-pkg.org/badges/grand-total/stopwords?color=orange)](https://CRAN.R-project.org/package=stopwords)
@@ -39,6 +39,7 @@ head(stopwords::stopwords("de", source = "snowball"), 20)
 ##  [1] "aber"    "alle"    "allem"   "allen"   "aller"   "alles"   "als"    
 ##  [8] "also"    "am"      "an"      "ander"   "andere"  "anderem" "anderen"
 ## [15] "anderer" "anderes" "anderm"  "andern"  "anderr"  "anders"
+
 head(stopwords::stopwords("ja", source = "marimo"), 20)
 ##  [1] "私"       "僕"       "自分"     "自身"     "我々"     "私達"    
 ##  [7] "あなた"   "彼"       "彼女"     "彼ら"     "彼女ら"   "あれ"    
@@ -62,6 +63,7 @@ Explore sources and languages:
 stopwords::stopwords_getsources()
 ## [1] "snowball"      "stopwords-iso" "misc"          "smart"        
 ## [5] "marimo"        "ancient"       "nltk"          "perseus"
+
 # list languages for a specific source
 stopwords::stopwords_getlanguages("snowball")
 ##  [1] "da" "de" "en" "es" "fi" "fr" "hu" "ir" "it" "nl" "no" "pt" "ro" "ru" "sv"
@@ -151,6 +153,7 @@ head(stopwords::stopwords("de", source = "snowball"), 20)
 ##  [1] "aber"    "alle"    "allem"   "allen"   "aller"   "alles"   "als"    
 ##  [8] "also"    "am"      "an"      "ander"   "andere"  "anderem" "anderen"
 ## [15] "anderer" "anderes" "anderm"  "andern"  "anderr"  "anders"
+
 head(stopwords::stopwords("de", source = "stopwords-iso"), 20)
 ##  [1] "a"           "ab"          "aber"        "ach"         "acht"       
 ##  [6] "achte"       "achten"      "achter"      "achtes"      "ag"         
@@ -174,6 +177,7 @@ Explore sources and languages:
 stopwords::stopwords_getsources()
 ## [1] "snowball"      "stopwords-iso" "misc"          "smart"        
 ## [5] "marimo"        "ancient"       "nltk"          "perseus"
+
 # list languages for a specific source
 stopwords::stopwords_getlanguages("snowball")
 ##  [1] "da" "de" "en" "es" "fi" "fr" "hu" "ir" "it" "nl" "no" "pt" "ro" "ru" "sv"
@@ -208,14 +212,15 @@ instance, this would work:
 
 ``` r
 library("quanteda", warn.conflicts = FALSE)
-## Package version: 3.1.0
+## Package version: 3.1.0.9000
 ## Unicode version: 13.0
-## ICU version: 66.1
-## Parallel computing: 6 of 6 threads used.
+## ICU version: 69.1
+## Parallel computing: 12 of 12 threads used.
 ## See https://quanteda.io for tutorials and examples.
 posspronouns <- stopwords::data_stopwords_marimo$en$pronoun$possessive
 posspronouns
 ## [1] "my"    "our"   "your"  "his"   "her"   "its"   "their"
+
 stopwords("en", source = "snowball") %>%
   head(n = 10)
 ##  [1] "i"         "me"        "my"        "myself"    "we"        "our"      
