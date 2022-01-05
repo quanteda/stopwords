@@ -3,7 +3,7 @@
 
 [![CRAN
 Version](https://www.r-pkg.org/badges/version/stopwords)](https://CRAN.R-project.org/package=stopwords)
-[![](https://img.shields.io/badge/devel%20version-2.3-royalblue.svg)](https://github.com/quanteda/stopwords)
+[![](https://img.shields.io/badge/devel%20version-2.4-royalblue.svg)](https://github.com/quanteda/stopwords)
 [![R build
 status](https://github.com/quanteda/stopwords/workflows/R-CMD-check/badge.svg)](https://github.com/quanteda/stopwords/actions)
 [![codecov](https://codecov.io/gh/quanteda/stopwords/branch/master/graph/badge.svg)](https://app.codecov.io/gh/quanteda/stopwords)
@@ -212,10 +212,10 @@ instance, this would work:
 
 ``` r
 library("quanteda", warn.conflicts = FALSE)
-## Package version: 3.1.0.9000
+## Package version: 3.2.0
 ## Unicode version: 13.0
 ## ICU version: 69.1
-## Parallel computing: 12 of 12 threads used.
+## Parallel computing: 8 of 8 threads used.
 ## See https://quanteda.io for tutorials and examples.
 posspronouns <- stopwords::data_stopwords_marimo$en$pronoun$possessive
 posspronouns
