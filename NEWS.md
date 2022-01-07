@@ -1,3 +1,7 @@
+stopwords v2.4
+==============
+* Updated the "stopwords-iso" source from the source at  https://github.com/stopwords-iso/stopwords-iso/commit/4f7516edb7c52e79dcf2000fc0dfd372bce427cc.  This solves some encoding issues noted in #41.
+
 stopwords v2.3
 ==============
 * Move the **lintr** checks from `testthat.R` to GitHub actions.
